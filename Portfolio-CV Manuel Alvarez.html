@@ -3,7 +3,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Manuel Álvarez - Portfolio</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
 <style type="text/tailwindcss">
@@ -44,19 +44,7 @@
         pointer-events: none;
 
     }
-
-    /* Certificaciones flip 3D */
-    .cert-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-    @media(max-width:1000px){.cert-grid{grid-template-columns:1fr}}
-    .flip{perspective:1200px}
-    .flip-inner{position:relative;height:220px;border-radius:16px;border:1px solid var(--border);background:rgba(255,255,255,.04);transform-style:preserve-3d;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
-    .flip-face{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:14px;backface-visibility:hidden}
-    .flip-back{text-align:center;transform:rotateY(180deg)}
-    .flip:hover .flip-inner, .flip.flipped .flip-inner{transform:rotateY(180deg)}
-    .flip-front img{max-height:120px;width:auto;display:block;filter:drop-shadow(0 0 18px rgba(127,19,236,.25))}
-    .lead{color:var(--muted)}
-
-
+        
     </style>
 </head>
 <body class="antialiased">
@@ -269,4 +257,5 @@
 <p class="mt-6 text-center text-sm text-gray-500">© 2025 Manuel Álvarez. Todos los derechos reservados.</p>
 </footer>
 </div>
+
 </body></html>
