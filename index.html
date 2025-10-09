@@ -10,21 +10,22 @@
             padding: 0;
             box-sizing: border-box;
         }
-
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
+               
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #0a0e27, #001a33, #002233, #001a33, #0a0e27);
+            background: linear-gradient(-45deg, #000000, #08000d, #000F55, #000000);
             background-size: 400% 400%;
-            animation: gradientShift 20s ease infinite;
+            animation: cambiarColorFondo 20s ease infinite;
+            padding-top: 400px;
             color: #e0e0e0;
             line-height: 1.6;
             min-height: 100vh;
+        }
+
+        @keyframes cambiarColorFondo {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
         .container {
