@@ -13,10 +13,10 @@
                
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(-45deg, #000000, #08000d, #000F55, #000000);
+            background: linear-gradient(-45deg, #000000, #000000, #000333, #000000);
             background-size: 400% 400%;
             animation: cambiarColorFondo 20s ease infinite;
-            padding-top: 400px;
+            padding-top: 0px;
             color: #e0e0e0;
             line-height: 1.6;
             min-height: 100vh;
