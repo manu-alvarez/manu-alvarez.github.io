@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -11,9 +13,17 @@
         }
 
 ```
+    @keyframes gradientShift {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
     body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background: linear-gradient(135deg, #0a0e27 0%, #1a0b2e 50%, #16001e 100%);
+        background: linear-gradient(135deg, #0a0e27, #001a33, #002233, #001a33, #0a0e27);
+        background-size: 400% 400%;
+        animation: gradientShift 20s ease infinite;
         color: #e0e0e0;
         line-height: 1.6;
         min-height: 100vh;
@@ -26,14 +36,20 @@
     }
 
     header {
-        background: linear-gradient(135deg, rgba(219, 39, 119, 0.15), rgba(59, 130, 246, 0.15));
-        border: 2px solid rgba(0, 247, 255, 0.3);
+        background: linear-gradient(135deg, rgba(0, 247, 255, 0.1), rgba(59, 130, 246, 0.15));
+        border: 2px solid rgba(0, 247, 255, 0.4);
         border-radius: 15px;
         padding: 40px;
         margin-bottom: 30px;
-        box-shadow: 0 0 30px rgba(219, 39, 119, 0.3), 0 0 60px rgba(59, 130, 246, 0.2);
+        box-shadow: 0 0 30px rgba(0, 247, 255, 0.3), 0 0 60px rgba(59, 130, 246, 0.2);
         position: relative;
         overflow: hidden;
+        transition: all 0.3s;
+    }
+
+    header:hover {
+        box-shadow: 0 0 40px rgba(0, 247, 255, 0.5), 0 0 80px rgba(59, 130, 246, 0.3);
+        border-color: rgba(0, 247, 255, 0.6);
     }
 
     header::before {
@@ -43,7 +59,7 @@
         left: -50%;
         width: 200%;
         height: 200%;
-        background: radial-gradient(circle, rgba(219, 39, 119, 0.1) 0%, transparent 70%);
+        background: radial-gradient(circle, rgba(0, 247, 255, 0.15) 0%, transparent 70%);
         animation: pulse 4s ease-in-out infinite;
     }
 
@@ -55,19 +71,30 @@
     h1 {
         font-size: 3em;
         color: #00f7ff;
-        text-shadow: 0 0 20px rgba(0, 247, 255, 0.8), 0 0 40px rgba(219, 39, 119, 0.5);
+        text-shadow: 0 0 20px rgba(0, 247, 255, 0.8), 0 0 40px rgba(59, 130, 246, 0.5);
         margin-bottom: 10px;
         position: relative;
         z-index: 1;
+        transition: all 0.3s;
+    }
+
+    h1:hover {
+        text-shadow: 0 0 30px rgba(0, 247, 255, 1), 0 0 60px rgba(59, 130, 246, 0.8);
+        transform: scale(1.02);
     }
 
     .subtitle {
         font-size: 1.2em;
-        color: #db2777;
-        text-shadow: 0 0 10px rgba(219, 39, 119, 0.8);
+        color: #00d9ff;
+        text-shadow: 0 0 10px rgba(0, 217, 255, 0.8);
         margin-bottom: 20px;
         position: relative;
         z-index: 1;
+        transition: all 0.3s;
+    }
+
+    .subtitle:hover {
+        text-shadow: 0 0 20px rgba(0, 217, 255, 1);
     }
 
     .contact-info {
@@ -98,27 +125,51 @@
     }
 
     .section {
-        background: linear-gradient(135deg, rgba(26, 11, 46, 0.6), rgba(22, 0, 30, 0.6));
-        border: 2px solid rgba(219, 39, 119, 0.3);
+        background: linear-gradient(135deg, rgba(0, 26, 51, 0.7), rgba(0, 34, 51, 0.7));
+        border: 2px solid rgba(0, 247, 255, 0.3);
         border-radius: 15px;
         padding: 30px;
         margin-bottom: 25px;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(59, 130, 246, 0.05);
-        transition: all 0.3s;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(0, 247, 255, 0.05);
+        transition: all 0.4s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(0, 247, 255, 0.1), transparent);
+        transition: left 0.5s;
+    }
+
+    .section:hover::before {
+        left: 100%;
     }
 
     .section:hover {
-        border-color: rgba(0, 247, 255, 0.5);
-        box-shadow: 0 5px 30px rgba(219, 39, 119, 0.4), inset 0 0 30px rgba(59, 130, 246, 0.1);
+        border-color: rgba(0, 247, 255, 0.6);
+        box-shadow: 0 8px 30px rgba(0, 247, 255, 0.4), inset 0 0 30px rgba(59, 130, 246, 0.15);
+        transform: translateY(-2px);
     }
 
     h2 {
-        color: #db2777;
+        color: #00d9ff;
         font-size: 1.8em;
         margin-bottom: 20px;
-        text-shadow: 0 0 15px rgba(219, 39, 119, 0.6);
-        border-bottom: 2px solid rgba(0, 247, 255, 0.3);
+        text-shadow: 0 0 15px rgba(0, 217, 255, 0.7);
+        border-bottom: 2px solid rgba(0, 247, 255, 0.4);
         padding-bottom: 10px;
+        transition: all 0.3s;
+    }
+
+    h2:hover {
+        text-shadow: 0 0 25px rgba(0, 217, 255, 1), 0 0 40px rgba(59, 130, 246, 0.6);
+        border-bottom-color: rgba(0, 247, 255, 0.8);
     }
 
     h3 {
@@ -145,31 +196,52 @@
     }
 
     .skill-item:hover {
-        background: rgba(219, 39, 119, 0.15);
-        border-color: rgba(219, 39, 119, 0.5);
-        transform: translateY(-3px);
-        box-shadow: 0 5px 15px rgba(219, 39, 119, 0.3);
+        background: rgba(0, 217, 255, 0.2);
+        border-color: rgba(0, 247, 255, 0.6);
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 247, 255, 0.4);
     }
 
     .skill-item strong {
-        color: #a78bfa;
+        color: #3b82f6;
         display: block;
         margin-bottom: 5px;
+        text-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
     }
 
     .project-card, .experience-card {
-        background: linear-gradient(135deg, rgba(59, 130, 246, 0.08), rgba(219, 39, 119, 0.08));
-        border: 1px solid rgba(167, 139, 250, 0.3);
+        background: linear-gradient(135deg, rgba(0, 130, 246, 0.1), rgba(0, 217, 255, 0.08));
+        border: 1px solid rgba(0, 247, 255, 0.3);
         border-radius: 10px;
         padding: 20px;
         margin-bottom: 15px;
-        transition: all 0.3s;
+        transition: all 0.4s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .project-card::after, .experience-card::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background: rgba(0, 247, 255, 0.1);
+        transform: translate(-50%, -50%);
+        transition: width 0.6s, height 0.6s;
+    }
+
+    .project-card:hover::after, .experience-card:hover::after {
+        width: 300%;
+        height: 300%;
     }
 
     .project-card:hover, .experience-card:hover {
-        border-color: rgba(0, 247, 255, 0.5);
-        box-shadow: 0 0 20px rgba(0, 247, 255, 0.2);
-        transform: translateX(5px);
+        border-color: rgba(0, 247, 255, 0.7);
+        box-shadow: 0 0 30px rgba(0, 247, 255, 0.3);
+        transform: translateX(8px) scale(1.02);
     }
 
     .project-card h3, .experience-card h3 {
@@ -193,37 +265,86 @@
         content: '▹';
         position: absolute;
         left: 0;
-        color: #db2777;
+        color: #00d9ff;
         font-size: 1.3em;
+        text-shadow: 0 0 10px rgba(0, 217, 255, 0.8);
     }
 
     .cert-badge {
         display: inline-block;
-        background: linear-gradient(135deg, rgba(219, 39, 119, 0.2), rgba(167, 139, 250, 0.2));
-        border: 1px solid rgba(0, 247, 255, 0.4);
+        background: linear-gradient(135deg, rgba(0, 217, 255, 0.15), rgba(59, 130, 246, 0.2));
+        border: 1px solid rgba(0, 247, 255, 0.5);
         color: #00f7ff;
         padding: 10px 20px;
         border-radius: 25px;
         margin: 5px;
         font-size: 0.95em;
         transition: all 0.3s;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .cert-badge::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(0, 247, 255, 0.3), transparent);
+        transition: left 0.5s;
+    }
+
+    .cert-badge:hover::before {
+        left: 100%;
     }
 
     .cert-badge:hover {
-        background: linear-gradient(135deg, rgba(219, 39, 119, 0.3), rgba(167, 139, 250, 0.3));
-        box-shadow: 0 0 15px rgba(0, 247, 255, 0.4);
-        transform: scale(1.05);
+        background: linear-gradient(135deg, rgba(0, 217, 255, 0.25), rgba(59, 130, 246, 0.3));
+        box-shadow: 0 0 20px rgba(0, 247, 255, 0.6);
+        transform: scale(1.08);
+        border-color: rgba(0, 247, 255, 0.8);
     }
 
     .availability {
-        background: linear-gradient(135deg, rgba(0, 247, 255, 0.1), rgba(219, 39, 119, 0.1));
-        border: 2px solid rgba(0, 247, 255, 0.4);
+        background: linear-gradient(135deg, rgba(0, 247, 255, 0.15), rgba(59, 130, 246, 0.15));
+        border: 2px solid rgba(0, 247, 255, 0.5);
         border-radius: 10px;
         padding: 20px;
         text-align: center;
         font-size: 1.1em;
         color: #00f7ff;
         text-shadow: 0 0 10px rgba(0, 247, 255, 0.5);
+        transition: all 0.3s;
+    }
+
+    .availability:hover {
+        box-shadow: 0 0 25px rgba(0, 247, 255, 0.5);
+        border-color: rgba(0, 247, 255, 0.8);
+        text-shadow: 0 0 15px rgba(0, 247, 255, 0.8);
+    }
+
+    .project-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: #00f7ff;
+        text-decoration: none;
+        padding: 8px 16px;
+        margin-top: 10px;
+        margin-right: 10px;
+        border: 1px solid rgba(0, 247, 255, 0.4);
+        border-radius: 5px;
+        transition: all 0.3s;
+        background: rgba(0, 247, 255, 0.05);
+    }
+
+    .project-link:hover {
+        background: rgba(0, 247, 255, 0.15);
+        border-color: rgba(0, 247, 255, 0.8);
+        box-shadow: 0 0 15px rgba(0, 247, 255, 0.4);
+        transform: translateY(-2px);
+        text-shadow: 0 0 10px rgba(0, 247, 255, 0.8);
     }
 
     @media (max-width: 768px) {
@@ -293,6 +414,14 @@
         <div class="project-card">
             <h3>App móvil (React Native/Expo)</h3>
             <p>Aplicación demostrable que muestra dominio de RN/Expo, componentes, estado y consumo de APIs.</p>
+            <div style="margin-top: 15px;">
+                <a href="https://github.com/TU_USUARIO/TU_REPOSITORIO" target="_blank" class="project-link">
+                    <span>📂</span> Ver código en GitHub
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=TU_APP_ID" target="_blank" class="project-link">
+                    <span>📱</span> Descargar en Play Store
+                </a>
+            </div>
         </div>
 
         <div class="project-card">
