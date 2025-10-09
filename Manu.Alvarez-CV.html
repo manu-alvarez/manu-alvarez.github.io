@@ -10,23 +10,28 @@
             padding: 0;
             box-sizing: border-box;
         }
-               
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(-45deg, #000000, #000000, #000333, #000000);
+            background: linear-gradient(-45deg, #000000, #000127, #000000, #070027);
             background-size: 400% 400%;
-            animation: cambiarColorFondo 20s ease infinite;
-            padding-top: 0px;
+            animation: cambiarColorFondo 10s ease infinite;
             color: #e0e0e0;
             line-height: 1.6;
             min-height: 100vh;
         }
 
-        @keyframes cambiarColorFondo {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
+	@keyframes cambiarColorFondo {
+	    0% { background-position: 0% 50%; }
+	    50% { background-position: 100% 50%; }
+	    100% { background-position: 0% 50%; }
+	}
 
         .container {
             max-width: 1200px;
