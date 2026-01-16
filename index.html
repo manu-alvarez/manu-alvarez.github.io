@@ -3,902 +3,273 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manuel Alvarez Dianez - Portfolio</title>
+    <title>Manu Álvarez | CV & Portfolio</title>
+    <meta name="description" content="Currículum y portfolio de Manu Álvarez. Técnico IT, automatización, IA aplicada y gestión logística.">
+
     <style>
-        * {
+        body {
             margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen;
+            background: #0f0f14;
+            color: #e6e6eb;
+            line-height: 1.6;
         }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #fff;
-            min-height: 100vh;
-            background: #000000;
-            overflow-x: hidden;
+        a {
+            color: #5eead4;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
         }
 
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
+            max-width: 1100px;
+            margin: auto;
             padding: 40px 20px;
         }
 
-        /* Header */
-        .header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .profile-img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-	    background: url('https://i.imgur.com/FcyV3nJ.png') center/cover;
-	    background-size: cover;
-	    background-position: center;
-            margin: 0 auto 20px;
-            box-shadow: 0 0 40px rgba(0, 0, 119, 0.9),
-                        0 0 60px rgba(0, 0, 119, 0.6),
-                        0 0 80px rgba(0, 0, 119, 0.4);
-            border: 2px solid #000077;
+        header {
+            margin-bottom: 50px;
         }
 
         h1 {
-            font-size: 2.5em;
+            font-size: 2.5rem;
             margin-bottom: 10px;
-            text-shadow: 0 0 30px rgba(0, 0, 119, 1),
-                         0 0 50px rgba(0, 0, 119, 0.8),
-                         0 0 70px rgba(0, 0, 119, 0.6);
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #2a2a35;
+            padding-bottom: 6px;
+        }
+
+        h3 {
+            margin: 0 0 10px 0;
         }
 
         .subtitle {
-            font-size: 1.1em;
-            color: #56bffb;
-            margin-bottom: 5px;
+            color: #9ca3af;
+            font-size: 1.1rem;
         }
 
-        .contact-info {
-            color: #fff;
-            margin: 15px 0;
-            line-height: 1.8;
-        }
-
-        .tagline {
-            color: #56bffb;
-            max-width: 800px;
-            margin: 20px auto;
-            line-height: 1.8;
-            text-align: justify;
-        }
-
-        /* Botones neón */
-        .btn-group {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            margin-top: 30px;
-            flex-wrap: wrap;
-        }
-
-        .btn-neon {
-            padding: 12px 30px;
-            background: transparent;
-            border: 2px solid #000077;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            box-shadow: 0 0 25px rgba(0, 0, 119, 0.8),
-                        inset 0 0 25px rgba(0, 0, 119, 0.3);
-            text-shadow: 0 0 15px rgba(0, 0, 119, 1);
-        }
-
-        .btn-neon:hover {
-            background: rgba(0, 0, 119, 0.3);
-            box-shadow: 0 0 40px rgba(0, 0, 119, 1),
-                        0 0 60px rgba(0, 0, 119, 0.8),
-                        inset 0 0 30px rgba(0, 0, 119, 0.4);
-            transform: translateY(-2px);
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, #00bfff
- 0%, #0099cc
- 100%);
-            border: 2px solid #000077;
-            box-shadow: 0 0 30px rgba(0, 0, 119, 0.8),
-                        0 0 50px rgba(0, 0, 119, 0.6);
-        }
-
-        .btn-primary:hover {
-            box-shadow: 0 0 50px rgba(0, 0, 119, 1),
-                        0 0 70px rgba(0, 0, 119, 0.8);
-        }
-
-        /* Secciones */
         .section {
-            margin-bottom: 60px;
-        }
-
-        .section-title {
-            font-size: 2em;
-            text-align: center;
-            margin-bottom: 40px;
-            text-shadow: 0 0 30px rgba(0, 0, 119, 1),
-                         0 0 50px rgba(0, 0, 119, 0.8);
-        }
-
-        .section-subtitle {
-            text-align: center;
-            color: #fff;
-            margin-bottom: 40px;
-        }
-
-        /* Grid de proyectos */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            margin-bottom: 50px;
         }
 
         .project-card {
-            background: rgba(10, 10, 20, 0.6);
-            border: 2px solid rgba(0, 0, 119, 0.6);
-            border-radius: 12px;
-            padding: 25px;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 0 20px rgba(0, 0, 119, 0.5),
-                        inset 0 0 20px rgba(0, 0, 119, 0.1);
-        }
-
-        .project-card:hover {
-            border-color: rgba(0, 0, 119, 1);
-            box-shadow: 0 0 40px rgba(0, 0, 119, 0.8),
-                        0 0 60px rgba(0, 0, 119, 0.5),
-                        inset 0 0 30px rgba(0, 0, 119, 0.2);
-            transform: translateY(-5px);
-        }
-
-        .project-title {
-            font-size: 1.3em;
-            margin-bottom: 15px;
-            color: #66d9ff
-;
-            text-shadow: 0 0 15px rgba(0, 0, 119, 0.8);
+            background: #161622;
+            border: 1px solid #2a2a35;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 25px;
         }
 
         .project-desc {
-            color: #fff;
-            margin-bottom: 10px;
-            line-height: 1.5;
+            margin: 8px 0;
+            color: #d1d5db;
         }
 
         .tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin: 15px 0;
+            margin-top: 10px;
         }
 
         .tag {
-            background: rgba(0, 0, 119, 0.3);
-            border: 2px solid rgba(0, 0, 119, 0.7);
-            padding: 4px 12px;
-            border-radius: 15px;
-            font-size: 0.85em;
-            color: #66d9ff
-;
-            box-shadow: 0 0 15px rgba(0, 0, 119, 0.5);
+            display: inline-block;
+            background: #1f2933;
+            color: #93c5fd;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 6px;
+            margin-bottom: 6px;
         }
 
         .project-buttons {
-            display: flex;
-            gap: 10px;
             margin-top: 15px;
         }
 
-        .project-btn {
-            flex: 1;
-            padding: 8px 20px;
-            font-size: 0.9em;
-            text-align: center;
+        .btn-neon {
+            display: inline-block;
+            padding: 8px 14px;
+            border-radius: 8px;
+            border: 1px solid #5eead4;
+            color: #5eead4;
+            font-size: 0.9rem;
+            margin-right: 10px;
         }
 
-        /* Habilidades */
-        .skills-section {
-            margin-bottom: 60px;
+        .btn-neon:hover {
+            background: #5eead4;
+            color: #0f0f14;
         }
 
-        .skills-grid {
+        .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            max-width: 1000px;
-            margin: 0 auto;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
         }
 
-        .skill-item {
-            background: rgba(10, 10, 20, 0.6);
-            border: 2px solid rgba(0, 0, 119, 0.4);
+        .skill-box {
+            background: #161622;
+            border: 1px solid #2a2a35;
             border-radius: 10px;
             padding: 20px;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            box-shadow: 0 0 12px rgba(0, 0, 119, 0.3),
-                        inset 0 0 12px rgba(0, 0, 119, 0.08);
-        }
-
-        .skill-item:hover,
-        .skill-item:active {
-            border-color: rgba(0, 0, 119, 0.8);
-            box-shadow: 0 0 25px rgba(0, 0, 119, 0.7),
-                        0 0 40px rgba(0, 0, 119, 0.5),
-                        inset 0 0 20px rgba(0, 0, 119, 0.25);
-            transform: translateY(-3px) scale(1.02);
-            background: rgba(0, 0, 119, 0.12);
         }
 
         .skill-category-name {
-            font-size: 1.1em;
-            color: #66d9ff
-;
-            margin-bottom: 10px;
-            font-weight: bold;
-            text-shadow: 0 0 10px rgba(0, 0, 119, 0.8);
+            font-weight: 600;
+            margin-bottom: 8px;
         }
 
-        .skill-list {
-            color: #fff;
-            line-height: 1.6;
-            font-size: 0.95em;
-        }
-
-        /* Certificaciones */
-        .cert-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .cert-card {
-            background: rgba(10, 10, 20, 0.6);
-            border: 2px solid rgba(0, 0, 119, 0.6);
-            border-radius: 12px;
-            padding: 30px;
-            text-align: center;
-            box-shadow: 0 0 25px rgba(0, 0, 119, 0.5),
-                        inset 0 0 20px rgba(0, 0, 119, 0.1);
-            transition: all 0.3s ease;
-        }
-
-        .cert-card:hover {
-            border-color: rgba(0, 0, 119, 1);
-            box-shadow: 0 0 40px rgba(0, 0, 119, 0.8),
-                        0 0 60px rgba(0, 0, 119, 0.5),
-                        inset 0 0 30px rgba(0, 0, 119, 0.2);
-        }
-
-        .cert-badge {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, #00bfff
- 0%, #0099cc
- 100%);
-            border-radius: 50%;
-            margin: 0 auto 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2em;
-            box-shadow: 0 0 35px rgba(0, 0, 119, 0.8),
-                        0 0 50px rgba(0, 0, 119, 0.5);
-            border: 2px solid #000077;
-        }
-
-        /* Timeline */
-        .timeline {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .timeline-item {
-            background: rgba(10, 10, 20, 0.6);
-            border-left: 4px solid #000077;
-            padding: 25px;
-            margin-bottom: 25px;
-            border-radius: 8px;
-            box-shadow: 0 0 20px rgba(0, 0, 119, 0.4),
-                        inset 0 0 15px rgba(0, 0, 119, 0.1);
-            border: 2px solid rgba(0, 0, 119, 0.5);
-            border-left: 4px solid #000077;
-            transition: all 0.3s ease;
-        }
-
-        .timeline-item:hover {
-            box-shadow: 0 0 35px rgba(0, 0, 119, 0.7),
-                        0 0 50px rgba(0, 0, 119, 0.4),
-                        inset 0 0 25px rgba(0, 0, 119, 0.2);
-            border-color: rgba(0, 0, 119, 0.8);
-        }
-
-        .timeline-title {
-            font-size: 1.3em;
-            color: #66d9ff
-;
-            margin-bottom: 5px;
-            text-shadow: 0 0 10px rgba(0, 0, 119, 0.8);
-        }
-
-        .timeline-period {
-            color: #56bffb;
-            font-size: 0.9em;
-            margin-bottom: 15px;
-        }
-
-        .timeline-desc {
-            color: #fff;
-            line-height: 1.6;
-        }
-
-        /* Sección especial - Finale interactivo */
-        .finale {
-            position: relative;
-            min-height: 60vh;
-            display: grid;
-            place-items: center;
-            overflow: hidden;
-            isolation: isolate;
-            border: 2px solid rgba(0, 0, 119, 0.6);
-            border-radius: 12px;
-            margin-top: 60px;
-            box-shadow: 0 0 25px rgba(0, 0, 119, 0.5),
-                        inset 0 0 20px rgba(0, 0, 119, 0.1);
-            background: #000000;
-        }
-
-        #fx-bg {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            filter: contrast(110%) saturate(120%);
-        }
-
-        .glow {
-            position: absolute;
-            inset: -20% -10% auto -10%;
-            height: 60vh;
-            z-index: 0;
-            background: radial-gradient(60% 60% at 50% 50%, rgba(0, 0, 119, 0.25), rgba(0, 0, 119, 0.08) 45%, transparent 70%);
-            mix-blend-mode: screen;
-            filter: blur(40px);
-            animation: float 18s ease-in-out infinite alternate;
-        }
-
-        .glow.g2 {
-            inset: auto -10% -20% -10%;
-            height: 50vh;
-            animation-duration: 22s;
-            opacity: .8;
-        }
-
-        @keyframes float {
-            from { transform: translateY(-2vh) }
-            to { transform: translateY(2vh) }
-        }
-
-        .finale-content {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            padding: 4rem 1.5rem;
-            display: grid;
-            gap: 1.25rem;
-            place-items: center;
-            width: min(1100px, 92vw);
-        }
-
-        .finale h2 {
-            margin: 0;
-            font-weight: 800;
-            line-height: .95;
-            letter-spacing: -0.02em;
-            font-size: clamp(2.2rem, 5.5vw, 5rem);
-            background: linear-gradient(180deg, #fff, #66d9ff
- 45%, #000077 85%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            filter: drop-shadow(0 10px 30px rgba(0, 0, 119, 0.3));
-        }
-
-        .swapper {
-            display: inline-grid;
-            place-items: center;
-            position: relative;
-            width: 1ch;
-        }
-
-        .word {
-            grid-area: 1/1;
-            opacity: 0;
-            transform: translateY(14%) scale(.98);
-            filter: blur(4px);
-            transition: opacity .7s cubic-bezier(.2,.8,.2,1), transform .7s cubic-bezier(.2,.8,.2,1), filter .7s;
-            white-space: nowrap;
-        }
-
-        .word.active {
-            opacity: 1;
-            transform: translateY(0) scale(1);
-            filter: blur(0);
-        }
-
-        p.finale-sub {
-            margin: .25rem 0 0;
-            opacity: .9;
-            font-size: clamp(.95rem, 1.5vw, 1.15rem);
-            color: #fff;
-        }
-
-        .pulse {
-            height: 2px;
-            width: 180px;
-            background: linear-gradient(90deg, transparent, #000077, transparent);
-            opacity: .7;
-            position: relative;
-            overflow: hidden;
-            border-radius: 2px;
-            margin-top: .5rem;
-        }
-
-        .pulse::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            transform: translateX(-100%);
-            background: linear-gradient(90deg, transparent, #fff, transparent);
-            animation: sweep 2.2s linear infinite;
-            mix-blend-mode: screen;
-        }
-
-        @keyframes sweep {
-            to { transform: translateX(100%) }
-        }
-
-        .magnet {
-            position: absolute;
-            width: 160px;
-            aspect-ratio: 1;
-            border-radius: 50%;
-            pointer-events: none;
-            inset: 0;
-            margin: auto;
-            z-index: 1;
-            background: radial-gradient(circle at 50% 50%, rgba(0, 0, 119, 0.3), rgba(0, 0, 119, 0.15) 40%, transparent 60%);
-            filter: blur(14px);
-            opacity: 0;
-            transition: opacity .3s;
-        }
-
-        .hint {
-            position: absolute;
-            bottom: 28px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: .8rem;
-            opacity: .6;
-            letter-spacing: .04em;
-            color: #fff;
-        }
-
-        #particles-canvas {
-            position: absolute;
-            inset: 0;
-            pointer-events: none;
-            z-index: 3;
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            .glow, .pulse::after { animation: none; }
-        }
-
-        /* Footer */
         footer {
             text-align: center;
-            padding: 30px;
-            color: #fff;
+            color: #9ca3af;
+            font-size: 0.85rem;
             margin-top: 60px;
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2em;
-            }
-            .btn-group {
-                flex-direction: column;
-                align-items: center;
-            }
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-            .project-buttons {
-                flex-direction: column;
-            }
         }
     </style>
 </head>
+
 <body>
-    <div class="container">
-        <!-- Header -->
-        <header class="header">
-<br>
-            <div class="profile-img"></div>
-            <h1>Manuel Alvarez Dianez</h1>
-<br>
-             <h3 class="project-title">Junior IT · Técnico de Sistemas y Redes · Developer</h3>
-<br><br><br><br><br>
-        <!-- Perfil -->
-        <section id="Perfil" class="section">
-            <h2 class="section-title">Perfil</h2>
-            <p class="tagline"><center>Técnico de Sistemas y Redes (Junior IT) con experiencia en entornos Windows y Linux, redes y administración básica de servicios.</p></center>
-	    <p class="tagline"><center>Enfocado en mantener la infraestructura estable, resolver incidencias con rapidez y aportar soluciones prácticas.</p></center>
-	  <p class="tagline"><center>Iniciándome como desarrollador, materializo ideas en proyectos funcionales y bien documentados. Busco aportar fiabilidad operativa y seguir creciendo en entornos profesionales.</p></center>
-<br><br><br><br><br>
-        </header>
+<div class="container">
 
-        <!-- Proyectos -->
-        <section id="proyectos" class="section">
-            <h2 class="section-title">Proyectos Destacados</h2>
-            
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3 class="project-title">APP Móvil/Escritorio — Expo Go</h3>
-                    <p class="project-desc">React Native (JS/TS). Inicio como Developer en Google</p>
-                    <p class="project-desc"><strong>Uso:</strong> utilidades y contenido propio (calendario temático).</p>
-                    <p class="project-desc"><strong>Finalidad:</strong> publicar y mantener una app en producción (Play Store) con actualizaciones OTA.</p>
-                    <p class="project-desc"><strong>Herramientas:</strong> React Native, Expo, JS/TS, OTA, GitHub.</p>
-                    <p class="project-desc"><strong>Motivación:</strong> consolidar skills móviles y ciclo de despliegue real.</p>
-                    <div class="tags">
-                        <span class="tag">Expo</span>
-                        <span class="tag">Navegación</span>
-                        <span class="tag">OTA</span>
-                    </div>
-                    <div class="project-buttons">
-                        <a href="https://github.com/manu-alvarez/CalendarioMaya-ManoElectricaAzul" target="_blank" class="btn-neon project-btn">GitHub</a>
-                        <a href="https://play.google.com/store/apps/details?id=com.manoelectricaazul.app" target="_blank" class="btn-neon project-btn">Google Play</a>
-                    </div>
-                </div>
+    <!-- HEADER -->
+    <header>
+        <h1>Manu Álvarez</h1>
+        <p class="subtitle">
+            Técnico IT · Automatización · IA aplicada · Gestión de trabajo y logística
+        </p>
+    </header>
 
-                <div class="project-card">
-                    <h3 class="project-title">VPS Ubuntu 24.04 — Sistema Multiagéntico</h3>
-                    <p class="project-desc">Dockerizado (n8n, Nextcloud, Flowise, Hetzner) | Base para futuros proyectos</p>
-                    <p class="project-desc"><strong>Uso:</strong> hosting de servicios, agentes y automatizaciones.</p>
-                    <p class="project-desc"><strong>Finalidad:</strong> plataforma estable y escalable con reverse-proxy y SSL.</p>
-                    <p class="project-desc"><strong>Herramientas:</strong> Ubuntu 24.04, Docker Compose, Nginx Proxy Manager, Coolify, MySQL/Postgres.</p>
-                    <p class="project-desc"><strong>Motivación:</strong> centralizar desarrollo y facilitar despliegues.</p>
-                    <div class="tags">
-                        <span class="tag">Reverse‑Proxy</span>
-                        <span class="tag">SSL</span>
-                        <span class="tag">Backups</span>
-                    </div>
-                    <div class="project-buttons">
-                        <a href="https://github.com/manu-alvarez/" target="_blank" class="btn-neon project-btn">GitHub</a>
-                        <a href="https://github.com/manu-alvarez/" target="_blank" class="btn-neon project-btn">Demo</a>
-                    </div>
-                </div>
+    <!-- PERFIL -->
+    <section class="section" id="perfil">
+        <h2>Perfil profesional</h2>
+        <p>
+            Técnico informático con base sólida en sistemas y soporte IT, orientado a la creación
+            de soluciones prácticas mediante automatización, inteligencia artificial aplicada y
+            organización eficiente del trabajo.
+        </p>
+        <p>
+            Actualmente desarrollo proyectos digitales vivos (webs, apps y contenido automatizado)
+            y modelos de gestión operativa basados en metodologías ágiles como Kanban,
+            aplicadas a contextos reales.
+        </p>
+    </section>
 
-                <div class="project-card">
-                    <h3 class="project-title">Kit de Automatización — Búsqueda de Empleo</h3>
-                    <p class="project-desc">Trackers, Scripts, Bookmarklet y Workflow n8n (flujo guiado)</p>
-                    <p class="project-desc"><strong>Uso:</strong> captura de ofertas y correos (Gmail/Outlook) a un tracker centralizado.</p>
-                    <p class="project-desc"><strong>Finalidad:</strong> priorización, recordatorios y seguimiento con eventos en Calendar.</p>
-                    <p class="project-desc"><strong>Herramientas:</strong> Google Sheets/Apps Script, n8n, Telegram.</p>
-                    <p class="project-desc"><strong>Motivación:</strong> eliminar tareas repetitivas y asegurar follow-ups.</p><br>
-                    <div class="tags">
-                        <span class="tag">Gmail/Outlook</span>
-                        <span class="tag">Calendar</span>
-                        <span class="tag">Telegram</span>
-                    </div>
-                    <div class="project-buttons">
-                        <a href="https://github.com/manu-alvarez/" target="_blank" class="btn-neon project-btn">GitHub</a>
-                        <a href="https://github.com/manu-alvarez/" target="_blank" class="btn-neon project-btn">Demo</a>
-                    </div>
+    <!-- PROYECTOS -->
+    <section class="section" id="projects">
+        <h2>Proyectos</h2>
+
+        <!-- PROYECTO 1: APP (SE MANTIENE) -->
+        <div class="project-card">
+            <h3>APP Móvil y Escritorio</h3>
+            <p class="project-desc">
+                Desarrollo de una aplicación multiplataforma (móvil y escritorio) utilizando Expo Go,
+                orientada a la exploración de contenido interactivo y aprendizaje personal.
+            </p>
+            <p class="project-desc">
+                <strong>Tecnologías:</strong> Expo, JavaScript, HTML, CSS.
+            </p>
+            <div class="tags">
+                <span class="tag">App</span>
+                <span class="tag">Multiplataforma</span>
+                <span class="tag">Expo</span>
+            </div>
+        </div>
+
+        <!-- PROYECTO 2: IA -->
+        <div class="project-card">
+            <h3>Creación de Webs, Apps y Contenido con IA</h3>
+            <p class="project-desc">
+                Desarrollo de sitios web y aplicaciones con contenido dinámico generado y mantenido
+                mediante herramientas de inteligencia artificial.
+            </p>
+            <p class="project-desc">
+                Implementación de automatizaciones para la actualización diaria de contenidos,
+                reduciendo el mantenimiento manual y asegurando coherencia y continuidad.
+            </p>
+            <p class="project-desc">
+                <strong>Herramientas:</strong> Antigravity, NotebookLM, AI Studio, GitHub Pages.
+            </p>
+            <div class="tags">
+                <span class="tag">IA aplicada</span>
+                <span class="tag">Automatización</span>
+                <span class="tag">Web</span>
+            </div>
+            <div class="project-buttons">
+                <a class="btn-neon" href="https://manu-alvarez.github.io/TuEnergiaMaya/" target="_blank">
+                    Ver proyecto
+                </a>
+            </div>
+        </div>
+
+        <!-- PROYECTO 3: LOGÍSTICA -->
+        <div class="project-card">
+            <h3>Modelos de Gestión de Trabajo Logístico (Kanban)</h3>
+            <p class="project-desc">
+                Diseño de modelos de organización del trabajo orientados a entornos logísticos,
+                basados en la metodología Kanban.
+            </p>
+            <p class="project-desc">
+                Uso de tableros visuales para priorización de tareas, seguimiento de flujos
+                y mejora de la eficiencia operativa.
+            </p>
+            <p class="project-desc">
+                <strong>Herramientas:</strong> Trello, Kanban, automatizaciones y plantillas reutilizables.
+            </p>
+            <div class="tags">
+                <span class="tag">Logística</span>
+                <span class="tag">Kanban</span>
+                <span class="tag">Organización</span>
+            </div>
+            <div class="project-buttons">
+                <a class="btn-neon" href="https://trello.com/w/espaciodetrabajo37473965/" target="_blank">
+                    Ver tableros
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+        <h2>Skills</h2>
+
+        <div class="grid">
+            <div class="skill-box">
+                <div class="skill-category-name">Sistemas & IT</div>
+                <div>Soporte técnico, mantenimiento, resolución de incidencias, entornos Windows y Linux</div>
+            </div>
+
+            <div class="skill-box">
+                <div class="skill-category-name">Desarrollo Web</div>
+                <div>HTML5, CSS3, JavaScript, GitHub Pages</div>
+            </div>
+
+            <div class="skill-box">
+                <div class="skill-category-name">Inteligencia Artificial</div>
+                <div>
+                    Antigravity, NotebookLM, AI Studio, prompting,
+                    automatización de contenidos, uso práctico de modelos LLM
                 </div>
             </div>
-        </section>
 
-        <!-- Habilidades Técnicas -->
-        <section class="skills-section">
-            <h2 class="section-title">Habilidades Técnicas</h2>
-            <div class="skills-grid">
-                <div class="skill-item">
-                    <div class="skill-category-name">Sistemas</div>
-                    <div class="skill-list">Windows 10/11, Windows Server, Active Directory, Linux (Ubuntu)</div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-category-name">Redes</div>
-                    <div class="skill-list">TCP/IP, DHCP, DNS, Wi‑Fi, switching básico, cableado y diagnóstico L1–L3</div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-category-name">Herramientas/Plataforma</div>
-                    <div class="skill-list">Docker, Git/GitHub, Nginx, Coolify, n8n, Flowise, OpenWebUI, Excalidraw</div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-category-name">Scripting</div>
-                    <div class="skill-list">PowerShell, Bash, Visual Studio Code</div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-category-name">Desarrollo</div>
-                    <div class="skill-list">React Native, Node.js, HTML, CSS, JavaScript, TypeScript, Tailwind CSS</div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-category-name">Virtualización</div>
-                    <div class="skill-list">VMware, VirtualBox, Parallels Desktop, KVM</div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-category-name">Gestión remota</div>
-                    <div class="skill-list">RDP, SSH, SFTP, VNC, TeamViewer, AnyDesk</div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-category-name">Inteligencia Artificial</div>
-                    <div class="skill-list">Self-hosting con Ollama, prompting con modelos OpenAI, ChatGPT, Claude, Gemini, Qwen</div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-category-name">Soft Skills</div>
-                    <div class="skill-list">Resolución de problemas, comunicación técnica clara, trabajo en equipo, adaptabilidad</div>
-                </div>
+            <div class="skill-box">
+                <div class="skill-category-name">Gestión y Organización</div>
+                <div>Kanban, Trello, organización de flujos de trabajo, mejora continua</div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Experiencia -->
-        <section class="section">
-            <h2 class="section-title">Experiencia y Formación</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <h3 class="timeline-title">Codearts Solutions — Internship</h3>
-                    <p class="timeline-period">2025</p>
-                    <p class="timeline-desc">Administración de sistemas Linux/Windows, despliegues Docker, instalación y configuración de servidores, virtualizaciones.</p>
-                </div>
-                <div class="timeline-item">
-                    <h3 class="timeline-title">Técnico de Sistemas Microinformáticos y Redes</h3>
-                    <p class="timeline-period">2022 - 2024</p>
-                    <p class="timeline-desc">Formación completa en hardware, software, redes y seguridad informática.</p>
-                </div>
-                <div class="timeline-item">
-                    <h3 class="timeline-title">Certificaciones</h3>
-                    <p class="timeline-period">Credenciales profesionales Cisco</p>
-                    <div style="display: flex; gap: 20px; margin-top: 15px; flex-wrap: wrap;">
-                        <div style="display: flex; align-items: center; gap: 10px;">
-                            <div style="width: 120px; height: 120px; background: linear-gradient(135deg, #00bfff 0%, #0099cc 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2em; box-shadow: 0 0 20px rgba(0, 0, 119, 0.6);"><img src="https://raw.githubusercontent.com/manu-alvarez/varios-external/refs/heads/main/ccst_cybersecurity_small.png" alt="CCST — Cybersecurity Amenazas, controles, redes seguras, endpoints y respuesta a incidentes." width="80" height="80"></div>
-                            <span style="color: #fff; font-weight: 600;">Cibersecurity</span>
-                        </div>
-                        <div style="display: flex; align-items: center; gap: 10px;">
-                            <div style="width: 120px; height: 120px; background: linear-gradient(135deg, #00bfff 0%, #0099cc 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2em; box-shadow: 0 0 20px rgba(0, 0, 119, 0.6);"><img src="https://raw.githubusercontent.com/manu-alvarez/varios-external/refs/heads/main/ccst_networking_small.png" alt="CCST — Networking IP · switching/routing · Wi‑Fi · troubleshooting L1–L3." width="80" height="80"></div>
-                            <span style="color: #fff; font-weight: 600;">Networking</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <!-- FOOTER -->
+    <footer>
+        <p>
+            © Manu Álvarez · Portfolio y CV · Actualizado
+        </p>
+    </footer>
 
-        <!-- Sección Finale interactiva -->
-        <section class="finale" aria-label="Cierre visual interactivo">
-            <canvas id="fx-bg" aria-hidden="true"></canvas>
-            <div class="glow"></div>
-            <div class="glow g2"></div>
-            <div class="magnet" aria-hidden="true"></div>
-            <canvas id="particles-canvas" aria-hidden="true"></canvas>
-
-            <div class="finale-content">
-                <h2>Contacto y Redes</h2>
-                
-                <div style="display: flex; flex-direction: column; gap: 20px; margin: 30px 0;">
-                    <p class="finale-sub" style="margin: 0;">
-                        📍 Mequinenza (Zaragoza)<br>
-                        📱 651.352.065<br>
-                        ✉️ manuelalvarezdianez@gmail.com
-                    </p>
-                    
-                    <div style="display: flex; gap: 25px; justify-content: center; flex-wrap: wrap; margin-top: 10px;">
-                        <a href="https://es.linkedin.com/in/manu-alvarez-dev" target="_blank" style="display: flex; flex-direction: column; align-items: center; gap: 10px; text-decoration: none; color: #66d9ff
-; transition: all 0.3s ease;">
-                            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #0077B5, #005582); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 2em; box-shadow: 0 0 25px rgba(0, 119, 181, 0.5); border: 2px solid rgba(0, 0, 119, 0.4); transition: all 0.3s ease;">
-                                <svg width="32" height="32" fill="white" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                            </div>
-                            <span style="font-size: 0.9em; font-weight: 600;">LinkedIn</span>
-                        </a>
-                        
-                        <a href="https://github.com/manu-alvarez/" target="_blank" style="display: flex; flex-direction: column; align-items: center; gap: 10px; text-decoration: none; color: #66d9ff
-; transition: all 0.3s ease;">
-                            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #333, #1a1a1a); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 2em; box-shadow: 0 0 25px rgba(51, 51, 51, 0.5); border: 2px solid rgba(0, 0, 119, 0.4); transition: all 0.3s ease;">
-                                <svg width="32" height="32" fill="white" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                            </div>
-                            <span style="font-size: 0.9em; font-weight: 600;">GitHub</span>
-                        </a>
-                        
-                        <a href="https://manuelalvarez.dev" target="_blank" style="display: flex; flex-direction: column; align-items: center; gap: 10px; text-decoration: none; color: #66d9ff
-; transition: all 0.3s ease;">
-                            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #00bfff
- 0%, #0099cc
- 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 2em; box-shadow: 0 0 25px rgba(0, 0, 119, 0.6); border: 2px solid rgba(0, 0, 119, 0.4); transition: all 0.3s ease;">
-                                <svg width="32" height="32" fill="white" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm0 3a7 7 0 100 14 7 7 0 000-14zm0 2a5 5 0 110 10 5 5 0 010-10z"/></svg>
-                            </div>
-                            <span style="font-size: 0.9em; font-weight: 600;">Web</span>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="pulse" aria-hidden="true"></div>
-                <span class="hint">Interactúa: mueve el cursor o haz clic</span>
-            </div>
-        </section>
-
-        <footer>
-            <p>© 2025 Manuel Álvarez Diánez. Todos los derechos reservados.</p>
-        </footer>
-    </div>
-
-    <script>
-        // ======== Fondo procedural en <canvas> ========
-        const canvas = document.getElementById('fx-bg');
-        if (!canvas) {
-            console.error('Canvas not found');
-        } else {
-            const ctx = canvas.getContext('2d', { alpha: true });
-            let w, h, t = 0, raf;
-
-            function resize() {
-                const dpr = Math.min(window.devicePixelRatio || 1, 2);
-                w = canvas.width = Math.floor(canvas.offsetWidth * dpr);
-                h = canvas.height = Math.floor(canvas.offsetHeight * dpr);
-                canvas.style.width = '100%';
-                canvas.style.height = '100%';
-            }
-            addEventListener('resize', resize, { passive: true });
-            resize();
-
-            function noise(x, y, seed) {
-                return (
-                    Math.sin(x * 0.009 + seed) +
-                    Math.sin(y * 0.011 - seed * 1.3) +
-                    Math.sin((x + y) * 0.007 + seed * 0.7)
-                ) / 3;
-            }
-
-            function render() {
-                t += 0.008;
-                const img = ctx.createImageData(w, h);
-                const data = img.data;
-                for (let y = 0; y < h; y += 2) {
-                    for (let x = 0; x < w; x += 2) {
-                        const n = noise(x, y, t);
-                        const a = Math.max(0, Math.min(1, (n + 1) / 2));
-                        const r = 0;
-			const g = 0;
-			const b = 0;
-                        const idx = (y * w + x) * 4;
-                        data[idx] = r; data[idx+1] = g; data[idx+2] = b; data[idx+3] = 255;
-                        const idx2 = (y * w + (x+1)) * 4;
-                        const idx3 = ((y+1) * w + x) * 4;
-                        const idx4 = ((y+1) * w + (x+1)) * 4;
-                        data[idx2] = r; data[idx2+1] = g; data[idx2+2] = b; data[idx2+3] = 255;
-                        data[idx3] = r; data[idx3+1] = g; data[idx3+2] = b; data[idx3+3] = 255;
-                        data[idx4] = r; data[idx4+1] = g; data[idx4+2] = b; data[idx4+3] = 255;
-                    }
-                }
-                ctx.putImageData(img, 0, 0);
-                raf = requestAnimationFrame(render);
-            }
-
-            const reduce = matchMedia('(prefers-reduced-motion: reduce)');
-            function start() { if (!reduce.matches) raf = requestAnimationFrame(render); }
-            function stop() { cancelAnimationFrame(raf); }
-            reduce.addEventListener?.('change', e => e.matches ? stop() : start());
-            start();
-
-            document.addEventListener('visibilitychange', () => {
-                if (document.hidden) stop(); else start();
-            });
-        }
-
-        // ======== Cursor magnético y parallax ========
-        const magnet = document.querySelector('.magnet');
-        const finaleContent = document.querySelector('.finale-content');
-        const title = document.querySelector('.finale h2');
-
-        if (magnet && finaleContent && title) {
-            let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
-            addEventListener('pointermove', (e) => {
-                mouseX = e.clientX;
-                mouseY = e.clientY;
-                const finaleSection = document.querySelector('.finale');
-                if (finaleSection) {
-                    const finaleRect = finaleSection.getBoundingClientRect();
-                    if (e.clientY >= finaleRect.top && e.clientY <= finaleRect.bottom) {
-                        magnet.style.opacity = 1;
-                        magnet.style.transform = `translate(${mouseX - finaleRect.left - 80}px, ${mouseY - finaleRect.top - 80}px)`;
-                        const rect = finaleContent.getBoundingClientRect();
-                        const dx = (mouseX - (rect.left + rect.width / 2)) / rect.width;
-                        const dy = (mouseY - (rect.top + rect.height / 2)) / rect.height;
-                        title.style.transform = `perspective(800px) rotateX(${dy * -6}deg) rotateY(${dx * 6}deg)`;
-                    }
-                }
-            }, { passive: true });
-
-            addEventListener('pointerleave', () => {
-                magnet.style.opacity = 0;
-                title.style.transform = 'none';
-            });
-        }
-
-        // ======== Micro-explosión de partículas al click ========
-        const bursts = [];
-        addEventListener('click', (e) => {
-            const finaleSection = document.querySelector('.finale');
-            if (finaleSection) {
-                const finaleRect = finaleSection.getBoundingClientRect();
-                if (e.clientY >= finaleRect.top && e.clientY <= finaleRect.bottom) {
-                    burst(e.clientX - finaleRect.left, e.clientY - finaleRect.top);
-                }
-            }
-        });
-
-        function burst(x, y) {
-            const count = 16;
-            for (let i = 0; i < count; i++) {
-                bursts.push({
-                    x, y,
-                    vx: (Math.random()-0.5)*6,
-                    vy: (Math.random()-0.8)*6-2,
-                    life: 60 + Math.random()*20
-                });
-            }
-        }
-
-        const topCanvas = document.getElementById('particles-canvas');
-        if (topCanvas) {
-            const tctx = topCanvas.getContext('2d');
-            function resizeTop() {
-                const dpr = Math.min(devicePixelRatio||1, 2);
-                const finaleSection = document.querySelector('.finale');
-                if (finaleSection) {
-                    const finaleRect = finaleSection.getBoundingClientRect();
-                    topCanvas.width = Math.floor(finaleRect.width * dpr);
-                    topCanvas.height = Math.floor(finaleRect.height * dpr);
-                    topCanvas.style.width = '100%';
-                    topCanvas.style.height = '100%';
-                }
-            }
-            addEventListener('resize', resizeTop, { passive: true });
-            resizeTop();
-
-            function loopParticles() {
-                tctx.clearRect(0, 0, topCanvas.width, topCanvas.height);
-                for (let i = bursts.length - 1; i >= 0; i--) {
-                    const p = bursts[i];
-                    p.x += p.vx;
-                    p.y += p.vy;
-                    p.vy += 0.12;
-                    p.life -= 1;
-                    const alpha = Math.max(0, Math.min(1, p.life/80));
-                    tctx.beginPath();
-                    tctx.fillStyle = `rgba(0, 153, 204, ${alpha})`;
-                    tctx.arc(p.x * (devicePixelRatio||1), p.y * (devicePixelRatio||1), 3 * (devicePixelRatio||1), 0, Math.PI*2);
-                    tctx.fill();
-                    if (p.life <= 0) bursts.splice(i, 1);
-                }
-                requestAnimationFrame(loopParticles);
-            }
-            loopParticles();
-        }
-    </script>
+</div>
 </body>
 </html>
