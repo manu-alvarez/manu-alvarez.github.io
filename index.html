@@ -3,273 +3,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manu Álvarez | CV & Portfolio</title>
-    <meta name="description" content="Currículum y portfolio de Manu Álvarez. Técnico IT, automatización, IA aplicada y gestión logística.">
-
+    <title>Manuel Alvarez Dianez - Portfolio</title>
     <style>
-        body {
-            margin: 0;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen;
-            background: #0f0f14;
-            color: #e6e6eb;
-            line-height: 1.6;
-        }
+        /* ======================== ESTILOS ======================== */
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:#fff; min-height:100vh; background:#000; overflow-x:hidden; }
+        .container { max-width:1200px; margin:0 auto; padding:40px 20px; }
 
-        a {
-            color: #5eead4;
-            text-decoration: none;
-        }
+        /* Header */
+        .header { text-align:center; margin-bottom:60px; }
+        .profile-img { width:120px; height:120px; border-radius:50%; background:url('https://i.imgur.com/FcyV3nJ.png') center/cover; margin:0 auto 20px; box-shadow:0 0 40px rgba(0,0,119,0.9),0 0 60px rgba(0,0,119,0.6),0 0 80px rgba(0,0,119,0.4); border:2px solid #000077; }
+        h1 { font-size:2.5em; margin-bottom:10px; text-shadow:0 0 30px rgba(0,0,119,1),0 0 50px rgba(0,0,119,0.8),0 0 70px rgba(0,0,119,0.6); }
+        .subtitle { font-size:1.1em; color:#56bffb; margin-bottom:5px; }
+        .tagline { color:#56bffb; max-width:800px; margin:20px auto; line-height:1.8; text-align:justify; }
 
-        a:hover {
-            text-decoration: underline;
-        }
+        /* Botones neón */
+        .btn-group { display:flex; gap:15px; justify-content:center; margin-top:30px; flex-wrap:wrap; }
+        .btn-neon { padding:12px 30px; background:transparent; border:2px solid #000077; color:#fff; text-decoration:none; border-radius:8px; font-weight:bold; transition:all 0.3s ease; box-shadow:0 0 25px rgba(0,0,119,0.8),inset 0 0 25px rgba(0,0,119,0.3); text-shadow:0 0 15px rgba(0,0,119,1); }
+        .btn-neon:hover { background:rgba(0,0,119,0.3); box-shadow:0 0 40px rgba(0,0,119,1),0 0 60px rgba(0,0,119,0.8),inset 0 0 30px rgba(0,0,119,0.4); transform:translateY(-2px); }
+        .btn-primary { background:linear-gradient(135deg,#00bfff 0%,#0099cc 100%); border:2px solid #000077; box-shadow:0 0 30px rgba(0,0,119,0.8),0 0 50px rgba(0,0,119,0.6); }
+        .btn-primary:hover { box-shadow:0 0 50px rgba(0,0,119,1),0 0 70px rgba(0,0,119,0.8); }
 
-        .container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 40px 20px;
-        }
+        /* Secciones */
+        .section { margin-bottom:60px; }
+        .section-title { font-size:2em; text-align:center; margin-bottom:40px; text-shadow:0 0 30px rgba(0,0,119,1),0 0 50px rgba(0,0,119,0.8); }
+        .section-subtitle { text-align:center; color:#fff; margin-bottom:40px; }
 
-        header {
-            margin-bottom: 50px;
-        }
+        /* Grid de proyectos */
+        .projects-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:30px; }
+        .project-card { background:rgba(10,10,20,0.6); border:2px solid rgba(0,0,119,0.6); border-radius:12px; padding:25px; transition:all 0.3s ease; backdrop-filter:blur(10px); box-shadow:0 0 20px rgba(0,0,119,0.5),inset 0 0 20px rgba(0,0,119,0.1); }
+        .project-card:hover { border-color:rgba(0,0,119,1); box-shadow:0 0 40px rgba(0,0,119,0.8),0 0 60px rgba(0,0,119,0.5),inset 0 0 30px rgba(0,0,119,0.2); transform:translateY(-5px); }
+        .project-title { font-size:1.3em; margin-bottom:15px; color:#66d9ff; text-shadow:0 0 15px rgba(0,0,119,0.8); }
+        .project-desc { color:#fff; margin-bottom:10px; line-height:1.5; }
+        .tags { display:flex; flex-wrap:wrap; gap:8px; margin:15px 0; }
+        .tag { background:rgba(0,0,119,0.3); border:2px solid rgba(0,0,119,0.7); padding:4px 12px; border-radius:15px; font-size:0.85em; color:#66d9ff; box-shadow:0 0 15px rgba(0,0,119,0.5); }
+        .project-buttons { display:flex; gap:10px; margin-top:15px; }
+        .project-btn { flex:1; padding:8px 20px; font-size:0.9em; text-align:center; }
 
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
+        /* Habilidades */
+        .skills-section { margin-bottom:60px; }
+        .skills-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; max-width:1000px; margin:0 auto; }
+        .skill-item { background:rgba(10,10,20,0.6); border:2px solid rgba(0,0,119,0.4); border-radius:10px; padding:20px; transition:all 0.3s ease; cursor:pointer; box-shadow:0 0 12px rgba(0,0,119,0.3),inset 0 0 12px rgba(0,0,119,0.08); }
+        .skill-item:hover, .skill-item:active { border-color:rgba(0,0,119,0.8); box-shadow:0 0 25px rgba(0,0,119,0.7),0 0 40px rgba(0,0,119,0.5),inset 0 0 20px rgba(0,0,119,0.25); transform:translateY(-3px) scale(1.02); background:rgba(0,0,119,0.12); }
+        .skill-category-name { font-size:1.1em; color:#66d9ff; margin-bottom:10px; font-weight:bold; text-shadow:0 0 10px rgba(0,0,119,0.8); }
+        .skill-list { color:#fff; line-height:1.6; font-size:0.95em; }
 
-        h2 {
-            font-size: 1.6rem;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #2a2a35;
-            padding-bottom: 6px;
-        }
+        /* Timeline */
+        .timeline { max-width:800px; margin:0 auto; }
+        .timeline-item { background:rgba(10,10,20,0.6); border-left:4px solid #000077; padding:25px; margin-bottom:25px; border-radius:8px; box-shadow:0 0 20px rgba(0,0,119,0.4),inset 0 0 15px rgba(0,0,119,0.1); border:2px solid rgba(0,0,119,0.5); transition:all 0.3s ease; }
+        .timeline-item:hover { box-shadow:0 0 35px rgba(0,0,119,0.7),0 0 50px rgba(0,0,119,0.4),inset 0 0 25px rgba(0,0,119,0.2); border-color:rgba(0,0,119,0.8); }
+        .timeline-title { font-size:1.3em; color:#66d9ff; margin-bottom:5px; text-shadow:0 0 10px rgba(0,0,119,0.8); }
+        .timeline-period { color:#56bffb; font-size:0.9em; margin-bottom:15px; }
+        .timeline-desc { color:#fff; line-height:1.6; }
 
-        h3 {
-            margin: 0 0 10px 0;
-        }
+        /* Finale interactivo */
+        .finale { position:relative; min-height:60vh; display:grid; place-items:center; overflow:hidden; isolation:isolate; border:2px solid rgba(0,0,119,0.6); border-radius:12px; margin-top:60px; box-shadow:0 0 25px rgba(0,0,119,0.5),inset 0 0 20px rgba(0,0,119,0.1); background:#000; }
+        #fx-bg { position:absolute; inset:0; width:100%; height:100%; z-index:-1; filter:contrast(110%) saturate(120%); }
+        .glow { position:absolute; inset:-20% -10% auto -10%; height:60vh; z-index:0; background:radial-gradient(60% 60% at 50% 50%, rgba(0,0,119,0.25), rgba(0,0,119,0.08) 45%, transparent 70%); mix-blend-mode:screen; filter:blur(40px); animation:float 18s ease-in-out infinite alternate; }
+        .glow.g2 { inset:auto -10% -20% -10%; height:50vh; animation-duration:22s; opacity:.8; }
+        @keyframes float { from { transform:translateY(-2vh) } to { transform:translateY(2vh) } }
 
-        .subtitle {
-            color: #9ca3af;
-            font-size: 1.1rem;
-        }
+        .finale-content { position:relative; z-index:2; text-align:center; padding:4rem 1.5rem; display:grid; gap:1.25rem; place-items:center; width:min(1100px,92vw); }
+        .finale h2 { margin:0; font-weight:800; line-height:.95; letter-spacing:-0.02em; font-size:clamp(2.2rem,5.5vw,5rem); background:linear-gradient(180deg,#fff,#66d9ff 45%,#000077 85%); -webkit-background-clip:text; background-clip:text; color:transparent; filter:drop-shadow(0 10px 30px rgba(0,0,119,0.3)); }
+        .swapper { display:inline-grid; place-items:center; position:relative; width:1ch; }
+        .word { grid-area:1/1; opacity:0; transform:translateY(14%) scale(.98); filter:blur(4px); transition:opacity .7s cubic-bezier(.2,.8,.2,1), transform .7s cubic-bezier(.2,.8,.2,1), filter .7s; white-space:nowrap; }
+        .word.active { opacity:1; transform:translateY(0) scale(1); filter:blur(0); }
+        p.finale-sub { margin:.25rem 0 0; opacity:.9; font-size:clamp(.95rem,1.5vw,1.15rem); color:#fff; }
+        .pulse { height:2px; width:180px; background:linear-gradient(90deg, transparent,#000077,transparent); opacity:.7; position:relative; overflow:hidden; border-radius:2px; margin-top:.5rem; }
+        .pulse::after { content:""; position:absolute; inset:0; transform:translateX(-100%); background:linear-gradient(90deg, transparent,#fff,transparent); animation:sweep 2.2s linear infinite; mix-blend-mode:screen; }
+        @keyframes sweep { to { transform:translateX(100%) } }
+        .magnet { position:absolute; width:160px; aspect-ratio:1; border-radius:50%; pointer-events:none; inset:0; margin:auto; z-index:1; background:radial-gradient(circle at 50% 50%, rgba(0,0,119,0.3), rgba(0,0,119,0.15) 40%, transparent 60%); filter:blur(14px); opacity:0; transition:opacity .3s; }
 
-        .section {
-            margin-bottom: 50px;
-        }
-
-        .project-card {
-            background: #161622;
-            border: 1px solid #2a2a35;
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 25px;
-        }
-
-        .project-desc {
-            margin: 8px 0;
-            color: #d1d5db;
-        }
-
-        .tags {
-            margin-top: 10px;
-        }
-
-        .tag {
-            display: inline-block;
-            background: #1f2933;
-            color: #93c5fd;
-            padding: 4px 10px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            margin-right: 6px;
-            margin-bottom: 6px;
-        }
-
-        .project-buttons {
-            margin-top: 15px;
-        }
-
-        .btn-neon {
-            display: inline-block;
-            padding: 8px 14px;
-            border-radius: 8px;
-            border: 1px solid #5eead4;
-            color: #5eead4;
-            font-size: 0.9rem;
-            margin-right: 10px;
-        }
-
-        .btn-neon:hover {
-            background: #5eead4;
-            color: #0f0f14;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 25px;
-        }
-
-        .skill-box {
-            background: #161622;
-            border: 1px solid #2a2a35;
-            border-radius: 10px;
-            padding: 20px;
-        }
-
-        .skill-category-name {
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        footer {
-            text-align: center;
-            color: #9ca3af;
-            font-size: 0.85rem;
-            margin-top: 60px;
-        }
+        /* Footer */
+        footer { text-align:center; padding:30px; color:#fff; margin-top:60px; }
+        @media(max-width:768px){ h1{ font-size:2em; } .btn-group{ flex-direction:column; align-items:center; } .projects-grid{ grid-template-columns:1fr; } .project-buttons{ flex-direction:column; } }
     </style>
 </head>
-
 <body>
-<div class="container">
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <br>
+            <div class="profile-img"></div>
+            <h1>Manuel Alvarez Dianez</h1>
+            <br>
+            <h3 class="project-title">Junior IT · Técnico de Sistemas y Redes · Developer</h3>
+            <br><br><br><br><br>
 
-    <!-- HEADER -->
-    <header>
-        <h1>Manu Álvarez</h1>
-        <p class="subtitle">
-            Técnico IT · Automatización · IA aplicada · Gestión de trabajo y logística
-        </p>
-    </header>
+            <!-- Perfil -->
+            <section id="Perfil" class="section">
+                <h2 class="section-title">Perfil</h2>
+                <p class="tagline"><center>Técnico de Sistemas y Redes (Junior IT) con experiencia en entornos Windows y Linux, redes y administración básica de servicios, enfocado en mantener la infraestructura estable y resolver incidencias con rapidez.</p></center>
+                <p class="tagline"><center>Iniciándome como desarrollador, materializo ideas en proyectos funcionales, integrando nuevas herramientas como Antigravity, NotebookLM y AI Studio con automatizaciones diarias, así como modelos de gestión de trabajo logístico mediante Trello y metodología Kanban.</p></center>
+                <p class="tagline"><center>Busco aportar fiabilidad operativa, eficiencia y seguir creciendo en entornos profesionales con enfoque en innovación tecnológica.</p></center>
+                <br><br><br><br><br>
+        </header>
 
-    <!-- PERFIL -->
-    <section class="section" id="perfil">
-        <h2>Perfil profesional</h2>
-        <p>
-            Técnico informático con base sólida en sistemas y soporte IT, orientado a la creación
-            de soluciones prácticas mediante automatización, inteligencia artificial aplicada y
-            organización eficiente del trabajo.
-        </p>
-        <p>
-            Actualmente desarrollo proyectos digitales vivos (webs, apps y contenido automatizado)
-            y modelos de gestión operativa basados en metodologías ágiles como Kanban,
-            aplicadas a contextos reales.
-        </p>
-    </section>
+        <!-- Proyectos -->
+        <section id="proyectos" class="section">
+            <h2 class="section-title">Proyectos Destacados</h2>
+            
+            <div class="projects-grid">
+                <!-- Proyecto 1: App Móvil -->
+                <div class="project-card">
+                    <h3 class="project-title">APP Móvil/Escritorio — Expo Go</h3>
+                    <p class="project-desc">React Native (JS/TS). Inicio como Developer en Google</p>
+                    <p class="project-desc"><strong>Uso:</strong> utilidades y contenido propio (calendario temático).</p>
+                    <p class="project-desc"><strong>Finalidad:</strong> publicar y mantener una app en producción (Play Store) con actualizaciones OTA.</p>
+                    <p class="project-desc"><strong>Herramientas:</strong> React Native, Expo, JS/TS, OTA, GitHub.</p>
+                    <p class="project-desc"><strong>Motivación:</strong> consolidar skills móviles y ciclo de despliegue real.</p>
+                    <div class="tags">
+                        <span class="tag">Expo</span>
+                        <span class="tag">Navegación</span>
+                        <span class="tag">OTA</span>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="https://github.com/manu-alvarez/CalendarioMaya-ManoElectricaAzul" target="_blank" class="btn-neon project-btn">GitHub</a>
+                        <a href="https://play.google.com/store/apps/details?id=com.manoelectricaazul.app" target="_blank" class="btn-neon project-btn">Google Play</a>
+                    </div>
+                </div>
 
-    <!-- PROYECTOS -->
-    <section class="section" id="projects">
-        <h2>Proyectos</h2>
+                <!-- Proyecto 2: Webs y contenido con AI -->
+                <div class="project-card">
+                    <h3 class="project-title">Creación de Webs y Apps con IA</h3>
+                    <p class="project-desc">Desarrollo de contenido y aplicaciones usando herramientas Antigravity, NotebookLM y AI Studio</p>
+                    <p class="project-desc"><strong>Uso:</strong> generación y actualización automática diaria de webs y contenido.</p>
+                    <p class="project-desc"><strong>Finalidad:</strong> mantener proyectos dinámicos y actualizados con mínima intervención manual.</p>
+                    <p class="project-desc"><strong>Herramientas:</strong> Antigravity, NotebookLM, AI Studio, automatizaciones, GitHub.</p>
+                    <p class="project-desc"><strong>Motivación:</strong> experimentar y optimizar flujos de creación de contenido y apps mediante IA.</p>
+                    <div class="tags">
+                        <span class="tag">Antigravity</span>
+                        <span class="tag">NotebookLM</span>
+                        <span class="tag">AI Studio</span>
+                        <span class="tag">Automatización</span>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="https://manu-alvarez.github.io/TuEnergiaMaya/" target="_blank" class="btn-neon project-btn">Demo Web</a>
+                        <a href="https://github.com/manu-alvarez/" target="_blank" class="btn-neon project-btn">GitHub</a>
+                    </div>
+                </div>
 
-        <!-- PROYECTO 1: APP (SE MANTIENE) -->
-        <div class="project-card">
-            <h3>APP Móvil y Escritorio</h3>
-            <p class="project-desc">
-                Desarrollo de una aplicación multiplataforma (móvil y escritorio) utilizando Expo Go,
-                orientada a la exploración de contenido interactivo y aprendizaje personal.
-            </p>
-            <p class="project-desc">
-                <strong>Tecnologías:</strong> Expo, JavaScript, HTML, CSS.
-            </p>
-            <div class="tags">
-                <span class="tag">App</span>
-                <span class="tag">Multiplataforma</span>
-                <span class="tag">Expo</span>
-            </div>
-        </div>
-
-        <!-- PROYECTO 2: IA -->
-        <div class="project-card">
-            <h3>Creación de Webs, Apps y Contenido con IA</h3>
-            <p class="project-desc">
-                Desarrollo de sitios web y aplicaciones con contenido dinámico generado y mantenido
-                mediante herramientas de inteligencia artificial.
-            </p>
-            <p class="project-desc">
-                Implementación de automatizaciones para la actualización diaria de contenidos,
-                reduciendo el mantenimiento manual y asegurando coherencia y continuidad.
-            </p>
-            <p class="project-desc">
-                <strong>Herramientas:</strong> Antigravity, NotebookLM, AI Studio, GitHub Pages.
-            </p>
-            <div class="tags">
-                <span class="tag">IA aplicada</span>
-                <span class="tag">Automatización</span>
-                <span class="tag">Web</span>
-            </div>
-            <div class="project-buttons">
-                <a class="btn-neon" href="https://manu-alvarez.github.io/TuEnergiaMaya/" target="_blank">
-                    Ver proyecto
-                </a>
-            </div>
-        </div>
-
-        <!-- PROYECTO 3: LOGÍSTICA -->
-        <div class="project-card">
-            <h3>Modelos de Gestión de Trabajo Logístico (Kanban)</h3>
-            <p class="project-desc">
-                Diseño de modelos de organización del trabajo orientados a entornos logísticos,
-                basados en la metodología Kanban.
-            </p>
-            <p class="project-desc">
-                Uso de tableros visuales para priorización de tareas, seguimiento de flujos
-                y mejora de la eficiencia operativa.
-            </p>
-            <p class="project-desc">
-                <strong>Herramientas:</strong> Trello, Kanban, automatizaciones y plantillas reutilizables.
-            </p>
-            <div class="tags">
-                <span class="tag">Logística</span>
-                <span class="tag">Kanban</span>
-                <span class="tag">Organización</span>
-            </div>
-            <div class="project-buttons">
-                <a class="btn-neon" href="https://trello.com/w/espaciodetrabajo37473965/" target="_blank">
-                    Ver tableros
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section class="section" id="skills">
-        <h2>Skills</h2>
-
-        <div class="grid">
-            <div class="skill-box">
-                <div class="skill-category-name">Sistemas & IT</div>
-                <div>Soporte técnico, mantenimiento, resolución de incidencias, entornos Windows y Linux</div>
-            </div>
-
-            <div class="skill-box">
-                <div class="skill-category-name">Desarrollo Web</div>
-                <div>HTML5, CSS3, JavaScript, GitHub Pages</div>
-            </div>
-
-            <div class="skill-box">
-                <div class="skill-category-name">Inteligencia Artificial</div>
-                <div>
-                    Antigravity, NotebookLM, AI Studio, prompting,
-                    automatización de contenidos, uso práctico de modelos LLM
+                <!-- Proyecto 3: Gestión logística -->
+                <div class="project-card">
+                    <h3 class="project-title">Gestión de Trabajo Logístico (Kanban)</h3>
+                    <p class="project-desc">Desarrollo de modelos de gestión mediante tableros Trello basados en metodología Kanban</p>
+                    <p class="project-desc"><strong>Uso:</strong> planificación y optimización de flujos de trabajo logísticos</p>
+                    <p class="project-desc"><strong>Finalidad:</strong> mejorar la eficiencia operativa y supervisión de tareas.</p>
+                    <p class="project-desc"><strong>Herramientas:</strong> Trello, Kanban, tableros y plantillas personalizadas.</p>
+                    <p class="project-desc"><strong>Motivación:</strong> aplicar metodologías ágiles a la organización real de proyectos.</p>
+                    <div class="tags">
+                        <span class="tag">Kanban</span>
+                        <span class="tag">Trello</span>
+                        <span class="tag">Logística</span>
+                        <span class="tag">Automatización</span>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="https://trello.com/w/espaciodetrabajo37473965/" target="_blank" class="btn-neon project-btn">Ver Tableros</a>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="skill-box">
-                <div class="skill-category-name">Gestión y Organización</div>
-                <div>Kanban, Trello, organización de flujos de trabajo, mejora continua</div>
+        <!-- Skills -->
+        <section id="skills" class="skills-section section">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <div class="skill-category-name">Sistemas y Soporte</div>
+                    <div class="skill-list">Windows / Linux / Redes / Resolución de incidencias / Mantenimiento de servidores</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-category-name">Desarrollo Web & Apps</div>
+                    <div class="skill-list">HTML5 / CSS3 / JS / React Native / Expo / GitHub Pages</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-category-name">Inteligencia Artificial</div>
+                    <div class="skill-list">Antigravity / NotebookLM / AI Studio / Automatización de contenido / LLM aplicado</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-category-name">Gestión y Logística</div>
+                    <div class="skill-list">Kanban / Trello / Organización de flujos / Mejora continua / Eficiencia operativa</div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>
-            © Manu Álvarez · Portfolio y CV · Actualizado
-        </p>
-    </footer>
-
-</div>
+        <footer>
+            <p>© 2026 Manu Álvarez · Portfolio & CV</p>
+        </footer>
+    </div>
 </body>
 </html>
