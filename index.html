@@ -4,17 +4,165 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Manuel Alvarez Dianez - Portfolio</title>
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;color:#fff;min-height:100vh;background:#000;overflow-x:hidden}.container{max-width:1200px;margin:0 auto;padding:40px 20px}.header{text-align:center;margin-bottom:60px}.profile-img{width:120px;height:120px;border-radius:50%;background:url('https://i.imgur.com/FcyV3nJ.png') center/cover;box-shadow:0 0 30px rgba(0,0,119,0.8),0 0 50px rgba(0,0,119,0.5);border:2px solid #000077;margin:0 auto 20px;opacity:0;transform:scale(0.8);animation:fadeScale 0.8s forwards}.header h1{font-size:2.5em;margin-bottom:10px;text-shadow:0 0 20px rgba(0,0,119,0.8),0 0 40px rgba(0,0,119,0.6);opacity:0;animation:fadeScale 0.8s 0.2s forwards}.header h3.subtitle{font-size:1.1em;color:#56bffb;margin-bottom:5px;opacity:0;animation:fadeScale 0.8s 0.4s forwards}.tagline{color:#56bffb;max-width:800px;margin:20px auto;line-height:1.8;text-align:justify;opacity:0;animation:fadeScale 0.8s 0.6s forwards}.btn-neon{padding:12px 30px;background:transparent;border:2px solid #000077;color:#fff;text-decoration:none;border-radius:8px;font-weight:bold;transition:all 0.3s ease;box-shadow:0 0 20px rgba(0,0,119,0.7),inset 0 0 20px rgba(0,0,119,0.2);text-shadow:0 0 12px rgba(0,0,119,1)}.btn-neon:hover{background:rgba(0,0,119,0.2);box-shadow:0 0 35px rgba(0,0,119,0.9),0 0 50px rgba(0,0,119,0.5),inset 0 0 20px rgba(0,0,119,0.2);transform:translateY(-2px)}.section{margin-bottom:60px}.section-title{font-size:2em;text-align:center;margin-bottom:40px;text-shadow:0 0 20px rgba(0,0,119,0.8),0 0 40px rgba(0,0,119,0.6)}.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:25px}.project-card{background:rgba(10,10,20,0.6);border:2px solid rgba(0,0,119,0.6);border-radius:12px;padding:25px;backdrop-filter:blur(8px);box-shadow:0 0 15px rgba(0,0,119,0.4),inset 0 0 15px rgba(0,0,119,0.1);opacity:0;transform:translate3d(0,20px,0)}.project-card.visible{opacity:1;transform:translate3d(0,0,0);transition:all 0.6s ease-out}.project-card:hover{border-color:rgba(0,0,119,1);box-shadow:0 0 35px rgba(0,0,119,0.8),0 0 50px rgba(0,0,119,0.5),inset 0 0 20px rgba(0,0,119,0.2);transform:translateY(-5px)}.project-title{font-size:1.3em;margin-bottom:15px;color:#66d9ff;text-shadow:0 0 12px rgba(0,0,119,0.8)}.project-desc{color:#fff;margin-bottom:10px;line-height:1.5}.project-buttons{display:flex;gap:10px;margin-top:15px}.project-btn{flex:1;padding:8px 20px;font-size:0.9em;text-align:center}.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;max-width:1000px;margin:0 auto}.skill-item{background:rgba(10,10,20,0.6);border:2px solid rgba(0,0,119,0.4);border-radius:10px;padding:20px;transition:all 0.3s ease;opacity:0;transform:scale(0.95)}.skill-item.visible{opacity:1;transform:scale(1);transition:all 0.6s ease-out}.skill-item:hover{border-color:rgba(0,0,119,0.8);box-shadow:0 0 20px rgba(0,0,119,0.6);transform:translateY(-3px) scale(1.02);background:rgba(0,0,119,0.12)}.skill-category-name{font-size:1.1em;color:#66d9ff;margin-bottom:10px;font-weight:bold;text-shadow:0 0 10px rgba(0,0,119,0.8)}.skill-list{color:#fff;line-height:1.6;font-size:0.95em}.timeline{max-width:900px;margin:0 auto}.timeline-item{background:rgba(10,10,20,0.6);border-left:4px solid #000077;padding:25px;margin-bottom:25px;border-radius:8px;box-shadow:0 0 15px rgba(0,0,119,0.3),inset 0 0 10px rgba(0,0,119,0.08);opacity:0;transform:translate3d(-30px,0,0)}.timeline-item.visible{opacity:1;transform:translate3d(0,0,0);transition:all 0.6s ease-out}.timeline-title{font-size:1.3em;color:#66d9ff;margin-bottom:5px;text-shadow:0 0 10px rgba(0,0,119,0.8)}.timeline-period{color:#56bffb;font-size:0.9em;margin-bottom:15px}.timeline-desc{color:#fff;line-height:1.6}footer{text-align:center;padding:30px;color:#fff;margin-top:60px}@keyframes fadeScale{from{opacity:0;transform:scale(0.8)}to{opacity:1;transform:scale(1)}}@media(max-width:768px){h1{font-size:2em}.projects-grid{grid-template-columns:1fr}.project-buttons{flex-direction:column}.skills-grid{grid-template-columns:1fr}}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+  color:#fff;
+  min-height:100vh;
+  background:#000;
+  overflow-x:hidden
+}
+.container{max-width:1200px;margin:0 auto;padding:40px 20px}
+
+.header{text-align:center;margin-bottom:60px}
+.profile-img{
+  width:120px;height:120px;border-radius:50%;
+  background:url('https://i.imgur.com/FcyV3nJ.png') center/cover;
+  box-shadow:0 0 30px rgba(0,0,119,0.8),0 0 50px rgba(0,0,119,0.5);
+  border:2px solid #000077;margin:0 auto 20px;
+  opacity:0;transform:scale(0.8);
+  animation:fadeScale 0.8s forwards
+}
+.header h1{
+  font-size:2.5em;margin-bottom:10px;
+  text-shadow:0 0 20px rgba(0,0,119,0.8),0 0 40px rgba(0,0,119,0.6);
+  opacity:0;animation:fadeScale 0.8s 0.2s forwards
+}
+.header h3.subtitle{
+  font-size:1.1em;color:#56bffb;margin-bottom:5px;
+  opacity:0;animation:fadeScale 0.8s 0.4s forwards
+}
+.tagline{
+  color:#56bffb;max-width:800px;margin:20px auto;
+  line-height:1.8;text-align:justify;
+  opacity:0;animation:fadeScale 0.8s 0.6s forwards
+}
+
+.btn-neon{
+  padding:12px 30px;background:transparent;
+  border:2px solid #000077;color:#fff;
+  text-decoration:none;border-radius:8px;
+  font-weight:bold;transition:all 0.3s ease;
+  box-shadow:0 0 20px rgba(0,0,119,0.7),inset 0 0 20px rgba(0,0,119,0.2);
+  text-shadow:0 0 12px rgba(0,0,119,1)
+}
+.btn-neon:hover{
+  background:rgba(0,0,119,0.2);
+  box-shadow:0 0 35px rgba(0,0,119,0.9),0 0 50px rgba(0,0,119,0.5);
+  transform:translateY(-2px)
+}
+
+.section{margin-bottom:60px}
+.section-title{
+  font-size:2em;text-align:center;margin-bottom:40px;
+  text-shadow:0 0 20px rgba(0,0,119,0.8),0 0 40px rgba(0,0,119,0.6)
+}
+
+/* PROYECTOS */
+.projects-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:25px
+}
+.project-card{
+  background:rgba(10,10,20,0.6);
+  border:2px solid rgba(0,0,119,0.6);
+  border-radius:12px;padding:25px;
+  backdrop-filter:blur(8px);
+  box-shadow:0 0 15px rgba(0,0,119,0.4);
+  opacity:0;transform:translateY(20px)
+}
+.project-card.visible{
+  opacity:1;transform:translateY(0);
+  transition:all 0.6s ease-out
+}
+.project-title{font-size:1.3em;margin-bottom:15px;color:#66d9ff}
+.project-desc{margin-bottom:10px;line-height:1.5}
+
+/* SKILLS */
+.skills-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:20px
+}
+.skill-item{
+  background:rgba(10,10,20,0.6);
+  border:2px solid rgba(0,0,119,0.4);
+  border-radius:10px;padding:20px;
+  opacity:0;transform:scale(0.95)
+}
+.skill-item.visible{
+  opacity:1;transform:scale(1);
+  transition:all 0.6s ease-out
+}
+.skill-category-name{color:#66d9ff;font-weight:bold;margin-bottom:10px}
+
+/* CONTACTO ✅ */
+.contact-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+  max-width:900px;
+  margin:0 auto
+}
+.contact-card{
+  display:flex;
+  align-items:center;
+  gap:15px;
+  cursor:default
+}
+.contact-card .icon{
+  font-size:1.8em;
+  filter:drop-shadow(0 0 6px rgba(0,0,119,0.8))
+}
+.contact-card a{
+  color:#56bffb;
+  text-decoration:none;
+  word-break:break-all
+}
+.contact-card a:hover{
+  text-decoration:underline;
+  color:#66d9ff
+}
+
+/* TIMELINE */
+.timeline{max-width:900px;margin:0 auto}
+.timeline-item{
+  background:rgba(10,10,20,0.6);
+  border-left:4px solid #000077;
+  padding:25px;margin-bottom:25px;
+  opacity:0;transform:translateX(-30px)
+}
+.timeline-item.visible{
+  opacity:1;transform:translateX(0);
+  transition:all 0.6s ease-out
+}
+
+footer{text-align:center;padding:30px;margin-top:60px}
+
+@keyframes fadeScale{
+  from{opacity:0;transform:scale(0.8)}
+  to{opacity:1;transform:scale(1)}
+}
+
+@media(max-width:768px){
+  .projects-grid,.skills-grid,.contact-grid{grid-template-columns:1fr}
+}
 </style>
 </head>
+
 <body>
 <div class="container">
+
 <header class="header">
-<div class="profile-img"></div>
-<h1>Manuel Alvarez Dianez</h1>
-<h3 class="subtitle">Técnico Informático & Desarrollador de Soluciones Digitales y Automatización</h3>
-<p class="tagline">Técnico informático con base sólida en sistemas y soporte IT, orientado a la creación de soluciones prácticas mediante automatización, inteligencia artificial aplicada y organización eficiente del trabajo. Actualmente desarrollo proyectos digitales vivos (webs, apps y contenido automatizado) y modelos de gestión operativa basados en metodologías ágiles como Kanban. Perfil resolutivo, organizado y orientado a la mejora continua, con enfoque práctico en eficiencia operativa y aprendizaje constante.</p>
+  <div class="profile-img"></div>
+  <h1>Manuel Alvarez Dianez</h1>
+  <h3 class="subtitle">Técnico Informático & Desarrollador de Soluciones Digitales</h3>
+  <p class="tagline">
+    Técnico informático orientado a automatización, IA aplicada y eficiencia operativa.
+  </p>
 </header>
 
 <section id="proyectos" class="section">
@@ -80,62 +228,42 @@
   <h2 class="section-title">Contacto</h2>
 
   <div class="contact-grid">
-
     <div class="skill-item contact-card">
-      <div class="icon">
-        📧
-      </div>
-      <div class="skill-list">
-        <a href="mailto:manuelalvarezdianez@hotmail.com">
-          manuelalvarezdianez@hotmail.com
-        </a>
-      </div>
+      <div class="icon">📧</div>
+      <div><a href="mailto:manuelalvarezdianez@hotmail.com">manuelalvarezdianez@hotmail.com</a></div>
     </div>
 
     <div class="skill-item contact-card">
-      <div class="icon">
-        💼
-      </div>
-      <div class="skill-list">
-        <a href="https://www.linkedin.com/in/manu-alvarez-dev/" target="_blank">
-          linkedin.com/in/manu-alvarez-dev
-        </a>
-      </div>
+      <div class="icon">💼</div>
+      <div><a href="https://www.linkedin.com/in/manu-alvarez-dev/" target="_blank">linkedin.com/in/manu-alvarez-dev</a></div>
     </div>
 
     <div class="skill-item contact-card">
-      <div class="icon">
-        🧑‍💻
-      </div>
-      <div class="skill-list">
-        <a href="https://github.com/manu-alvarez" target="_blank">
-          github.com/manu-alvarez
-        </a>
-      </div>
+      <div class="icon">🧑‍💻</div>
+      <div><a href="https://github.com/manu-alvarez" target="_blank">github.com/manu-alvarez</a></div>
     </div>
 
     <div class="skill-item contact-card">
-      <div class="icon">
-        📍
-      </div>
-      <div class="skill-list">
-        España · Remoto / Presencial
-      </div>
+      <div class="icon">📍</div>
+      <div>España · Remoto / Presencial</div>
     </div>
-
   </div>
 </section>
 
-
-<footer><p>© 2026 Manu Álvarez · Portfolio & CV</p></footer>
+<footer>© 2026 Manu Álvarez · Portfolio & CV</footer>
 </div>
 
 <script>
-const observerOptions={threshold:0.25};
-const observer=new IntersectionObserver((entries)=>{
-entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});
-},observerOptions);
-document.querySelectorAll('.project-card,.skill-item,.timeline-item').forEach(el=>observer.observe(el));
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting)e.target.classList.add('visible')
+  })
+},{threshold:0.25})
+
+document.querySelectorAll(
+  '.project-card,.skill-item,.timeline-item'
+).forEach(el=>observer.observe(el))
 </script>
+
 </body>
 </html>
