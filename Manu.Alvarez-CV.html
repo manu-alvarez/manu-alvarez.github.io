@@ -1,49 +1,157 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Manuel Alvarez - CV</title>
     <style>
-        :root { --primary: #2563eb; --dark: #1e293b; --text: #334155; }
-        body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.4; color: var(--text); margin: 0; padding: 0; }
-        .page { width: 210mm; min-height: 297mm; padding: 15mm; margin: auto; background: white; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        header { border-bottom: 2px solid var(--primary); padding-bottom: 10px; margin-bottom: 15px; }
-        h1 { margin: 0; color: var(--dark); font-size: 24pt; text-transform: uppercase; }
-        .subtitle { color: var(--primary); font-weight: bold; font-size: 12pt; }
-        .contact { font-size: 9pt; margin-top: 5px; display: flex; gap: 10px; flex-wrap: wrap; }
-        section { margin-bottom: 15px; }
-        h2 { font-size: 14pt; border-left: 4px solid var(--primary); padding-left: 8px; color: var(--dark); margin: 15px 0 8px 0; background: #f8fafc; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-        .skill-cat { font-weight: bold; color: var(--dark); font-size: 10pt; margin-top: 5px; }
-        .skill-list { font-size: 9pt; }
-        .item { margin-bottom: 8px; }
-        .item-title { font-weight: bold; color: var(--dark); font-size: 11pt; display: flex; justify-content: space-between; }
-        .item-date { font-size: 9pt; color: #64748b; }
-        p { font-size: 9.5pt; margin: 4px 0; text-align: justify; }
-        ul { margin: 4px 0; padding-left: 18px; font-size: 9pt; }
-        @media print { 
-            body { background: none; } 
-            .page { box-shadow: none; margin: 0; width: 100%; padding: 10mm; }
-            .no-print { display: none; }
+        :root {
+            --primary: #2563eb;
+            --dark: #1e293b;
+            --text: #334155;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.4;
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 15mm;
+            margin: auto;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            margin: 0;
+            color: var(--dark);
+            font-size: 24pt;
+            text-transform: uppercase;
+        }
+
+        .subtitle {
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 12pt;
+        }
+
+        .contact {
+            font-size: 9pt;
+            margin-top: 5px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        section {
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            font-size: 14pt;
+            border-left: 4px solid var(--primary);
+            padding-left: 8px;
+            color: var(--dark);
+            margin: 15px 0 8px 0;
+            background: #f8fafc;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .skill-cat {
+            font-weight: bold;
+            color: var(--dark);
+            font-size: 10pt;
+            margin-top: 5px;
+        }
+
+        .skill-list {
+            font-size: 9pt;
+        }
+
+        .item {
+            margin-bottom: 8px;
+        }
+
+        .item-title {
+            font-weight: bold;
+            color: var(--dark);
+            font-size: 11pt;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .item-date {
+            font-size: 9pt;
+            color: #64748b;
+        }
+
+        p {
+            font-size: 9.5pt;
+            margin: 4px 0;
+            text-align: justify;
+        }
+
+        ul {
+            margin: 4px 0;
+            padding-left: 18px;
+            font-size: 9pt;
+        }
+
+        @media print {
+            body {
+                background: none;
+            }
+
+            .page {
+                box-shadow: none;
+                margin: 0;
+                width: 100%;
+                padding: 10mm;
+            }
+
+            .no-print {
+                display: none;
+            }
         }
     </style>
 </head>
+
 <body>
     <div class="page">
         <header>
             <h1>Manuel Álvarez Diánez</h1>
             <div class="subtitle">Técnico Informático & Desarrollador de Soluciones Digitales</div>
             <div class="contact">
-                <span>📍 España (Remoto/Presencial)</span> | 
-                <span>📧 manuelalvarezdianez@hotmail.com</span> | 
-                <span>🔗 linkedin.com/in/manu-alvarez-dev</span> | 
+                <span>📍 España (Remoto/Presencial)</span> |
+                <span>📧 manuelalvarezdianez@hotmail.com</span> |
+                <span>🔗 linkedin.com/in/manu-alvarez-dev</span> |
                 <span>💻 github.com/manu-alvarez</span>
             </div>
         </header>
 
         <section>
             <h2>Perfil Profesional</h2>
-            <p>Especialista en <strong>ecosistemas de gestión híbrida</strong> que unen la planificación estratégica de alto nivel con el control operativo de campo. Experto en convertir el caos de datos en un flujo de trabajo ordenado, bilingüe y eficiente mediante la integración de automatización, IA aplicada y metodologías ágiles (Scrumban).</p>
+            <p>Especialista en <strong>ecosistemas de gestión híbrida</strong> que unen la planificación estratégica de
+                alto nivel con el control operativo de campo. Experto en convertir el caos de datos en un flujo de
+                trabajo ordenado, bilingüe y eficiente mediante la integración de automatización, IA aplicada y
+                metodologías ágiles (Scrumban).</p>
         </section>
 
         <div class="grid">
@@ -51,12 +159,13 @@
                 <h2>Skills Técnicas</h2>
                 <div class="skill-cat">Sistemas & Soporte IT</div>
                 <div class="skill-list">Windows/Linux, Active Directory, Virtualización, Docker, Redes.</div>
-                
+
                 <div class="skill-cat">Desarrollo Web & Apps</div>
                 <div class="skill-list">JS/TypeScript, React, React Native, Expo, Git, HTML5/CSS3.</div>
-                
+
                 <div class="skill-cat">IA & Automatización</div>
-                <div class="skill-list">AI Orchestration, Coding Agents, Agentic Workflows, Automatización de contenido.</div>
+                <div class="skill-list">AI Orchestration, Coding Agents, Agentic Workflows, Automatización de contenido.
+                </div>
 
                 <div class="skill-cat">Gestión Operativa</div>
                 <div class="skill-list">Scrumban, Trello, Optimización de procesos, Gestión de datos.</div>
@@ -67,6 +176,8 @@
                 <div class="item">
                     <div class="item-title">Cisco CCST Cybersecurity</div>
                     <div class="item-title">Cisco CCST Networking</div>
+                    <div class="item-title">Kanban Essentials Certified (KEC)</div>
+                    <div class="item-title">Scrum Fundamentals Certified (SFC)</div>
                 </div>
             </section>
         </div>
@@ -74,11 +185,14 @@
         <section>
             <h2>Experiencia y Formación</h2>
             <div class="item">
-                <div class="item-title">Codearts Solutions — IT Systems Internship <span class="item-date">2025</span></div>
-                <p>Administración de sistemas híbridos, despliegues en Docker, configuración de servidores y optimización de entornos de virtualización.</p>
+                <div class="item-title">Codearts Solutions — IT Systems Internship <span class="item-date">2025</span>
+                </div>
+                <p>Administración de sistemas híbridos, despliegues en Docker, configuración de servidores y
+                    optimización de entornos de virtualización.</p>
             </div>
             <div class="item">
-                <div class="item-title">Técnico en Sistemas Microinformáticos y Redes (SMR) <span class="item-date">2022 – 2024</span></div>
+                <div class="item-title">Técnico en Sistemas Microinformáticos y Redes (SMR) <span class="item-date">2022
+                        – 2024</span></div>
                 <p>Formación especializada en hardware, seguridad informática y gestión de infraestructuras de red.</p>
             </div>
         </section>
@@ -94,7 +208,8 @@
             <div class="item">
                 <div class="item-title">Orquestación de Contenido con IA</div>
                 <ul>
-                    <li>Desarrollo de sitios con contenido dinámico mediante agentes de IA y actualización diaria automatizada.</li>
+                    <li>Desarrollo de sitios con contenido dinámico mediante agentes de IA y actualización diaria
+                        automatizada.</li>
                 </ul>
             </div>
             <div class="item">
@@ -106,4 +221,5 @@
         </section>
     </div>
 </body>
+
 </html>
