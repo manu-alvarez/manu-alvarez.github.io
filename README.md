@@ -48,7 +48,7 @@ Implementación de un sistema de gestión visual utilizando un tablero **Trello 
 ## 📫 Contacto
 * **LinkedIn:** [linkedin.com/in/manu-alvarez-dev](https://linkedin.com/in/manu-alvarez-dev)
 * **Email:** [manuelalvarezdianez@hotmail.com](mailto:manuelalvarezdianez@hotmail.com) / [manuelalvarezdianez@gmail.com](mailto:manuelalvarezdianez@gmail.com)
-* * **Web Personal:** [manu-alvarez.github.io](https://manu-alvarez.github.io)
+* **Web Personal:** [manu-alvarez.github.io](https://manu-alvarez.github.io)
 
 ---
 *Aprendiendo y construyendo algo nuevo cada día.*
