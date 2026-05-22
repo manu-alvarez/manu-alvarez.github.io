@@ -3,115 +3,133 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Manuel Alvarez - CV</title>
+    <title>Manuel Alvarez Dianez - Curriculum Vitae</title>
     <style>
         :root {
             --primary: #2563eb;
-            --dark: #1e293b;
+            --dark: #0f172a;
             --text: #334155;
+            --slate-500: #64748b;
         }
 
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
-            line-height: 1.4;
+            line-height: 1.35;
             color: var(--text);
             margin: 0;
             padding: 0;
+            background: #f8fafc;
         }
 
         .page {
             width: 210mm;
             min-height: 297mm;
-            padding: 15mm;
+            padding: 12mm 15mm;
             margin: auto;
             background: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+            box-sizing: border-box;
         }
 
         header {
             border-bottom: 2px solid var(--primary);
-            padding-bottom: 10px;
-            margin-bottom: 15px;
+            padding-bottom: 8px;
+            margin-bottom: 12px;
         }
 
         h1 {
             margin: 0;
             color: var(--dark);
-            font-size: 24pt;
+            font-size: 22pt;
             text-transform: uppercase;
+            letter-spacing: -0.02em;
+            font-weight: 800;
         }
 
         .subtitle {
             color: var(--primary);
             font-weight: bold;
-            font-size: 12pt;
+            font-size: 11pt;
+            margin-top: 2px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
 
         .contact {
-            font-size: 9pt;
-            margin-top: 5px;
+            font-size: 8.5pt;
+            margin-top: 6px;
             display: flex;
-            gap: 10px;
+            gap: 12px;
             flex-wrap: wrap;
+            color: var(--slate-500);
         }
 
         section {
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         h2 {
-            font-size: 14pt;
-            border-left: 4px solid var(--primary);
+            font-size: 12pt;
+            border-left: 3px solid var(--primary);
             padding-left: 8px;
             color: var(--dark);
-            margin: 15px 0 8px 0;
-            background: #f8fafc;
+            margin: 12px 0 8px 0;
+            background: #f1f5f9;
+            font-weight: 700;
         }
 
         .grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1.1fr 0.9fr;
             gap: 15px;
         }
 
         .skill-cat {
             font-weight: bold;
             color: var(--dark);
-            font-size: 10pt;
-            margin-top: 5px;
+            font-size: 9.5pt;
+            margin-top: 4px;
         }
 
         .skill-list {
-            font-size: 9pt;
+            font-size: 8.5pt;
+            margin-bottom: 4px;
+            color: var(--text);
         }
 
         .item {
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .item-title {
             font-weight: bold;
             color: var(--dark);
-            font-size: 11pt;
+            font-size: 10pt;
             display: flex;
             justify-content: space-between;
+            align-items: baseline;
         }
 
         .item-date {
-            font-size: 9pt;
-            color: #64748b;
+            font-size: 8.5pt;
+            color: var(--slate-500);
+            font-weight: normal;
         }
 
         p {
-            font-size: 9.5pt;
-            margin: 4px 0;
+            font-size: 8.5pt;
+            margin: 3px 0;
             text-align: justify;
         }
 
         ul {
-            margin: 4px 0;
-            padding-left: 18px;
-            font-size: 9pt;
+            margin: 3px 0;
+            padding-left: 15px;
+            font-size: 8.5pt;
+        }
+
+        li {
+            margin-bottom: 2px;
         }
 
         @media print {
@@ -123,11 +141,7 @@
                 box-shadow: none;
                 margin: 0;
                 width: 100%;
-                padding: 10mm;
-            }
-
-            .no-print {
-                display: none;
+                padding: 8mm 10mm;
             }
         }
     </style>
@@ -137,47 +151,55 @@
     <div class="page">
         <header>
             <h1>Manuel Álvarez Diánez</h1>
-            <div class="subtitle">Técnico Informático & Desarrollador de Soluciones Digitales</div>
+            <div class="subtitle">Técnico de Sistemas · Especialista en Soporte IT y Software</div>
             <div class="contact">
                 <span>📍 España (Remoto/Presencial)</span> |
-                <span>📧 manuelalvarezdianez@hotmail.com</span> |
-                <span>🔗 linkedin.com/in/manu-alvarez-dev</span> |
+                <span>✉️ manuelalvarezdianez@hotmail.com</span> |
+                <span>💼 linkedin.com/in/manu-alvarez-dev</span> |
                 <span>💻 github.com/manu-alvarez</span>
             </div>
         </header>
 
         <section>
             <h2>Perfil Profesional</h2>
-            <p>Especialista en <strong>ecosistemas de gestión híbrida</strong> que unen la planificación estratégica de
-                alto nivel con el control operativo de campo. Experto en convertir el caos de datos en un flujo de
-                trabajo ordenado, bilingüe y eficiente mediante la integración de automatización, IA aplicada y
-                metodologías ágiles (Scrumban).</p>
+            <p>
+                Técnico de sistemas microinformáticos y redes con experiencia en soporte técnico multiplataforma, virtualización y administración básica de entornos de red. Con un perfil orientado al sentido práctico y la eficiencia, desarrollo utilidades personalizadas e integro herramientas de Inteligencia Artificial para simplificar flujos operativos y resolver incidencias informáticas del día a día de manera honesta y organizada.
+            </p>
         </section>
 
         <div class="grid">
             <section>
-                <h2>Skills Técnicas</h2>
-                <div class="skill-cat">Sistemas & Soporte IT</div>
-                <div class="skill-list">Windows/Linux, Active Directory, Virtualización, Docker, Redes.</div>
+                <h2>Competencias Técnicas</h2>
+                <div class="skill-cat">Sistemas & Redes</div>
+                <div class="skill-list">Administración Windows/Linux, Active Directory, DHCP/DNS, switches, enrutamiento básico y direccionamiento IP.</div>
 
-                <div class="skill-cat">Desarrollo Web & Apps</div>
-                <div class="skill-list">JS/TypeScript, React, React Native, Expo, Git, HTML5/CSS3.</div>
+                <div class="skill-cat">Soporte & Virtualización</div>
+                <div class="skill-list">Diagnóstico físico de averías en hardware, virtualización local (VMware, VirtualBox), Docker y atención a usuarios multiplataforma.</div>
 
-                <div class="skill-cat">IA & Automatización</div>
-                <div class="skill-list">AI Orchestration, Coding Agents, Agentic Workflows, Automatización de contenido.
-                </div>
+                <div class="skill-cat">Desarrollo Web & Base de Datos</div>
+                <div class="skill-list">Soluciones web funcionales (HTML5, CSS3, JavaScript básico, React, React Native, Git/GitHub y PostgreSQL).</div>
 
-                <div class="skill-cat">Gestión Operativa</div>
-                <div class="skill-list">Scrumban, Trello, Optimización de procesos, Gestión de datos.</div>
+                <div class="skill-cat">IA & Productividad</div>
+                <div class="skill-list">Integración de modelos LLM (Gemini, Llama) a través de APIs para flujos de automatización y control operativo.</div>
             </section>
 
             <section>
-                <h2>Certificaciones</h2>
-                <div class="item">
-                    <div class="item-title">Cisco CCST Cybersecurity</div>
+                <h2>Certificaciones Oficiales</h2>
+                <div class="item" style="margin-bottom: 8px;">
                     <div class="item-title">Cisco CCST Networking</div>
+                    <p style="color: var(--slate-500); font-size: 8pt;">Cisco Certified Support Technician (Infraestructura & Redes)</p>
+                </div>
+                <div class="item" style="margin-bottom: 8px;">
+                    <div class="item-title">Cisco CCST Cybersecurity</div>
+                    <p style="color: var(--slate-500); font-size: 8pt;">Cisco Certified Support Technician (Seguridad Operativa)</p>
+                </div>
+                <div class="item" style="margin-bottom: 8px;">
                     <div class="item-title">Kanban Essentials Certified (KEC)</div>
+                    <p style="color: var(--slate-500); font-size: 8pt;">CertiProf Professional ID 1143487</p>
+                </div>
+                <div class="item" style="margin-bottom: 8px;">
                     <div class="item-title">Scrum Fundamentals Certified (SFC)</div>
+                    <p style="color: var(--slate-500); font-size: 8pt;">SCRUMstudy Professional ID 1143492</p>
                 </div>
             </section>
         </div>
@@ -185,37 +207,40 @@
         <section>
             <h2>Experiencia y Formación</h2>
             <div class="item">
-                <div class="item-title">Codearts Solutions — IT Systems Internship <span class="item-date">2025</span>
-                </div>
-                <p>Administración de sistemas híbridos, despliegues en Docker, configuración de servidores y
-                    optimización de entornos de virtualización.</p>
+                <div class="item-title">Codearts Solutions — Internship de Sistemas <span class="item-date">2025</span></div>
+                <p>
+                    Administración de sistemas híbridos Linux/Windows en red, soporte técnico preventivo y correctivo, configuración básica de contenedores Docker, virtualización de servidores locales y control de infraestructura de cableado.
+                </p>
             </div>
-            <div class="item">
-                <div class="item-title">Técnico en Sistemas Microinformáticos y Redes (SMR) <span class="item-date">2022
-                        – 2024</span></div>
-                <p>Formación especializada en hardware, seguridad informática y gestión de infraestructuras de red.</p>
+            <div class="item" style="margin-top: 6px;">
+                <div class="item-title">Técnico en Sistemas Microinformáticos y Redes (SMR) <span class="item-date">2022 – 2024</span></div>
+                <p>
+                    Formación reglada específica: diagnóstico físico de PCs, montaje y mantenimiento de servidores, configuración de sistemas operativos, instalación de redes LAN cableadas/inalámbricas y aseguramiento informático.
+                </p>
             </div>
         </section>
 
         <section>
-            <h2>Proyectos Destacados</h2>
+            <h2>Ecosistema de Proyectos e IA Aplicada (msbross.me)</h2>
             <div class="item">
-                <div class="item-title">App Expo Go (Play Store)</div>
+                <div class="item-title">Sistemas y Utilidades Operativas</div>
                 <ul>
-                    <li>Aplicación multiplataforma para exploración de contenido interactivo.</li>
+                    <li><strong>Newton Mequinenza:</strong> PWA de gestión de incidencias, caducidades y checklists en Estación Repsol.</li>
+                    <li><strong>DOHLER & TaskFlowPro:</strong> Gestores interactivos locales con pomodoro, checklists anidadas y alarmas.</li>
                 </ul>
             </div>
-            <div class="item">
-                <div class="item-title">Orquestación de Contenido con IA</div>
+            <div class="item" style="margin-top: 4px;">
+                <div class="item-title">Integraciones Inteligentes y Voz</div>
                 <ul>
-                    <li>Desarrollo de sitios con contenido dinámico mediante agentes de IA y actualización diaria
-                        automatizada.</li>
+                    <li><strong>IAPuta OS & Nikolina:</strong> Asistentes con visión, orbe reactiva 3D y canal por voz interactivo (LiveKit/Gemini).</li>
+                    <li><strong>App Generator & Arantxa:</strong> Generador de SPAs en tiempo real y traductor neural con lector OCR de imágenes.</li>
                 </ul>
             </div>
-            <div class="item">
-                <div class="item-title">Logitrack - Gestión de Operaciones</div>
+            <div class="item" style="margin-top: 4px;">
+                <div class="item-title">Gestión y Logística</div>
                 <ul>
-                    <li>Diseño de flujos Scrumban para optimización de eficiencia operativa en almacén/campo.</li>
+                    <li><strong>Teringo ERP & LogiSearch:</strong> Catálogo maestro multialmacén B2B y buscador de rutas con PDF formalizado.</li>
+                    <li><strong>Mano Eléctrica Azul (Google Play Store):</strong> App nativa sobre React Native y Expo para seguimiento interactivo.</li>
                 </ul>
             </div>
         </section>
