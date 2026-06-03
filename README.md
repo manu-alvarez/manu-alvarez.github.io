@@ -30,7 +30,7 @@ Como proyecto personal para aprender sobre servidores y programación, mantengo 
 * Uso de PM2 para mantener los procesos activos y estables.
 * Creación de pequeños backends con Python (FastAPI) y NodeJS integrados con APIs de Inteligencia Artificial (Gemini) para experimentar con chatbots, gestión de tareas (TaskFlow) y automatizaciones.
 
-### 📱 [App en Play Store - Mano Eléctrica Azul](https://play.google.com/store/apps/details?id=com.manoelectricaazul.app)
+### 📱 [App Play Store - Mano Eléctrica Azul](https://play.google.com/store/apps/details?id=com.manoelectricaazul.app)
 Aplicación multiplataforma para la exploración de contenido interactivo sobre calendarios mayas. Desarrollada de forma autodidacta usando React Native y Expo para aprender el proceso completo de publicación en Android.
 
 ### 📦 [Logitrack - Gestión de Operaciones](https://trello.com/b/IRVpzuUt/logitrack-operaciones-de-almacen)
