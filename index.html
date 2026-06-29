@@ -162,14 +162,17 @@
                             <button onclick="filterCategory('all')" id="btn-all" class="px-3 py-1.5 rounded-full font-semibold transition-all bg-primary text-white border border-primary/20">
                                 Todas
                             </button>
-                            <button onclick="filterCategory('sistemas')" id="btn-sistemas" class="px-3 py-1.5 rounded-full font-semibold transition-all bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200">
-                                Sistemas
-                            </button>
                             <button onclick="filterCategory('ia')" id="btn-ia" class="px-3 py-1.5 rounded-full font-semibold transition-all bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200">
-                                IA & Voz
+                                🤖 IA
                             </button>
-                            <button onclick="filterCategory('empresa')" id="btn-empresa" class="px-3 py-1.5 rounded-full font-semibold transition-all bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200">
-                                Gestión
+                            <button onclick="filterCategory('herramientas')" id="btn-herramientas" class="px-3 py-1.5 rounded-full font-semibold transition-all bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200">
+                                🛠️ Herramientas
+                            </button>
+                            <button onclick="filterCategory('negocio')" id="btn-negocio" class="px-3 py-1.5 rounded-full font-semibold transition-all bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200">
+                                💼 Negocio
+                            </button>
+                            <button onclick="filterCategory('personal')" id="btn-personal" class="px-3 py-1.5 rounded-full font-semibold transition-all bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200">
+                                🌟 Personal
                             </button>
                         </div>
                     </div>
@@ -182,6 +185,7 @@
                     <div id="apps-container" class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         
                         <!-- IAPuta OS -->
+                        <!-- IAPuta OS → IA -->
                         <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="ia">
                             <div class="flex items-center gap-3 mb-3">
                                 <span class="text-2xl">🤖</span>
@@ -200,6 +204,7 @@
                         </div>
 
                         <!-- LIVEKIT Nikolina -->
+                        <!-- LIVEKIT Nikolina → IA -->
                         <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="ia">
                             <div class="flex items-center gap-3 mb-3">
                                 <span class="text-2xl">🎙️</span>
@@ -217,8 +222,8 @@
                             </div>
                         </div>
 
-                        <!-- Gas Station -->
-                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="sistemas">
+                        <!-- Gas Station → Negocio -->
+                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="negocio">
                             <div class="flex items-center gap-3 mb-3">
                                 <span class="text-2xl">⛽</span>
                                 <div>
@@ -235,8 +240,8 @@
                             </div>
                         </div>
 
-                        <!-- Mano Eléctrica Azul -->
-                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="sistemas">
+                        <!-- Mano Eléctrica Azul → Personal -->
+                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="personal">
                             <div class="flex items-center gap-3 mb-3">
                                 <span class="text-2xl">📱</span>
                                 <div>
@@ -253,8 +258,8 @@
                             </div>
                         </div>
 
-                        <!-- Perfume Trading ERP -->
-                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="empresa">
+                        <!-- Perfume Trading → Negocio -->
+                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="negocio">
                             <div class="flex items-center gap-3 mb-3">
                                 <span class="text-2xl">💼</span>
                                 <div>
@@ -271,7 +276,7 @@
                             </div>
                         </div>
 
-                        <!-- App Generator -->
+                        <!-- App Generator → IA -->
                         <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="ia">
                             <div class="flex items-center gap-3 mb-3">
                                 <span class="text-2xl">⚡</span>
@@ -289,8 +294,8 @@
                             </div>
                         </div>
 
-                        <!-- Traductor PRO -->
-                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="ia">
+                        <!-- Traductor PRO → Herramientas -->
+                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="herramientas">
                             <div class="flex items-center gap-3 mb-3">
                                 <span class="text-2xl">🌐</span>
                                 <div>
@@ -307,8 +312,8 @@
                             </div>
                         </div>
 
-                        <!-- IndustrialPro -->
-                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="empresa">
+                        <!-- IndustrialPro → Negocio -->
+                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="negocio">
                             <div class="flex items-center gap-3 mb-3">
                                 <span class="text-2xl">🏭</span>
                                 <div>
@@ -325,8 +330,8 @@
                             </div>
                         </div>
 
-                        <!-- TaskFlow -->
-                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="sistemas">
+                        <!-- TaskFlowPro → Herramientas -->
+                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="herramientas">
                             <div class="flex items-center gap-3 mb-3">
                                 <span class="text-2xl">📋</span>
                                 <div>
@@ -343,8 +348,8 @@
                             </div>
                         </div>
 
-                        <!-- LogiSearch -->
-                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="empresa">
+                        <!-- LogiSearch → Herramientas -->
+                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="herramientas">
                             <div class="flex items-center gap-3 mb-3">
                                 <span class="text-2xl">🔍</span>
                                 <div>
@@ -361,8 +366,8 @@
                             </div>
                         </div>
 
-                        <!-- Cuentos Mágicos -->
-                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="ia">
+                        <!-- Cuentos Mágicos → Personal -->
+                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="personal">
                             <div class="flex items-center gap-3 mb-3">
                                 <span class="text-2xl">🦄</span>
                                 <div>
@@ -379,8 +384,8 @@
                             </div>
                         </div>
 
-                        <!-- LogiTrack Almacén -->
-                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="empresa">
+                        <!-- LogiTrack Almacén → Negocio -->
+                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="negocio">
                             <div class="flex items-center gap-3 mb-3">
                                 <span class="text-2xl">📦</span>
                                 <div>
@@ -397,8 +402,8 @@
                             </div>
                         </div>
 
-                        <!-- Moko-Tools -->
-                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="sistemas">
+                        <!-- Moko-Tools → Herramientas -->
+                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="herramientas">
                             <div class="flex items-center gap-3 mb-3">
                                 <span class="text-2xl">🛠️</span>
                                 <div>
@@ -415,8 +420,8 @@
                             </div>
                         </div>
 
-                        <!-- CombiPro -->
-                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="ia">
+                        <!-- CombiPro → Personal -->
+                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="personal">
                             <div class="flex items-center gap-3 mb-3">
                                 <span class="text-2xl">⚽</span>
                                 <div>
@@ -433,7 +438,7 @@
                             </div>
                         </div>
 
-                        <!-- EliteScout -->
+                        <!-- EliteScout → IA -->
                         <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="ia">
                             <div class="flex items-center gap-3 mb-3">
                                 <span class="text-2xl">✈️</span>
@@ -451,8 +456,8 @@
                             </div>
                         </div>
 
-                        <!-- Edelweiss -->
-                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="sistemas">
+                        <!-- Edelweiss → Personal -->
+                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="personal">
                             <div class="flex items-center gap-3 mb-3">
                                 <span class="text-2xl">👶</span>
                                 <div>
@@ -469,8 +474,8 @@
                             </div>
                         </div>
 
-                        <!-- EXPOSITATOR RTE -->
-                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="ia">
+                        <!-- EXPOSITATOR RTE → Herramientas -->
+                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="herramientas">
                             <div class="flex items-center gap-3 mb-3">
                                 <span class="text-2xl">🗣️</span>
                                 <div>
@@ -487,7 +492,7 @@
                             </div>
                         </div>
 
-                        <!-- JartosDTo -->
+                        <!-- JartosDTo → IA -->
                         <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="ia">
                             <div class="flex items-center gap-3 mb-3">
                                 <span class="text-2xl">🧠</span>
@@ -505,8 +510,8 @@
                             </div>
                         </div>
 
-                        <!-- MAPFRE Infocol -->
-                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="empresa">
+                        <!-- MAPFRE Infocol → Negocio -->
+                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="negocio">
                             <div class="flex items-center gap-3 mb-3">
                                 <span class="text-2xl">🛡️</span>
                                 <div>
@@ -523,7 +528,7 @@
                             </div>
                         </div>
 
-                        <!-- MSBrOSs -->
+                        <!-- MSBrOSs → IA -->
                         <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="ia">
                             <div class="flex items-center gap-3 mb-3">
                                 <span class="text-2xl">💬</span>
@@ -541,8 +546,8 @@
                             </div>
                         </div>
 
-                        <!-- Tu Energía Maya -->
-                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="sistemas">
+                        <!-- Tu Energía Maya → Personal -->
+                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="personal">
                             <div class="flex items-center gap-3 mb-3">
                                 <span class="text-2xl">🌀</span>
                                 <div>
@@ -559,8 +564,8 @@
                             </div>
                         </div>
 
-                        <!-- TxaFitnessPro -->
-                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="empresa">
+                        <!-- TxaFitnessPro → Personal -->
+                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="personal">
                             <div class="flex items-center gap-3 mb-3">
                                 <span class="text-2xl">🏋️</span>
                                 <div>
@@ -577,8 +582,8 @@
                             </div>
                         </div>
 
-                        <!-- Web Restaurante Atenea -->
-                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="empresa">
+                        <!-- Web Restaurante Atenea → Personal -->
+                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="personal">
                             <div class="flex items-center gap-3 mb-3">
                                 <span class="text-2xl">🏛️</span>
                                 <div>
@@ -807,7 +812,7 @@
     <script>
         function filterCategory(category) {
             const items = document.querySelectorAll('.app-item');
-            const buttons = ['all', 'sistemas', 'ia', 'empresa'];
+            const buttons = ['all', 'ia', 'herramientas', 'negocio', 'personal'];
             
             // Update buttons active class
             buttons.forEach(btn => {
