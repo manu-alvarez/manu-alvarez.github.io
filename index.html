@@ -1,931 +1,1658 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="es">
-
+<html lang="es">
 <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Manuel Álvarez Diánez | Portfolio &amp; CV</title>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
-    
-    <!-- Tailwind CSS with CDN -->
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-    <script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        primary: "#3b82f6", // Vibrant tech blue
-                        accent: "#8b5cf6",  // Royal violet
-                        "bg-dark": "#070a13",
-                        "card-dark": "rgba(15, 23, 42, 0.6)",
-                        "border-dark": "rgba(255, 255, 255, 0.06)",
-                    },
-                    fontFamily: {
-                        sans: ["Inter", "sans-serif"],
-                        mono: ["JetBrains Mono", "monospace"],
-                    },
-                },
-            },
-        };
-    </script>
-    
-    <style>
-        /* Ambient Floating Orbs */
-        .orb {
-            position: fixed;
-            border-radius: 50%;
-            filter: blur(130px);
-            opacity: 0.08;
-            pointer-events: none;
-            z-index: 0;
-            animation: orbFloat 25s infinite alternate ease-in-out;
-        }
-        .orb-1 { width: 500px; height: 500px; background: #3b82f6; top: -100px; right: -50px; }
-        .orb-2 { width: 450px; height: 450px; background: #8b5cf6; bottom: -100px; left: -50px; animation-delay: -5s; }
-        .orb-3 { width: 350px; height: 350px; background: #10b981; top: 40%; left: 30%; animation-delay: -12s; }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manuel Álvarez Diánez — Técnico en Sistemas Microinformáticos y Redes & Creador de IA</title>
+  <meta name="description" content="Portfolio profesional de Manuel Álvarez Diánez. Técnico en Sistemas Microinformáticos y Redes (SMR), Soporte IT, Redes Cisco, Certificaciones Oficiales y Desarrollador de Aplicaciones con IA." />
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
 
-        @keyframes orbFloat {
-            0% { transform: translate(0, 0) scale(1); }
-            50% { transform: translate(40px, -30px) scale(1.05); }
-            100% { transform: translate(-30px, 40px) scale(0.95); }
-        }
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
-        /* Glassmorphism Classes */
-        .glass-card {
-            background: rgba(15, 23, 42, 0.45);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .glass-card:hover {
-            border-color: rgba(59, 130, 246, 0.3);
-            background: rgba(15, 23, 42, 0.6);
-            transform: translateY(-4px);
-        }
+  <style>
+    :root {
+      --bg-dark: #060911;
+      --bg-card: rgba(13, 20, 36, 0.75);
+      --bg-card-hover: rgba(18, 28, 50, 0.88);
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-glow: rgba(0, 240, 255, 0.35);
+      --neon-cyan: #00f0ff;
+      --neon-blue: #38bdf8;
+      --neon-purple: #a855f7;
+      --neon-pink: #ec4899;
+      --neon-green: #10b981;
+      --neon-amber: #f59e0b;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
 
-        /* Smooth Custom Scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #070a13; }
-        ::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.1); border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.2); }
-    </style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      background-image: 
+        radial-gradient(circle at 15% 12%, rgba(0, 240, 255, 0.09) 0%, transparent 45%),
+        radial-gradient(circle at 85% 20%, rgba(168, 85, 247, 0.09) 0%, transparent 50%),
+        radial-gradient(circle at 50% 75%, rgba(16, 185, 129, 0.06) 0%, transparent 50%);
+      background-attachment: fixed;
+      color: var(--text-main);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Ambient background canvas/blur accents */
+    .glow-orb {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(140px);
+      opacity: 0.12;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .orb-1 { width: 550px; height: 550px; background: var(--neon-cyan); top: -120px; left: -100px; }
+    .orb-2 { width: 500px; height: 500px; background: var(--neon-purple); bottom: 10%; right: -100px; }
+
+    /* Top Sticky Navigation */
+    header.top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      background: rgba(6, 9, 17, 0.85);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 14px 24px;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .brand-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      padding: 2px;
+      background: linear-gradient(135deg, var(--neon-cyan), var(--neon-purple));
+      box-shadow: 0 0 16px rgba(0, 240, 255, 0.35);
+      flex-shrink: 0;
+    }
+
+    .brand-avatar img {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+      display: block;
+      background: #080d16;
+    }
+
+    .brand-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+    }
+
+    .brand-sub {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--neon-cyan);
+      display: block;
+      letter-spacing: 0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      list-style: none;
+    }
+
+    @media (max-width: 860px) {
+      .nav-links {
+        display: none;
+      }
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.86rem;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--neon-cyan);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-nav {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border-radius: 10px;
+      font-family: var(--font-display);
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btn-nav-msb {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-subtle);
+      color: #cbd5e1;
+    }
+
+    .btn-nav-msb:hover {
+      background: rgba(255, 255, 255, 0.09);
+      color: #fff;
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .btn-nav-pdf {
+      background: linear-gradient(135deg, rgba(0, 240, 255, 0.2), rgba(16, 185, 129, 0.22));
+      border: 1px solid var(--neon-cyan);
+      color: #fff;
+      box-shadow: 0 0 16px rgba(0, 240, 255, 0.2);
+    }
+
+    .btn-nav-pdf:hover {
+      background: linear-gradient(135deg, rgba(0, 240, 255, 0.35), rgba(16, 185, 129, 0.38));
+      box-shadow: 0 0 24px rgba(0, 240, 255, 0.4);
+      transform: translateY(-1px);
+    }
+
+    /* Main Container */
+    main.main-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 36px 20px 80px;
+      flex: 1;
+      width: 100%;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Hero Section */
+    .hero-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 24px;
+      padding: 40px;
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      margin-bottom: 36px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+    }
+
+    .hero-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--neon-cyan), var(--neon-purple), var(--neon-green));
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 36px;
+      align-items: center;
+    }
+
+    @media (max-width: 960px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .hero-avatar-box {
+        margin: 0 auto;
+      }
+      .hero-badges-row {
+        justify-content: center;
+      }
+      .hero-meta {
+        justify-content: center;
+      }
+      .hero-cta-group {
+        justify-content: center;
+        width: 100%;
+      }
+    }
+
+    .hero-avatar-box {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      padding: 4px;
+      background: linear-gradient(135deg, var(--neon-cyan), var(--neon-purple));
+      box-shadow: 0 0 35px rgba(0, 240, 255, 0.35);
+      flex-shrink: 0;
+    }
+
+    .hero-avatar-img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      background: #080d16;
+      border: 3px solid #080d16;
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 5px 14px;
+      border-radius: 9999px;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      color: #34d399;
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      margin-bottom: 12px;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #10b981;
+      box-shadow: 0 0 10px #10b981;
+      animation: pulseDot 2s infinite ease-in-out;
+    }
+
+    @keyframes pulseDot {
+      0%, 100% { transform: scale(0.9); opacity: 0.8; }
+      50% { transform: scale(1.25); opacity: 1; }
+    }
+
+    .hero-name {
+      font-family: var(--font-display);
+      font-size: 2.35rem;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-title {
+      font-family: var(--font-mono);
+      font-size: 0.96rem;
+      color: var(--neon-cyan);
+      margin-top: 8px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    .hero-bio {
+      color: #cbd5e1;
+      font-size: 0.95rem;
+      margin-top: 14px;
+      max-width: 650px;
+      line-height: 1.65;
+    }
+
+    .hero-badges-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .hero-kpi-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-subtle);
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      color: #cbd5e1;
+    }
+
+    .hero-kpi-chip.accent {
+      background: rgba(0, 240, 255, 0.08);
+      border-color: rgba(0, 240, 255, 0.3);
+      color: var(--neon-cyan);
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 16px;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .hero-meta a, .hero-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .hero-meta a:hover {
+      color: var(--neon-cyan);
+    }
+
+    .hero-cta-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      min-width: 210px;
+    }
+
+    .btn-action-primary {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 13px 20px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--neon-cyan), #0284c7);
+      color: #060911;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.88rem;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      box-shadow: 0 0 25px rgba(0, 240, 255, 0.35);
+      transition: all 0.25s ease;
+      cursor: pointer;
+    }
+
+    .btn-action-primary:hover {
+      box-shadow: 0 0 35px rgba(0, 240, 255, 0.6);
+      transform: translateY(-2px);
+      filter: brightness(1.08);
+    }
+
+    .btn-action-secondary {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 18px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-subtle);
+      color: #e2e8f0;
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 0.84rem;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .btn-action-secondary:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.2);
+      color: #fff;
+    }
+
+    /* Section Component */
+    .section-wrap {
+      margin-bottom: 42px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 22px;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .section-title-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section-icon-box {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-subtle);
+    }
+
+    .icon-cyan {
+      background: rgba(0, 240, 255, 0.1);
+      border-color: rgba(0, 240, 255, 0.3);
+      color: var(--neon-cyan);
+    }
+
+    .icon-purple {
+      background: rgba(168, 85, 247, 0.1);
+      border-color: rgba(168, 85, 247, 0.3);
+      color: var(--neon-purple);
+    }
+
+    .icon-amber {
+      background: rgba(245, 158, 11, 0.1);
+      border-color: rgba(245, 158, 11, 0.3);
+      color: var(--neon-amber);
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.01em;
+    }
+
+    .section-sub {
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    /* Education Featured Card (Técnico SMR) */
+    .edu-featured-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(0, 240, 255, 0.35);
+      border-radius: 20px;
+      padding: 28px;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35), inset 0 0 25px rgba(0, 240, 255, 0.04);
+      margin-bottom: 24px;
+    }
+
+    .edu-featured-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--neon-cyan);
+    }
+
+    .edu-top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+
+    .edu-degree {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.01em;
+    }
+
+    .edu-institution {
+      color: var(--neon-cyan);
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+
+    .edu-badge-date {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: #38bdf8;
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      padding: 5px 12px;
+      border-radius: 8px;
+      white-space: nowrap;
+      font-weight: 600;
+    }
+
+    .edu-desc {
+      color: #cbd5e1;
+      font-size: 0.92rem;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .edu-skills-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .edu-tag {
+      font-family: var(--font-mono);
+      font-size: 0.73rem;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.04);
+      color: #94a3b8;
+      border: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    /* Certifications Grid */
+    .certs-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    @media (max-width: 1024px) {
+      .certs-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .certs-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .cert-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: all 0.25s ease;
+      position: relative;
+    }
+
+    .cert-card:hover {
+      background: var(--bg-card-hover);
+      border-color: rgba(0, 240, 255, 0.3);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    }
+
+    .cert-card-top {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .cert-img-box {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.09);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    }
+
+    .cert-img-box img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      display: block;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+    }
+
+    .cert-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .cert-title {
+      font-family: var(--font-display);
+      font-size: 0.94rem;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.25;
+    }
+
+    .cert-issuer {
+      font-size: 0.78rem;
+      color: var(--neon-cyan);
+      margin-top: 2px;
+    }
+
+    .cert-meta {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--text-dim);
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 10px;
+      margin-top: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* IT Experience Cards */
+    .exp-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    @media (max-width: 900px) {
+      .exp-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .exp-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 20px;
+      padding: 26px;
+      position: relative;
+      transition: all 0.25s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .exp-card:hover {
+      background: var(--bg-card-hover);
+      border-color: rgba(0, 240, 255, 0.4);
+      transform: translateY(-3px);
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.4);
+    }
+
+    .exp-card.featured-it {
+      border-left: 4px solid var(--neon-cyan);
+      box-shadow: inset 0 0 20px rgba(0, 240, 255, 0.02);
+    }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+    }
+
+    .exp-role {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .exp-company {
+      color: var(--neon-cyan);
+      font-weight: 600;
+      font-size: 0.92rem;
+    }
+
+    .exp-period {
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      color: #94a3b8;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 4px 10px;
+      border-radius: 6px;
+      border: 1px solid var(--border-subtle);
+      white-space: nowrap;
+    }
+
+    .exp-tags-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 12px 0 16px;
+    }
+
+    .tag-chip {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      padding: 3px 9px;
+      border-radius: 6px;
+      background: rgba(0, 240, 255, 0.07);
+      color: var(--neon-cyan);
+      border: 1px solid rgba(0, 240, 255, 0.2);
+    }
+
+    .exp-bullets {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: auto;
+    }
+
+    .exp-bullets li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 0.88rem;
+      color: #cbd5e1;
+      line-height: 1.55;
+    }
+
+    .exp-bullets li::before {
+      content: '▹';
+      position: absolute;
+      left: 0;
+      color: var(--neon-cyan);
+      font-weight: bold;
+    }
+
+    /* AI Software Development & Projects Section */
+    .ai-showcase-box {
+      background: var(--bg-card);
+      border: 1px solid rgba(168, 85, 247, 0.3);
+      border-radius: 24px;
+      padding: 32px;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4), inset 0 0 30px rgba(168, 85, 247, 0.03);
+      margin-bottom: 36px;
+    }
+
+    .ai-hero-desc {
+      color: #cbd5e1;
+      font-size: 0.96rem;
+      line-height: 1.65;
+      max-width: 850px;
+      margin-bottom: 24px;
+    }
+
+    .ai-projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: 960px) {
+      .ai-projects-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .ai-project-card {
+      background: rgba(13, 20, 36, 0.65);
+      border: 1px solid var(--border-subtle);
+      border-radius: 18px;
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.25s ease;
+      position: relative;
+    }
+
+    .ai-project-card:hover {
+      background: rgba(18, 28, 50, 0.85);
+      border-color: rgba(168, 85, 247, 0.4);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    .project-badge-type {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: #c084fc;
+      background: rgba(168, 85, 247, 0.12);
+      border: 1px solid rgba(168, 85, 247, 0.25);
+      padding: 3px 8px;
+      border-radius: 6px;
+      align-self: flex-start;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .project-name {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    .project-summary {
+      color: #94a3b8;
+      font-size: 0.86rem;
+      line-height: 1.55;
+      margin-bottom: 16px;
+      flex: 1;
+    }
+
+    .project-tech {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: #64748b;
+      margin-bottom: 14px;
+    }
+
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-display);
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--neon-cyan);
+      text-decoration: none;
+      transition: gap 0.2s;
+    }
+
+    .project-link:hover {
+      color: #fff;
+      gap: 10px;
+    }
+
+    /* MSB Call to Action Banner */
+    .msb-cta-banner {
+      background: linear-gradient(135deg, rgba(0, 240, 255, 0.08), rgba(168, 85, 247, 0.08));
+      border: 1px solid rgba(0, 240, 255, 0.25);
+      border-radius: 16px;
+      padding: 20px 26px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .msb-cta-text h4 {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      color: #fff;
+      font-weight: 700;
+    }
+
+    .msb-cta-text p {
+      color: #94a3b8;
+      font-size: 0.86rem;
+      margin-top: 2px;
+    }
+
+    .btn-msb-banner {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--neon-cyan), #0284c7);
+      color: #060911;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.84rem;
+      text-decoration: none;
+      box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+
+    .btn-msb-banner:hover {
+      box-shadow: 0 0 30px rgba(0, 240, 255, 0.55);
+      transform: translateY(-1px);
+    }
+
+    /* Industrial Experience Condensed Card */
+    .industrial-condensed-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      border-radius: 20px;
+      padding: 26px;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    @media (max-width: 768px) {
+      .industrial-condensed-card {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    .ind-icon-box {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      color: #fbbf24;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    .ind-content {
+      flex: 1;
+    }
+
+    .ind-title {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+
+    .ind-text {
+      color: #cbd5e1;
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+
+    .ind-text strong {
+      color: #fbbf24;
+      font-weight: 600;
+    }
+
+    /* Technical Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    @media (max-width: 960px) {
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 540px) {
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .skill-block {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 20px;
+    }
+
+    .skill-block-title {
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .skill-items-list {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .skill-item-pill {
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      color: #cbd5e1;
+      background: rgba(255, 255, 255, 0.03);
+      padding: 5px 10px;
+      border-radius: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .skill-item-pill::before {
+      content: '•';
+      color: var(--neon-cyan);
+    }
+
+    /* Footer */
+    footer.site-footer {
+      border-top: 1px solid var(--border-subtle);
+      background: rgba(6, 9, 17, 0.95);
+      padding: 40px 20px;
+      margin-top: auto;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .footer-brand {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .footer-name {
+      font-family: var(--font-display);
+      font-weight: 700;
+      color: #fff;
+      font-size: 1.05rem;
+    }
+
+    .footer-copy {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-dim);
+    }
+
+    .footer-contact-links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .footer-contact-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      font-family: var(--font-mono);
+      transition: color 0.2s;
+    }
+
+    .footer-contact-links a:hover {
+      color: var(--neon-cyan);
+    }
+  </style>
 </head>
 
-<body class="font-sans bg-bg-dark text-slate-200 min-height-screen relative overflow-x-hidden antialiased">
-    <!-- Ambient Backgrounds -->
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
+<body>
+  <!-- Ambient glow accents -->
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
 
-    <div class="relative z-10 max-w-6xl mx-auto px-6 py-12 flex flex-col min-h-screen">
-        
-        <!-- Header Controls -->
-        <div class="flex justify-end items-center gap-4 mb-8">
-            <a href="https://msbross.me" class="text-xs font-semibold px-4 py-2 rounded-full border border-slate-800 hover:border-primary/50 text-slate-400 hover:text-slate-200 transition-all">
-                ← Volver a MSBrossAI
-            </a>
-            <a href="Manuel Alvarez - CV.pdf" target="_blank"
-                class="bg-primary hover:bg-primary/95 text-white text-xs font-semibold px-5 py-2.5 rounded-full shadow-lg shadow-primary/10 transition-all">
-                Descargar en PDF
-            </a>
+  <!-- Top Navigation Bar -->
+  <header class="top-nav">
+    <div class="nav-container">
+      <a href="#" class="nav-brand">
+        <div class="brand-avatar">
+          <img src="./assets/images/profile-photo.png" alt="Manuel Álvarez Diánez" />
         </div>
-
-        <!-- Bio / Hero Section -->
-        <header class="mb-16 text-center md:text-left md:flex md:items-center md:gap-8 bg-slate-900/25 p-8 md:p-10 rounded-3xl border border-white/[0.03]">
-            <div class="mb-6 md:mb-0 flex justify-center flex-shrink-0">
-                <div class="relative w-36 h-36 rounded-full overflow-hidden border-2 border-primary/40 shadow-xl shadow-primary/5">
-                    <img alt="Manuel Álvarez Diánez" class="w-full h-full object-cover" src="assets/images/profile-photo.png" />
-                </div>
-            </div>
-            <div>
-                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20 mb-3">
-                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>Disponible para Incorporación · Mequinenza, Zaragoza (España)
-                </span>
-                <h1 class="text-3xl md:text-4xl lg:text-5xl font-black mb-3 text-white tracking-tight">Manuel Álvarez Diánez</h1>
-                <p class="text-sm md:text-base font-semibold text-primary/90 mb-5 font-mono">
-                    Técnico en Sistemas Microinformáticos y Redes · Soporte IT · Perfil Logístico e Industrial
-                </p>
-                <p class="text-sm leading-relaxed text-slate-400 max-w-3xl">
-                    Técnico en Sistemas Microinformáticos y Redes, con experiencia multiplataforma, en virtualización y administración básica de entornos de red. Perfil orientado al sentido práctico y la eficiencia: desarrollo utilidades personalizadas e integro herramientas de Inteligencia Artificial para simplificar flujos operativos y resolver incidencias informáticas del día a día de manera honesta y organizada. Complemento mi perfil técnico con una sólida trayectoria en logística y producción industrial en compañías de referencia como Procter &amp; Gamble, GB Foods y Döhler.
-                </p>
-            </div>
-        </header>
-
-        <!-- Stats Bar -->
-        <section class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
-            <div class="p-5 rounded-2xl bg-slate-900/35 border border-white/[0.03] text-center glass-card">
-                <span class="text-2xl mb-1 block">💻</span>
-                <div class="text-lg font-bold text-white">Técnico IT</div>
-                <div class="text-xs text-slate-500">Teringo S.L.U. (2025)</div>
-            </div>
-            <div class="p-5 rounded-2xl bg-slate-900/35 border border-white/[0.03] text-center glass-card">
-                <span class="text-2xl mb-1 block">🛠️</span>
-                <div class="text-lg font-bold text-white">24 Aplicaciones</div>
-                <div class="text-xs text-slate-500">Creadas y Desplegadas</div>
-            </div>
-            <div class="p-5 rounded-2xl bg-slate-900/35 border border-white/[0.03] text-center glass-card">
-                <span class="text-2xl mb-1 block">🛡️</span>
-                <div class="text-lg font-bold text-white">Cisco CCST</div>
-                <div class="text-xs text-slate-500">Networking & Cybersecurity</div>
-            </div>
-            <div class="p-5 rounded-2xl bg-slate-900/35 border border-white/[0.03] text-center glass-card">
-                <span class="text-2xl mb-1 block">🏭</span>
-                <div class="text-lg font-bold text-white">Logística Industrial</div>
-                <div class="text-xs text-slate-500">P&G / GB Foods / Döhler</div>
-            </div>
-        </section>
-
-        <!-- Core Sections Grid -->
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
-            
-            <!-- Left & Middle: Projects & Apps (Span 2) -->
-            <main class="lg:col-span-2 space-y-12">
-                
-                <!-- Redesigned Projects / Ecosistema Apps Section -->
-                <section>
-                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
-                        <h2 class="text-2xl font-extrabold text-white flex items-center gap-2">
-                            <span>🚀</span> Ecosistema de Utilidades & Apps
-                            <a href="https://msbross.me" target="_blank" class="ml-2 hover:opacity-80 transition-opacity">
-                                <img src="assets/images/msbross-logo.png" alt="MSBrossAI" class="h-6 object-contain" />
-                            </a>
-                        </h2>
-                        
-                        <!-- Categories Filters -->
-                        <div class="flex flex-wrap gap-2 text-xs">
-                            <button onclick="filterCategory('all')" id="btn-all" class="px-3 py-1.5 rounded-full font-semibold transition-all bg-primary text-white border border-primary/20">
-                                Todas
-                            </button>
-                            <button onclick="filterCategory('ia')" id="btn-ia" class="px-3 py-1.5 rounded-full font-semibold transition-all bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200">
-                                🤖 IA
-                            </button>
-                            <button onclick="filterCategory('herramientas')" id="btn-herramientas" class="px-3 py-1.5 rounded-full font-semibold transition-all bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200">
-                                🛠️ Herramientas
-                            </button>
-                            <button onclick="filterCategory('negocio')" id="btn-negocio" class="px-3 py-1.5 rounded-full font-semibold transition-all bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200">
-                                💼 Negocio
-                            </button>
-                            <button onclick="filterCategory('personal')" id="btn-personal" class="px-3 py-1.5 rounded-full font-semibold transition-all bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200">
-                                🌟 Personal
-                            </button>
-                        </div>
-                    </div>
-
-                    <p class="text-sm text-slate-400 mb-6 -mt-4">
-                        Colección de aplicaciones prácticas construidas de forma autónoma para experimentar con arquitecturas locales, automatizaciones, herramientas de productividad y APIs.
-                    </p>
-
-                    <!-- Apps Grid -->
-                    <div id="apps-container" class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        
-                        <!-- IAPuta OS -->
-                        <!-- IAPuta OS → IA -->
-                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="ia">
-                            <div class="flex items-center gap-3 mb-3">
-                                <span class="text-2xl">🤖</span>
-                                <div>
-                                    <h4 class="font-extrabold text-white leading-tight">IAPuta OS</h4>
-                                    <span class="text-[10px] font-mono text-accent">Core AI</span>
-                                </div>
-                            </div>
-                            <p class="text-xs text-slate-400 flex-grow mb-4">
-                                Asistente local con orbe reactivo 3D. Cuenta con 12 herramientas integradas, visión computacional y sistema fallback multi-LLM (Groq → Ollama → OpenRouter).
-                            </p>
-                            <div class="flex items-center justify-between pt-3 border-t border-slate-800/80 text-[10px] font-mono text-slate-500">
-                                <span>FastAPI / React / Three.js</span>
-                                <a href="https://msbross.me/iaputa/" target="_blank" class="text-primary hover:underline font-semibold">Probar →</a>
-                            </div>
-                        </div>
-
-                        <!-- LIVEKIT Nikolina -->
-                        <!-- LIVEKIT Nikolina → IA -->
-                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="ia">
-                            <div class="flex items-center gap-3 mb-3">
-                                <span class="text-2xl">🎙️</span>
-                                <div>
-                                    <h4 class="font-extrabold text-white leading-tight">LIVEKIT Nikolina</h4>
-                                    <span class="text-[10px] font-mono text-accent">Voice AI</span>
-                                </div>
-                            </div>
-                            <p class="text-xs text-slate-400 flex-grow mb-4">
-                                Asistente conversacional por voz para restaurantes integrado con Gemini 2.5 Flash Native Audio. Gestiona reservas reales y muestra una carta interactiva.
-                            </p>
-                            <div class="flex items-center justify-between pt-3 border-t border-slate-800/80 text-[10px] font-mono text-slate-500">
-                                <span>LiveKit / FastAPI / Gemini</span>
-                                <a href="https://msbross.me/nikolina/" target="_blank" class="text-primary hover:underline font-semibold">Probar →</a>
-                            </div>
-                        </div>
-
-                        <!-- Gas Station → Negocio -->
-                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="negocio">
-                            <div class="flex items-center gap-3 mb-3">
-                                <span class="text-2xl">⛽</span>
-                                <div>
-                                    <h4 class="font-extrabold text-white leading-tight">Gas Station</h4>
-                                    <span class="text-[10px] font-mono text-primary">Ops PWA</span>
-                                </div>
-                            </div>
-                            <p class="text-xs text-slate-400 flex-grow mb-4">
-                                Aplicación progresiva de gestión operativa interna para Estación de Servicio Repsol. Centraliza checklists diarias, control de caducidades y fichajes locales.
-                            </p>
-                            <div class="flex items-center justify-between pt-3 border-t border-slate-800/80 text-[10px] font-mono text-slate-500">
-                                <span>PWA / Express / SQLite</span>
-                                <a href="https://msbross.me/gas-station/" target="_blank" class="text-primary hover:underline font-semibold">Probar →</a>
-                            </div>
-                        </div>
-
-                        <!-- Mano Eléctrica Azul → Personal -->
-                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="personal">
-                            <div class="flex items-center gap-3 mb-3">
-                                <span class="text-2xl">📱</span>
-                                <div>
-                                    <h4 class="font-extrabold text-white leading-tight">Mano Eléctrica Azul</h4>
-                                    <span class="text-[10px] font-mono text-primary">Mobile App</span>
-                                </div>
-                            </div>
-                            <p class="text-xs text-slate-400 flex-grow mb-4">
-                                Aplicación móvil multiplataforma publicada en Google Play Store. Diseñada para la exploración interactiva y seguimiento diario del calendario sagrado Maya Tzolkin.
-                            </p>
-                            <div class="flex items-center justify-between pt-3 border-t border-slate-800/80 text-[10px] font-mono text-slate-500">
-                                <span>React Native / Expo / Android</span>
-                                <a href="https://msbross.me/ManoElectricaAzul/" target="_blank" class="text-primary hover:underline font-semibold">Probar →</a>
-                            </div>
-                        </div>
-
-                        <!-- Perfume Trading → Negocio -->
-                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="negocio">
-                            <div class="flex items-center gap-3 mb-3">
-                                <span class="text-2xl">💼</span>
-                                <div>
-                                    <h4 class="font-extrabold text-white leading-tight">Perfume Trading</h4>
-                                    <span class="text-[10px] font-mono text-emerald-500">Trading B2B</span>
-                                </div>
-                            </div>
-                            <p class="text-xs text-slate-400 flex-grow mb-4">
-                                Sistema ERP especializado en trading B2B de perfumería. Catálogo, inventario multialmacén y control logístico.
-                            </p>
-                            <div class="flex items-center justify-between pt-3 border-t border-slate-800/80 text-[10px] font-mono text-slate-500">
-                                <span>Next.js / Prisma / ERP / B2B</span>
-                                <a href="https://msbross.me/perfume-trading-erp/" target="_blank" class="text-primary hover:underline font-semibold">Probar →</a>
-                            </div>
-                        </div>
-
-                        <!-- App Generator → IA -->
-                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="ia">
-                            <div class="flex items-center gap-3 mb-3">
-                                <span class="text-2xl">⚡</span>
-                                <div>
-                                    <h4 class="font-extrabold text-white leading-tight">App Generator</h4>
-                                    <span class="text-[10px] font-mono text-accent">Dev AI</span>
-                                </div>
-                            </div>
-                            <p class="text-xs text-slate-400 flex-grow mb-4">
-                                Generador interactivo de páginas SPA (Split-View) usando Gemini 2.5 Flash Native. Renderiza interfaces en tiempo real a partir de indicaciones en texto plano.
-                            </p>
-                            <div class="flex items-center justify-between pt-3 border-t border-slate-800/80 text-[10px] font-mono text-slate-500">
-                                <span>React 19 / Gemini API / Vite</span>
-                                <a href="https://msbross.me/app-generator/" target="_blank" class="text-primary hover:underline font-semibold">Probar →</a>
-                            </div>
-                        </div>
-
-                        <!-- Traductor PRO → Herramientas -->
-                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="herramientas">
-                            <div class="flex items-center gap-3 mb-3">
-                                <span class="text-2xl">🌐</span>
-                                <div>
-                                    <h4 class="font-extrabold text-white leading-tight">Traductor PRO</h4>
-                                    <span class="text-[10px] font-mono text-accent">Translation</span>
-                                </div>
-                            </div>
-                            <p class="text-xs text-slate-400 flex-grow mb-4">
-                                Traductor inteligente con 4 registros de lenguaje y multi-LLM (Groq, OpenAI, Gemini). Incorpora lector OCR con Tesseract.js para extraer texto de imágenes.
-                            </p>
-                            <div class="flex items-center justify-between pt-3 border-t border-slate-800/80 text-[10px] font-mono text-slate-500">
-                                <span>Express / React 19 / OCR</span>
-                                <a href="https://msbross.me/traductor-pro/" target="_blank" class="text-primary hover:underline font-semibold">Probar →</a>
-                            </div>
-                        </div>
-
-                        <!-- IndustrialPro → Negocio -->
-                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="negocio">
-                            <div class="flex items-center gap-3 mb-3">
-                                <span class="text-2xl">🏭</span>
-                                <div>
-                                    <h4 class="font-extrabold text-white leading-tight">IndustrialPro</h4>
-                                    <span class="text-[10px] font-mono text-emerald-500">SCADA Web</span>
-                                </div>
-                            </div>
-                            <p class="text-xs text-slate-400 flex-grow mb-4">
-                                Plataforma de gestión industrial para procesos productivos. Monitoriza válvulas, temporizadores, checklists de seguridad y mantenimiento preventivo en tiempo real.
-                            </p>
-                            <div class="flex items-center justify-between pt-3 border-t border-slate-800/80 text-[10px] font-mono text-slate-500">
-                                <span>React 19 / FastAPI / SQLite</span>
-                                <a href="https://msbross.me/industrialpro/" target="_blank" class="text-primary hover:underline font-semibold">Probar →</a>
-                            </div>
-                        </div>
-
-                        <!-- TaskFlowPro → Herramientas -->
-                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="herramientas">
-                            <div class="flex items-center gap-3 mb-3">
-                                <span class="text-2xl">📋</span>
-                                <div>
-                                    <h4 class="font-extrabold text-white leading-tight">TaskFlowPro</h4>
-                                    <span class="text-[10px] font-mono text-primary">Productivity</span>
-                                </div>
-                            </div>
-                            <p class="text-xs text-slate-400 flex-grow mb-4">
-                                Gestión de tareas con alarmas, categorías e integración WhatsApp. Temporizador Pomodoro, tareas anidadas y notificaciones.
-                            </p>
-                            <div class="flex items-center justify-between pt-3 border-t border-slate-800/80 text-[10px] font-mono text-slate-500">
-                                <span>React 18 / MUI 5 / Zustand / PWA</span>
-                                <a href="https://msbross.me/taskflow/" target="_blank" class="text-primary hover:underline font-semibold">Probar →</a>
-                            </div>
-                        </div>
-
-                        <!-- LogiSearch → Herramientas -->
-                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="herramientas">
-                            <div class="flex items-center gap-3 mb-3">
-                                <span class="text-2xl">🔍</span>
-                                <div>
-                                    <h4 class="font-extrabold text-white leading-tight">LogiSearch</h4>
-                                    <span class="text-[10px] font-mono text-emerald-500">Logistics AI</span>
-                                </div>
-                            </div>
-                            <p class="text-xs text-slate-400 flex-grow mb-4">
-                                Buscador inteligente y comparador logístico. Analiza rutas de transporte, calcula costes y permite exportar cotizaciones formalizadas (RFQs) a PDF.
-                            </p>
-                            <div class="flex items-center justify-between pt-3 border-t border-slate-800/80 text-[10px] font-mono text-slate-500">
-                                <span>React 19 / Supabase / Tavily</span>
-                                <a href="https://msbross.me/logisearch/" target="_blank" class="text-primary hover:underline font-semibold">Probar →</a>
-                            </div>
-                        </div>
-
-                        <!-- Cuentos Mágicos → Personal -->
-                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="personal">
-                            <div class="flex items-center gap-3 mb-3">
-                                <span class="text-2xl">🦄</span>
-                                <div>
-                                    <h4 class="font-extrabold text-white leading-tight">Cuentos Mágicos</h4>
-                                    <span class="text-[10px] font-mono text-accent">Creative AI</span>
-                                </div>
-                            </div>
-                            <p class="text-xs text-slate-400 flex-grow mb-4">
-                                Narrador interactivo que genera cuentos personalizados con ilustraciones y audio IA.
-                            </p>
-                            <div class="flex items-center justify-between pt-3 border-t border-slate-800/80 text-[10px] font-mono text-slate-500">
-                                <span>Next.js 15 / Gemini API / FastAPI / PWA</span>
-                                <a href="https://msbross.me/cuentosmagicos/" target="_blank" class="text-primary hover:underline font-semibold">Probar →</a>
-                            </div>
-                        </div>
-
-                        <!-- LogiTrack Almacén → Negocio -->
-                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="negocio">
-                            <div class="flex items-center gap-3 mb-3">
-                                <span class="text-2xl">📦</span>
-                                <div>
-                                    <h4 class="font-extrabold text-white leading-tight">LogiTrack Almacén</h4>
-                                    <span class="text-[10px] font-mono text-emerald-500">Logistics</span>
-                                </div>
-                            </div>
-                            <p class="text-xs text-slate-400 flex-grow mb-4">
-                                Panel ágil Kanban para la gestión integral de operaciones y stock físico en almacenes. Control de entradas, salidas y preparación de pedidos.
-                            </p>
-                            <div class="flex items-center justify-between pt-3 border-t border-slate-800/80 text-[10px] font-mono text-slate-500">
-                                <span>Trello / Kanban System</span>
-                                <a href="https://trello.com/b/IRVpzuUt/logitrack-operaciones-de-almacen" target="_blank" class="text-primary hover:underline font-semibold">Ver Tablero →</a>
-                            </div>
-                        </div>
-
-                        <!-- Moko-Tools → Herramientas -->
-                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="herramientas">
-                            <div class="flex items-center gap-3 mb-3">
-                                <span class="text-2xl">🛠️</span>
-                                <div>
-                                    <h4 class="font-extrabold text-white leading-tight">Moko-Tools</h4>
-                                    <span class="text-[10px] font-mono text-primary">Dev Tools</span>
-                                </div>
-                            </div>
-                            <p class="text-xs text-slate-400 flex-grow mb-4">
-                                Directorio curado de 167 herramientas de desarrollo web en 15 categorías, con motor de búsqueda local y navegación bento.
-                            </p>
-                            <div class="flex items-center justify-between pt-3 border-t border-slate-800/80 text-[10px] font-mono text-slate-500">
-                                <span>React 19 / Vite 7 / Tailwind</span>
-                                <a href="https://msbross.me/moko/" target="_blank" class="text-primary hover:underline font-semibold">Probar →</a>
-                            </div>
-                        </div>
-
-                        <!-- CombiPro → Personal -->
-                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="personal">
-                            <div class="flex items-center gap-3 mb-3">
-                                <span class="text-2xl">⚽</span>
-                                <div>
-                                    <h4 class="font-extrabold text-white leading-tight">CombiPro</h4>
-                                    <span class="text-[10px] font-mono text-accent">Sports AI</span>
-                                </div>
-                            </div>
-                            <p class="text-xs text-slate-400 flex-grow mb-4">
-                                Generador de combinadas deportivas con algoritmo de probabilidad real y perfiles de riesgo.
-                            </p>
-                            <div class="flex items-center justify-between pt-3 border-t border-slate-800/80 text-[10px] font-mono text-slate-500">
-                                <span>React 19 / MUI 7 / API-Football</span>
-                                <a href="https://msbross.me/combipro/" target="_blank" class="text-primary hover:underline font-semibold">Probar →</a>
-                            </div>
-                        </div>
-
-                        <!-- EliteScout → IA -->
-                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="ia">
-                            <div class="flex items-center gap-3 mb-3">
-                                <span class="text-2xl">✈️</span>
-                                <div>
-                                    <h4 class="font-extrabold text-white leading-tight">EliteScout</h4>
-                                    <span class="text-[10px] font-mono text-accent">Travel AI</span>
-                                </div>
-                            </div>
-                            <p class="text-xs text-slate-400 flex-grow mb-4">
-                                Buscador semántico de viajes y productos mediante inteligencia artificial avanzada.
-                            </p>
-                            <div class="flex items-center justify-between pt-3 border-t border-slate-800/80 text-[10px] font-mono text-slate-500">
-                                <span>Next.js 16 / Tavily / Groq / Gemini</span>
-                                <a href="https://msbross.me/elitescout/" target="_blank" class="text-primary hover:underline font-semibold">Probar →</a>
-                            </div>
-                        </div>
-
-                        <!-- Edelweiss → Personal -->
-                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="personal">
-                            <div class="flex items-center gap-3 mb-3">
-                                <span class="text-2xl">👶</span>
-                                <div>
-                                    <h4 class="font-extrabold text-white leading-tight">Edelweiss</h4>
-                                    <span class="text-[10px] font-mono text-primary">Vision Play</span>
-                                </div>
-                            </div>
-                            <p class="text-xs text-slate-400 flex-grow mb-4">
-                                Estimulación visual infantil con 5 modos, parental lock e i18n ES/EN.
-                            </p>
-                            <div class="flex items-center justify-between pt-3 border-t border-slate-800/80 text-[10px] font-mono text-slate-500">
-                                <span>React 18 / Tailwind / Framer Motion</span>
-                                <a href="https://msbross.me/edelweiss/" target="_blank" class="text-primary hover:underline font-semibold">Probar →</a>
-                            </div>
-                        </div>
-
-                        <!-- EXPOSITATOR RTE → Herramientas -->
-                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="herramientas">
-                            <div class="flex items-center gap-3 mb-3">
-                                <span class="text-2xl">🗣️</span>
-                                <div>
-                                    <h4 class="font-extrabold text-white leading-tight">EXPOSITATOR RTE</h4>
-                                    <span class="text-[10px] font-mono text-accent">Evaluator AI</span>
-                                </div>
-                            </div>
-                            <p class="text-xs text-slate-400 flex-grow mb-4">
-                                Motor interactivo de evaluación en tiempo real para exposiciones orales.
-                            </p>
-                            <div class="flex items-center justify-between pt-3 border-t border-slate-800/80 text-[10px] font-mono text-slate-500">
-                                <span>PWA / Speech API / Vision API</span>
-                                <a href="https://msbross.me/expositator-rte/" target="_blank" class="text-primary hover:underline font-semibold">Probar →</a>
-                            </div>
-                        </div>
-
-                        <!-- JartosDTo → IA -->
-                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="ia">
-                            <div class="flex items-center gap-3 mb-3">
-                                <span class="text-2xl">🧠</span>
-                                <div>
-                                    <h4 class="font-extrabold text-white leading-tight">JartosDTo</h4>
-                                    <span class="text-[10px] font-mono text-accent">AI Chat</span>
-                                </div>
-                            </div>
-                            <p class="text-xs text-slate-400 flex-grow mb-4">
-                                Plataforma unificada de chat IA con RAG, base vectorial y iOS nativo.
-                            </p>
-                            <div class="flex items-center justify-between pt-3 border-t border-slate-800/80 text-[10px] font-mono text-slate-500">
-                                <span>FastAPI / LangChain / pgvector</span>
-                                <a href="https://msbross.me/jartosdto/" target="_blank" class="text-primary hover:underline font-semibold">Probar →</a>
-                            </div>
-                        </div>
-
-                        <!-- MAPFRE Infocol → Negocio -->
-                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="negocio">
-                            <div class="flex items-center gap-3 mb-3">
-                                <span class="text-2xl">🛡️</span>
-                                <div>
-                                    <h4 class="font-extrabold text-white leading-tight">MAPFRE Infocol</h4>
-                                    <span class="text-[10px] font-mono text-emerald-500">Insurance</span>
-                                </div>
-                            </div>
-                            <p class="text-xs text-slate-400 flex-grow mb-4">
-                                Sistema avanzado de información, tasación y gestión documental para seguros.
-                            </p>
-                            <div class="flex items-center justify-between pt-3 border-t border-slate-800/80 text-[10px] font-mono text-slate-500">
-                                <span>Next.js 15 / Enterprise / Data Grid</span>
-                                <a href="https://msbross.me/mapfre/" target="_blank" class="text-primary hover:underline font-semibold">Probar →</a>
-                            </div>
-                        </div>
-
-                        <!-- MSBrOSs → IA -->
-                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="ia">
-                            <div class="flex items-center gap-3 mb-3">
-                                <span class="text-2xl">💬</span>
-                                <div>
-                                    <h4 class="font-extrabold text-white leading-tight">MSBrOSs</h4>
-                                    <span class="text-[10px] font-mono text-accent">Assistant</span>
-                                </div>
-                            </div>
-                            <p class="text-xs text-slate-400 flex-grow mb-4">
-                                Asistente conversacional principal del ecosistema MSBrossAI.
-                            </p>
-                            <div class="flex items-center justify-between pt-3 border-t border-slate-800/80 text-[10px] font-mono text-slate-500">
-                                <span>Python / Flask / Gemini API / SQLite</span>
-                                <a href="https://msbross.me/msbross/" target="_blank" class="text-primary hover:underline font-semibold">Probar →</a>
-                            </div>
-                        </div>
-
-                        <!-- Tu Energía Maya → Personal -->
-                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="personal">
-                            <div class="flex items-center gap-3 mb-3">
-                                <span class="text-2xl">🌀</span>
-                                <div>
-                                    <h4 class="font-extrabold text-white leading-tight">Tu Energía Maya</h4>
-                                    <span class="text-[10px] font-mono text-primary">Web App</span>
-                                </div>
-                            </div>
-                            <p class="text-xs text-slate-400 flex-grow mb-4">
-                                Plataforma interactiva sobre sabiduría Maya, kin y firma galáctica.
-                            </p>
-                            <div class="flex items-center justify-between pt-3 border-t border-slate-800/80 text-[10px] font-mono text-slate-500">
-                                <span>JavaScript / Tzolkin / Cosmología</span>
-                                <a href="https://msbross.me/tu-energia-maya/" target="_blank" class="text-primary hover:underline font-semibold">Probar →</a>
-                            </div>
-                        </div>
-
-                        <!-- TxaFitnessPro → Personal -->
-                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="personal">
-                            <div class="flex items-center gap-3 mb-3">
-                                <span class="text-2xl">🏋️</span>
-                                <div>
-                                    <h4 class="font-extrabold text-white leading-tight">TxaFitnessPro</h4>
-                                    <span class="text-[10px] font-mono text-emerald-500">Fitness AI</span>
-                                </div>
-                            </div>
-                            <p class="text-xs text-slate-400 flex-grow mb-4">
-                                Plataforma integral de entrenamiento y nutrición inteligente con IA.
-                            </p>
-                            <div class="flex items-center justify-between pt-3 border-t border-slate-800/80 text-[10px] font-mono text-slate-500">
-                                <span>Next.js 15 / React 19 / PostgreSQL</span>
-                                <a href="https://msbross.me/txafitnesspro/" target="_blank" class="text-primary hover:underline font-semibold">Probar →</a>
-                            </div>
-                        </div>
-
-                        <!-- Web Restaurante Atenea → Personal -->
-                        <div class="app-item p-6 rounded-2xl glass-card flex flex-col h-full" data-cat="personal">
-                            <div class="flex items-center gap-3 mb-3">
-                                <span class="text-2xl">🏛️</span>
-                                <div>
-                                    <h4 class="font-extrabold text-white leading-tight">Web Restaurante Atenea</h4>
-                                    <span class="text-[10px] font-mono text-emerald-500">Gastronomy</span>
-                                </div>
-                            </div>
-                            <p class="text-xs text-slate-400 flex-grow mb-4">
-                                Experiencia culinaria de alta gastronomía con sistema de reservas integrado.
-                            </p>
-                            <div class="flex items-center justify-between pt-3 border-t border-slate-800/80 text-[10px] font-mono text-slate-500">
-                                <span>HTML5 / CSS3 / JavaScript</span>
-                                <a href="https://msbross.me/web-restaurante-atenea/" target="_blank" class="text-primary hover:underline font-semibold">Probar →</a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Experiencia Profesional & Formación -->
-                <section class="space-y-6">
-                    <h2 class="text-2xl font-extrabold text-white flex items-center gap-2 mb-6">
-                        <span>📋</span> Experiencia Profesional y Formación
-                    </h2>
-
-                    <!-- Píldora de sección IT -->
-                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-primary/10 border border-primary/30 text-primary text-xs font-mono font-bold uppercase tracking-wider mb-2">
-                        <span>💻</span> Experiencia en Informática y Sistemas
-                    </div>
-                    
-                    <div class="relative border-l-2 border-primary/40 ml-3 space-y-8">
-                        <!-- Teringo S.L.U. -->
-                        <div class="relative pl-8">
-                            <div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-primary border-4 border-bg-dark shadow-[0_0_10px_rgba(59,130,246,0.6)]"></div>
-                            <div class="flex justify-between items-baseline mb-1">
-                                <h4 class="text-base font-bold text-white">Técnico Informático — Teringo S.L.U.</h4>
-                                <span class="text-xs font-mono text-primary font-bold">Oct – Dic 2025</span>
-                            </div>
-                            <ul class="text-xs text-slate-400 leading-relaxed space-y-1 list-disc list-inside">
-                                <li>Soporte técnico a usuarios, instalación y configuración de puestos de trabajo (Windows/Linux) y periféricos.</li>
-                                <li>Resolución de incidencias de hardware, software y conectividad de red local (LAN/Wi-Fi).</li>
-                                <li>Gestión de usuarios y accesos mediante Directorio Activo (Active Directory) y Microsoft 365.</li>
-                                <li>Mantenimiento preventivo de equipos y documentación de procedimientos e incidencias en ticketing.</li>
-                            </ul>
-                        </div>
-
-                        <!-- CodeArts Solutions -->
-                        <div class="relative pl-8">
-                            <div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-primary border-4 border-bg-dark shadow-[0_0_10px_rgba(59,130,246,0.6)]"></div>
-                            <div class="flex justify-between items-baseline mb-1">
-                                <h4 class="text-base font-bold text-white">IT Support Intern — CodeArts Solutions</h4>
-                                <span class="text-xs font-mono text-primary font-bold">Jun – Sep 2025</span>
-                            </div>
-                            <ul class="text-xs text-slate-400 leading-relaxed space-y-1 list-disc list-inside">
-                                <li>Atención de incidencias de primer nivel (Helpdesk) resolviendo dudas y problemas técnicos a usuarios.</li>
-                                <li>Configuración de cuentas de correo, políticas básicas y soporte en herramientas ofimáticas.</li>
-                                <li>Colaboración en la monitorización de servicios de red e inventariado de activos tecnológicos.</li>
-                                <li>Preparación y clonado de imágenes de sistemas operativos para despliegue de equipos.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Píldora de sección Logística e Industrial -->
-                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-mono font-bold uppercase tracking-wider mt-6 mb-2">
-                        <span>🏭</span> Experiencia Logística e Industrial
-                    </div>
-
-                    <div class="relative border-l-2 border-amber-500/30 ml-3 space-y-6">
-                        <!-- Newton Energies -->
-                        <div class="relative pl-8">
-                            <div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-amber-500 border-4 border-bg-dark"></div>
-                            <div class="flex justify-between items-baseline mb-0.5">
-                                <h4 class="text-sm font-bold text-white">Operario de Línea / Maquinista — Newton Energies</h4>
-                                <span class="text-xs font-mono text-amber-400">Nov 2024 – Feb 2025</span>
-                            </div>
-                        </div>
-
-                        <!-- Döhler -->
-                        <div class="relative pl-8">
-                            <div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-amber-500 border-4 border-bg-dark"></div>
-                            <div class="flex justify-between items-baseline mb-0.5">
-                                <h4 class="text-sm font-bold text-white">Operario de Producción / Preparador Mezclas — Döhler</h4>
-                                <span class="text-xs font-mono text-amber-400">Dic 2023 – Oct 2024</span>
-                            </div>
-                        </div>
-
-                        <!-- Procter & Gamble -->
-                        <div class="relative pl-8">
-                            <div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-amber-500 border-4 border-bg-dark"></div>
-                            <div class="flex justify-between items-baseline mb-0.5">
-                                <h4 class="text-sm font-bold text-white">Operador Logístico y Carretillero — Procter &amp; Gamble</h4>
-                                <span class="text-xs font-mono text-amber-400">Ene 2022 – Sep 2023</span>
-                            </div>
-                        </div>
-
-                        <!-- GB Foods -->
-                        <div class="relative pl-8">
-                            <div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-amber-500 border-4 border-bg-dark"></div>
-                            <div class="flex justify-between items-baseline mb-0.5">
-                                <h4 class="text-sm font-bold text-white">Operario de Acondicionamiento y Envasado — GB Foods</h4>
-                                <span class="text-xs font-mono text-amber-400">Oct 2021 – Ene 2022</span>
-                            </div>
-                        </div>
-
-                        <!-- Agrupación Logística de Bebidas -->
-                        <div class="relative pl-8">
-                            <div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-amber-500 border-4 border-bg-dark"></div>
-                            <div class="flex justify-between items-baseline mb-0.5">
-                                <h4 class="text-sm font-bold text-white">Mozo de Almacén y Carretillero — Agrup. Logística Bebidas</h4>
-                                <span class="text-xs font-mono text-amber-400">Jun 2021 – Oct 2021</span>
-                            </div>
-                        </div>
-
-                        <!-- Logista -->
-                        <div class="relative pl-8">
-                            <div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-amber-500 border-4 border-bg-dark"></div>
-                            <div class="flex justify-between items-baseline mb-0.5">
-                                <h4 class="text-sm font-bold text-white">Operario de Picking y Radiofrecuencia — Logista</h4>
-                                <span class="text-xs font-mono text-amber-400">Ene 2021 – Jun 2021</span>
-                            </div>
-                        </div>
-
-                        <!-- Transportes Souto -->
-                        <div class="relative pl-8">
-                            <div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-amber-500 border-4 border-bg-dark"></div>
-                            <div class="flex justify-between items-baseline mb-0.5">
-                                <h4 class="text-sm font-bold text-white">Mozo de Carga y Descarga — Transportes Souto</h4>
-                                <span class="text-xs font-mono text-amber-400">Sep 2020 – Dic 2020</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Formación Académica -->
-                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-purple-500/10 border border-purple-500/30 text-purple-400 text-xs font-mono font-bold uppercase tracking-wider mt-6 mb-2">
-                        <span>🎓</span> Formación Académica
-                    </div>
-
-                    <div class="relative border-l-2 border-purple-500/30 ml-3 space-y-6">
-                        <!-- Education: SMR -->
-                        <div class="relative pl-8">
-                            <div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-purple-500 border-4 border-bg-dark"></div>
-                            <div class="flex justify-between items-baseline mb-1">
-                                <h4 class="text-base font-bold text-white">Técnico en Sistemas Microinformáticos y Redes (SMR)</h4>
-                                <span class="text-xs font-mono text-purple-400">ILERNA Online · 2023 – 2025</span>
-                            </div>
-                            <p class="text-xs text-slate-500 leading-relaxed">
-                                Formación integral centrada en el diagnóstico y reparación de hardware, administración de sistemas (Windows/Linux), despliegue de redes locales cableadas e inalámbricas y servicios de red.
-                            </p>
-                        </div>
-
-                        <!-- Education: ESO -->
-                        <div class="relative pl-8">
-                            <div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-purple-500 border-4 border-bg-dark"></div>
-                            <div class="flex justify-between items-baseline mb-1">
-                                <h4 class="text-base font-bold text-white">Graduado en Educación Secundaria Obligatoria (ESO)</h4>
-                                <span class="text-xs font-mono text-purple-400">I.E.S. El Coronil</span>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </main>
-
-            <!-- Right Column: Skills, Certifications & Contact (Span 1) -->
-            <aside class="space-y-10">
-                
-                <!-- Core IT Skills -->
-                <section class="p-6 rounded-3xl bg-slate-900/35 border border-white/[0.03] glass-card">
-                    <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
-                        <span>⚙️</span> Competencias IT
-                    </h3>
-                    <div class="space-y-4">
-                        <div>
-                            <span class="text-xs font-semibold text-primary block mb-1">Sistemas & Redes</span>
-                            <p class="text-xs text-slate-400 leading-relaxed">
-                                Administración Windows/Linux, gestión Active Directory básica, configuración de switches/routers, protocolos TCP/IP y cableado de red.
-                            </p>
-                        </div>
-                        <div>
-                            <span class="text-xs font-semibold text-primary block mb-1">Soporte Informático</span>
-                            <p class="text-xs text-slate-400 leading-relaxed">
-                                Diagnóstico de averías físicas en PCs, optimización de sistemas operativos lentos, virtualizaciones locales y asistencia a usuarios multiplataforma.
-                            </p>
-                        </div>
-                        <div>
-                            <span class="text-xs font-semibold text-primary block mb-1">Desarrollo Web Base</span>
-                            <p class="text-xs text-slate-400 leading-relaxed">
-                                Creación de prototipos funcionales usando HTML5, CSS3, JavaScript básico, React y publicación rápida de contenedores locales.
-                            </p>
-                        </div>
-                        <div>
-                            <span class="text-xs font-semibold text-primary block mb-1">Integración y Herramientas IA</span>
-                            <p class="text-xs text-slate-400 leading-relaxed">
-                                Interés y destreza en la integración de APIs (Gemini, Llama) y entornos de desarrollo interactivos para agilizar workflows de oficina.
-                            </p>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Certifications -->
-                <section class="p-6 rounded-3xl bg-slate-900/35 border border-white/[0.03] glass-card">
-                    <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
-                        <span>🛡️</span> Certificaciones
-                    </h3>
-                    <div class="space-y-3">
-                        <div class="flex items-center gap-3 p-2 rounded-xl bg-slate-900/40 border border-slate-800">
-                            <div class="w-10 h-10 rounded-lg bg-white p-1 overflow-hidden flex-shrink-0 flex items-center justify-center">
-                                <img alt="Cisco CCST Networking" class="w-full h-full object-contain" src="assets/images/cert1.png" />
-                            </div>
-                            <div>
-                                <span class="text-xs font-bold text-white block">Cisco CCST Networking</span>
-                                <span class="text-[10px] text-slate-500 font-mono">Cisco Certified Support Tech</span>
-                            </div>
-                        </div>
-
-                        <div class="flex items-center gap-3 p-2 rounded-xl bg-slate-900/40 border border-slate-800">
-                            <div class="w-10 h-10 rounded-lg bg-white p-1 overflow-hidden flex-shrink-0 flex items-center justify-center">
-                                <img alt="Cisco CCST Cybersecurity" class="w-full h-full object-contain" src="assets/images/cert2.png" />
-                            </div>
-                            <div>
-                                <span class="text-xs font-bold text-white block">Cisco CCST Cybersecurity</span>
-                                <span class="text-[10px] text-slate-500 font-mono">Cisco Certified Support Tech</span>
-                            </div>
-                        </div>
-
-                        <div class="flex items-center gap-3 p-2 rounded-xl bg-slate-900/40 border border-slate-800">
-                            <div class="w-10 h-10 rounded-lg bg-white p-1 overflow-hidden flex-shrink-0 flex items-center justify-center">
-                                <img alt="Core Generative AI Skills" class="w-full h-full object-contain" src="assets/images/genai-skills.png" />
-                            </div>
-                            <div>
-                                <span class="text-xs font-bold text-white block">Core Generative AI Skills</span>
-                                <span class="text-[10px] text-slate-500 font-mono">Cisco Networking Academy · 2026</span>
-                            </div>
-                        </div>
-
-                        <div class="flex items-center gap-3 p-2 rounded-xl bg-slate-900/40 border border-slate-800">
-                            <div class="w-10 h-10 rounded-lg bg-white p-1 overflow-hidden flex-shrink-0 flex items-center justify-center">
-                                <img alt="Python Essentials 1" class="w-full h-full object-contain" src="assets/images/python-essentials.png" />
-                            </div>
-                            <div>
-                                <span class="text-xs font-bold text-white block">Python Essentials 1</span>
-                                <span class="text-[10px] text-slate-500 font-mono">Cisco & OpenEDG Python Institute · 2026</span>
-                            </div>
-                        </div>
-
-                        <div class="flex items-center gap-3 p-2 rounded-xl bg-slate-900/40 border border-slate-800">
-                            <div class="w-10 h-10 rounded-lg bg-white p-1 overflow-hidden flex-shrink-0 flex items-center justify-center">
-                                <img alt="Kanban Essentials Certified" class="w-full h-full object-contain" src="assets/images/KEC.png" />
-                            </div>
-                            <div>
-                                <span class="text-xs font-bold text-white block">Kanban Essentials Certified (KEC)</span>
-                                <span class="text-[10px] text-slate-500 font-mono">CertiProf ID 1143487</span>
-                            </div>
-                        </div>
-
-                        <div class="flex items-center gap-3 p-2 rounded-xl bg-slate-900/40 border border-slate-800">
-                            <div class="w-10 h-10 rounded-lg bg-white p-1 overflow-hidden flex-shrink-0 flex items-center justify-center">
-                                <img alt="Scrum Fundamentals Certified" class="w-full h-full object-contain" src="assets/images/SFC.png" />
-                            </div>
-                            <div>
-                                <span class="text-xs font-bold text-white block">Scrum Fundamentals Certified (SFC)</span>
-                                <span class="text-[10px] text-slate-500 font-mono">SCRUMstudy ID 1143492</span>
-                            </div>
-                        </div>
-
-                        <div class="flex items-center gap-3 p-2 rounded-xl bg-slate-900/40 border border-slate-800">
-                            <div class="w-10 h-10 rounded-lg bg-white p-1 overflow-hidden flex-shrink-0 flex items-center justify-center">
-                                <img alt="Six Sigma Yellow Belt Certified" class="w-full h-full object-contain" src="assets/images/cert3.png" />
-                            </div>
-                            <div>
-                                <span class="text-xs font-bold text-white block">Six Sigma Yellow Belt Certified</span>
-                                <span class="text-[10px] text-slate-500 font-mono">Lean & Mejora Continua</span>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Contact Info -->
-                <section class="p-6 rounded-3xl bg-slate-900/35 border border-white/[0.03] glass-card space-y-4">
-                    <h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
-                        <span>📬</span> Contacto
-                    </h3>
-                    
-                    <a href="mailto:manuelalvarezdianez@hotmail.com" class="flex items-center gap-3 p-3 rounded-2xl bg-slate-900/45 border border-slate-800 hover:border-primary/50 text-slate-400 hover:text-white transition-all group">
-                        <span class="text-lg group-hover:scale-110 transition-transform">✉️</span>
-                        <span class="text-xs truncate">manuelalvarezdianez@hotmail.com</span>
-                    </a>
-
-                    <a href="https://linkedin.com/in/manu-alvarez-dev" target="_blank" class="flex items-center gap-3 p-3 rounded-2xl bg-slate-900/45 border border-slate-800 hover:border-primary/50 text-slate-400 hover:text-white transition-all group">
-                        <span class="text-lg group-hover:scale-110 transition-transform">💼</span>
-                        <span class="text-xs truncate">linkedin.com/in/manu-alvarez-dev</span>
-                    </a>
-
-                    <a href="https://github.com/manu-alvarez" target="_blank" class="flex items-center gap-3 p-3 rounded-2xl bg-slate-900/45 border border-slate-800 hover:border-primary/50 text-slate-400 hover:text-white transition-all group">
-                        <span class="text-lg group-hover:scale-110 transition-transform">💻</span>
-                        <span class="text-xs truncate">github.com/manu-alvarez</span>
-                    </a>
-
-                    <a href="https://msbross.me" target="_blank" class="flex items-center gap-3 p-3 rounded-2xl bg-slate-900/45 border border-slate-800 hover:border-primary/50 text-slate-400 hover:text-white transition-all group">
-                        <img src="assets/images/msbross-logo.png" alt="MSBrossAI" class="h-5 w-5 object-contain group-hover:scale-110 transition-transform" />
-                        <span class="text-xs truncate">msbross.me</span>
-                    </a>
-
-                    <div class="flex items-center gap-3 p-3 rounded-2xl bg-slate-900/45 border border-slate-800 text-slate-500">
-                        <span class="text-lg">📍</span>
-                        <span class="text-xs">Mequinenza, Zaragoza (España) · Remoto / Presencial</span>
-                    </div>
-                </section>
-            </aside>
+        <div>
+          <span class="brand-title">Manuel Álvarez Diánez</span>
+          <span class="brand-sub">Técnico IT & Sistemas · Creador de IA</span>
         </div>
+      </a>
 
-        <!-- Footer -->
-        <footer class="mt-20 pt-8 border-t border-slate-900 text-center text-xs text-slate-600">
-            <p>© 2026 Manuel Álvarez Diánez · Portfolio &amp; CV interactivo</p>
-        </footer>
+      <ul class="nav-links">
+        <li><a href="#titulacion-certificaciones">Titulación & Certificaciones</a></li>
+        <li><a href="#experiencia-it">Experiencia IT</a></li>
+        <li><a href="#ecosistema-ia">Software & Proyectos IA</a></li>
+        <li><a href="#trayectoria-industrial">Trayectoria Previa</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="https://manu-alvarez.github.io/MSB/" target="_blank" rel="noopener noreferrer" class="btn-nav btn-nav-msb">
+          <span>⚡ Panel MSB</span>
+        </a>
+        <a href="./Manuel Alvarez - CV.pdf" download="CV-Manuel_Alvarez_Dianez.pdf" class="btn-nav btn-nav-pdf">
+          <span>Descargar PDF</span>
+        </a>
+      </div>
     </div>
+  </header>
 
-    <!-- Client-Side Filter Logic -->
-    <script>
-        function filterCategory(category) {
-            const items = document.querySelectorAll('.app-item');
-            const buttons = ['all', 'ia', 'herramientas', 'negocio', 'personal'];
-            
-            // Update buttons active class
-            buttons.forEach(btn => {
-                const el = document.getElementById(`btn-${btn}`);
-                if (btn === category) {
-                    el.className = "px-3 py-1.5 rounded-full font-semibold transition-all bg-primary text-white border border-primary/20";
-                } else {
-                    el.className = "px-3 py-1.5 rounded-full font-semibold transition-all bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200";
-                }
-            });
+  <!-- Main Content -->
+  <main class="main-content">
 
-            // Filter apps
-            items.forEach(item => {
-                const itemCat = item.getAttribute('data-cat');
-                if (category === 'all' || itemCat === category) {
-                    item.style.display = 'flex';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-        }
-    </script>
+    <!-- Hero Card -->
+    <section class="hero-card">
+      <div class="hero-grid">
+        <div class="hero-avatar-box">
+          <img src="./assets/images/profile-photo.png" alt="Manuel Álvarez Diánez" class="hero-avatar-img" />
+        </div>
+
+        <div class="hero-content">
+          <div class="status-pill">
+            <span class="status-dot"></span>
+            <span>Disponible para Incorporación Inmediata · Mequinenza, Zaragoza (España)</span>
+          </div>
+
+          <h1 class="hero-name">Manuel Álvarez Diánez</h1>
+          <div class="hero-title">Técnico en Sistemas Microinformáticos y Redes (SMR) & Desarrollador de Herramientas IA</div>
+
+          <p class="hero-bio">
+            Técnico IT especializado en soporte técnico presencial y remoto, despliegue de infraestructuras de red, administración de sistemas Windows y Linux, mantenimiento de hardware y optimización operativa. Con perfil autónomo en constante evolución: creador y mantenedor de más de 35 aplicaciones y utilidades interactivas integrando agentes de Inteligencia Artificial para simplificar flujos de trabajo.
+          </p>
+
+          <div class="hero-badges-row">
+            <span class="hero-kpi-chip accent">🎓 Titulado Oficial SMR (ILERNA)</span>
+            <span class="hero-kpi-chip accent">🛡️ 8 Certificaciones Oficiales</span>
+            <span class="hero-kpi-chip">💻 Soporte IT & Redes (Teringo / CodeArts)</span>
+            <span class="hero-kpi-chip">🚀 +35 Soluciones Web & Agentes IA</span>
+          </div>
+
+          <div class="hero-meta">
+            <a href="mailto:manuelalvarezdianez@hotmail.com">
+              <span>✉️</span> manuelalvarezdianez@hotmail.com
+            </a>
+            <a href="tel:+34651352065">
+              <span>📞</span> +34 651 35 20 65
+            </a>
+            <a href="https://linkedin.com/in/manu-alvarez-dev" target="_blank" rel="noopener noreferrer">
+              <span>🔗</span> linkedin.com/in/manu-alvarez-dev
+            </a>
+            <a href="https://github.com/manu-alvarez" target="_blank" rel="noopener noreferrer">
+              <span>🐙</span> github.com/manu-alvarez
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-cta-group">
+          <a href="./Manuel Alvarez - CV.pdf" download="CV-Manuel_Alvarez_Dianez.pdf" class="btn-action-primary">
+            <span>📄</span> Descargar CV en PDF
+          </a>
+          <a href="https://cv.manuelalvarez.dev/" target="_blank" rel="noopener noreferrer" class="btn-action-secondary">
+            <span>🌐</span> Ver CV Interactivo
+          </a>
+          <a href="https://manu-alvarez.github.io/MSB/" target="_blank" rel="noopener noreferrer" class="btn-action-secondary">
+            <span>🚀</span> Acceder a MSB Mission Control
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1: Titulación Oficial & Certificaciones (PRIMERA PLANA) -->
+    <section id="titulacion-certificaciones" class="section-wrap">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <div class="section-icon-box icon-cyan">🎓</div>
+          <div>
+            <h2 class="section-title">Titulación Oficial & Certificaciones</h2>
+            <span class="section-sub">Acreditaciones Técnicas Oficiales Verificadas</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Featured Degree Card -->
+      <div class="edu-featured-card">
+        <div class="edu-top-row">
+          <div>
+            <div class="edu-degree">Técnico en Sistemas Microinformáticos y Redes (SMR)</div>
+            <div class="edu-institution">ILERNA Formación Profesional Oficial</div>
+          </div>
+          <span class="edu-badge-date">2023 – 2025 · Titulación Oficial</span>
+        </div>
+        <p class="edu-desc">
+          Formación reglada integral centrada en el diagnóstico y reparación de hardware, montaje de puestos de trabajo, despliegue y mantenimiento de redes locales (cableadas e inalámbricas), administración de sistemas operativos monousuario y multiusuario (Windows Server / Linux), servicios de red, seguridad informática y asistencia técnica a usuarios.
+        </p>
+        <div class="edu-skills-tags">
+          <span class="edu-tag">Montaje & Diagnóstico Hardware</span>
+          <span class="edu-tag">Administración Windows Server & Linux</span>
+          <span class="edu-tag">Redes Locales (LAN/WLAN) & TCP/IP</span>
+          <span class="edu-tag">Ciberseguridad & Backup</span>
+          <span class="edu-tag">Soporte Técnico Helpdesk</span>
+        </div>
+      </div>
+
+      <!-- Certifications Grid (8 Official Badges) -->
+      <div class="certs-grid">
+        <!-- 1. Cisco CCST Networking -->
+        <div class="cert-card">
+          <div class="cert-card-top">
+            <div class="cert-img-box">
+              <img src="./assets/images/cert1.png" alt="Cisco CCST Networking" />
+            </div>
+            <div class="cert-info">
+              <div class="cert-title">Cisco CCST Networking</div>
+              <div class="cert-issuer">Cisco Networking Academy</div>
+            </div>
+          </div>
+          <div class="cert-meta">
+            <span>Redes & Switching</span>
+            <span>Certificado</span>
+          </div>
+        </div>
+
+        <!-- 2. Cisco CCST Cybersecurity -->
+        <div class="cert-card">
+          <div class="cert-card-top">
+            <div class="cert-img-box">
+              <img src="./assets/images/cert2.png" alt="Cisco CCST Cybersecurity" />
+            </div>
+            <div class="cert-info">
+              <div class="cert-title">Cisco CCST Cybersecurity</div>
+              <div class="cert-issuer">Cisco Networking Academy</div>
+            </div>
+          </div>
+          <div class="cert-meta">
+            <span>Seguridad & Amenazas</span>
+            <span>Certificado</span>
+          </div>
+        </div>
+
+        <!-- 3. Core Generative AI Skills -->
+        <div class="cert-card">
+          <div class="cert-card-top">
+            <div class="cert-img-box">
+              <img src="./assets/images/genai-skills.png" alt="Core Generative AI Skills" />
+            </div>
+            <div class="cert-info">
+              <div class="cert-title">Core Generative AI Skills</div>
+              <div class="cert-issuer">Cisco Networking Academy</div>
+            </div>
+          </div>
+          <div class="cert-meta">
+            <span>Fundamentos GenAI · 2026</span>
+            <span>Oficial</span>
+          </div>
+        </div>
+
+        <!-- 4. Python Essentials 1 -->
+        <div class="cert-card">
+          <div class="cert-card-top">
+            <div class="cert-img-box">
+              <img src="./assets/images/python-essentials.png" alt="Python Essentials 1" />
+            </div>
+            <div class="cert-info">
+              <div class="cert-title">Python Essentials 1</div>
+              <div class="cert-issuer">Cisco & OpenEDG Institute</div>
+            </div>
+          </div>
+          <div class="cert-meta">
+            <span>Programación Python · 2026</span>
+            <span>Oficial</span>
+          </div>
+        </div>
+
+        <!-- 5. Kanban Essentials Certified -->
+        <div class="cert-card">
+          <div class="cert-card-top">
+            <div class="cert-img-box">
+              <img src="./assets/images/KEC.png" alt="Kanban Essentials Certified" />
+            </div>
+            <div class="cert-info">
+              <div class="cert-title">Kanban Essentials (KEC)</div>
+              <div class="cert-issuer">CertiProf</div>
+            </div>
+          </div>
+          <div class="cert-meta">
+            <span>Flujos Ágiles · ID: 1143487</span>
+            <span>Certificado</span>
+          </div>
+        </div>
+
+        <!-- 6. Scrum Fundamentals Certified -->
+        <div class="cert-card">
+          <div class="cert-card-top">
+            <div class="cert-img-box">
+              <img src="./assets/images/SFC.png" alt="Scrum Fundamentals Certified" />
+            </div>
+            <div class="cert-info">
+              <div class="cert-title">Scrum Fundamentals (SFC)</div>
+              <div class="cert-issuer">SCRUMstudy</div>
+            </div>
+          </div>
+          <div class="cert-meta">
+            <span>Metodología Scrum · ID: 1143492</span>
+            <span>Certificado</span>
+          </div>
+        </div>
+
+        <!-- 7. Six Sigma Yellow Belt -->
+        <div class="cert-card">
+          <div class="cert-card-top">
+            <div class="cert-img-box">
+              <img src="./assets/images/cert3.png" alt="Six Sigma Yellow Belt" />
+            </div>
+            <div class="cert-info">
+              <div class="cert-title">Six Sigma Yellow Belt</div>
+              <div class="cert-issuer">6Sigmastudy / Lean</div>
+            </div>
+          </div>
+          <div class="cert-meta">
+            <span>Calidad & Mejora Continua</span>
+            <span>Certificado</span>
+          </div>
+        </div>
+
+        <!-- 8. Carnet UNE 58451 -->
+        <div class="cert-card">
+          <div class="cert-card-top">
+            <div class="cert-img-box">
+              <img src="./assets/images/cert4.jpeg" alt="Carnet Carretillas UNE 58451" />
+            </div>
+            <div class="cert-info">
+              <div class="cert-title">Carretillas & Elevadoras</div>
+              <div class="cert-issuer">Normativa UNE 58451</div>
+            </div>
+          </div>
+          <div class="cert-meta">
+            <span>Operativa de Alta Seguridad</span>
+            <span>Oficial</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: Experiencia Profesional IT & Sistemas -->
+    <section id="experiencia-it" class="section-wrap">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <div class="section-icon-box icon-cyan">💻</div>
+          <div>
+            <h2 class="section-title">Experiencia Profesional en Informática & Sistemas</h2>
+            <span class="section-sub">Trayectoria Técnica, Helpdesk y Redes</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-grid">
+        <!-- Exp 1: Teringo S.L.U. -->
+        <div class="exp-card featured-it">
+          <div class="exp-header">
+            <div>
+              <div class="exp-role">Técnico Informático</div>
+              <div class="exp-company">Teringo S.L.U.</div>
+            </div>
+            <span class="exp-period">Oct 2025 – Dic 2025</span>
+          </div>
+
+          <div class="exp-tags-row">
+            <span class="tag-chip">Soporte Técnico</span>
+            <span class="tag-chip">Windows & Linux</span>
+            <span class="tag-chip">Redes LAN / Wi-Fi</span>
+            <span class="tag-chip">Hardware & Periféricos</span>
+            <span class="tag-chip">Ticketing</span>
+          </div>
+
+          <ul class="exp-bullets">
+            <li>Soporte técnico directo a usuarios y resolución de incidencias de hardware, software y conectividad de red local (LAN/Wi-Fi).</li>
+            <li>Instalación, configuración y puesta a punto de puestos de trabajo, periféricos y sistemas operativos cliente (Windows y Linux).</li>
+            <li>Diagnóstico preventivo y correctivo de averías en equipos informáticos, sustitución de componentes y optimización de rendimiento.</li>
+            <li>Mantenimiento básico de infraestructuras de red de área local, cableado estructurado y gestión de direccionamiento IP.</li>
+            <li>Documentación de procedimientos operativos, soporte en copias de seguridad periódicas y registro en plataformas de ticketing.</li>
+          </ul>
+        </div>
+
+        <!-- Exp 2: CodeArts Solutions -->
+        <div class="exp-card featured-it">
+          <div class="exp-header">
+            <div>
+              <div class="exp-role">IT Support Intern</div>
+              <div class="exp-company">CodeArts Solutions</div>
+            </div>
+            <span class="exp-period">Jun 2025 – Sep 2025</span>
+          </div>
+
+          <div class="exp-tags-row">
+            <span class="tag-chip">Helpdesk N1</span>
+            <span class="tag-chip">Active Directory</span>
+            <span class="tag-chip">Clonado de Discos</span>
+            <span class="tag-chip">Microsoft 365</span>
+            <span class="tag-chip">Inventario IT</span>
+          </div>
+
+          <ul class="exp-bullets">
+            <li>Atención y triaje de incidencias de primer nivel (Helpdesk) resolviendo dudas y problemas técnicos a usuarios corporativos.</li>
+            <li>Configuración de cuentas de correo, asignación de permisos básicos y asistencia en utilidades ofimáticas corporativas.</li>
+            <li>Colaboración en la monitorización de servicios de red y actualización del inventario de activos tecnológicos y software.</li>
+            <li>Preparación y clonado de imágenes de sistemas operativos para el despliegue estandarizado de nuevos puestos de trabajo.</li>
+            <li>Apoyo en el cumplimiento de directivas de seguridad básicas y buenas prácticas informáticas en la oficina.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: Desarrollador de Software & Herramientas de IA (LA CUÑA DE PROYECTOS) -->
+    <section id="ecosistema-ia" class="section-wrap">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <div class="section-icon-box icon-purple">🤖</div>
+          <div>
+            <h2 class="section-title">Desarrollo de Software & Soluciones de Inteligencia Artificial</h2>
+            <span class="section-sub">Perfil Constructor: +35 Aplicaciones y Herramientas Web Desplegadas</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ai-showcase-box">
+        <p class="ai-hero-desc">
+          Más allá de la administración de sistemas y el soporte técnico, desarrollo de forma autónoma aplicaciones web modernas, microservicios y herramientas potenciadas por Inteligencia Artificial. Cuento con una infraestructura privada en red VPN Tailscale y Docker con <strong>más de 35 aplicaciones funcionales en producción</strong> para automatización, productividad y experimentación con modelos de lenguaje locales.
+        </p>
+
+        <div class="ai-projects-grid">
+          <!-- Project 1: MSB Mission Control -->
+          <div class="ai-project-card">
+            <span class="project-badge-type">Mando Central & Telemetría</span>
+            <div class="project-name">MSB Mission Control OS</div>
+            <p class="project-summary">
+              Dashboard centralizado de operaciones y catálogo de servicios que supervisa en tiempo real las 35+ aplicaciones web del sistema, con telemetría de red, supervisión de procesos PM2, audio procedural y Canvas 2D.
+            </p>
+            <div class="project-tech">Vanilla JS · Web Audio · Canvas · PM2 · Tailscale</div>
+            <a href="https://manu-alvarez.github.io/MSB/" target="_blank" rel="noopener noreferrer" class="project-link">
+              <span>Explorar Mission Control</span> <span>↗</span>
+            </a>
+          </div>
+
+          <!-- Project 2: IAPuta OS & Conversational Voice -->
+          <div class="ai-project-card">
+            <span class="project-badge-type">Inteligencia Artificial Local</span>
+            <div class="project-name">IAPuta OS & Agentes de Voz</div>
+            <p class="project-summary">
+              Asistente conversacional interactivo con orbe 3D reactivo, síntesis y reconocimiento de voz, visión artificial y fallback multi-LLM (Groq, Ollama local con modelos Qwen/DeepSeek y Gemini) para consultas privadas.
+            </p>
+            <div class="project-tech">FastAPI · React · Three.js · Ollama · WebRTC</div>
+            <a href="https://manu-alvarez.github.io/MSB/" target="_blank" rel="noopener noreferrer" class="project-link">
+              <span>Ver en Catálogo MSB</span> <span>↗</span>
+            </a>
+          </div>
+
+          <!-- Project 3: IndustrialPro & Operaciones -->
+          <div class="ai-project-card">
+            <span class="project-badge-type">Automatización & Utilidades</span>
+            <div class="project-name">Suite de Herramientas Operativas</div>
+            <p class="project-summary">
+              Conjunto de aplicaciones prácticas orientadas a procesos reales: SCADA web industrial (IndustrialPro), ERP de gestión comercial, utilidades OCR para digitalización de documentos y generadores reactivos.
+            </p>
+            <div class="project-tech">React 19 · Python · SQLite · Docker · Microservicios</div>
+            <a href="https://manu-alvarez.github.io/MSB/" target="_blank" rel="noopener noreferrer" class="project-link">
+              <span>Ver en Catálogo MSB</span> <span>↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Bottom CTA -->
+        <div class="msb-cta-banner">
+          <div class="msb-cta-text">
+            <h4>¿Quieres probar o explorar el ecosistema completo?</h4>
+            <p>Accede al panel de mando MSB para descubrir las 35+ aplicaciones web, APIs y utilidades activas.</p>
+          </div>
+          <a href="https://manu-alvarez.github.io/MSB/" target="_blank" rel="noopener noreferrer" class="btn-msb-banner">
+            <span>⚡ Abrir Catálogo Completo en MSB</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: Trayectoria Logística e Industrial Previa (AGRUPADA Y DIRECTA) -->
+    <section id="trayectoria-industrial" class="section-wrap">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <div class="section-icon-box icon-amber">🏭</div>
+          <div>
+            <h2 class="section-title">Trayectoria Logística e Industrial Previa</h2>
+            <span class="section-sub">Experiencia de Alta Exigencia en Plantas Multinacionales</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="industrial-condensed-card">
+        <div class="ind-icon-box">⚙️</div>
+        <div class="ind-content">
+          <div class="ind-title">Operador Logístico, Carretillero y Maquinista Industrial (2020 – 2025)</div>
+          <p class="ind-text">
+            Sólida trayectoria previa en entornos de alta exigencia operativa y producción continua en compañías multinacionales de primer nivel como <strong>Procter &amp; Gamble (P&amp;G)</strong>, <strong>Becton Dickinson</strong>, <strong>Döhler</strong>, <strong>GB Foods</strong> y <strong>Logista</strong>. Experiencia que consolida mi rigor profesional, capacidad de trabajo bajo presión, máxima disciplina en normativas de seguridad laboral (normativa <strong>UNE 58451</strong>) y mentalidad de mejora continua orientada a la calidad (<strong>Six Sigma</strong>).
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: Competencias Técnicas & Stack -->
+    <section class="section-wrap">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <div class="section-icon-box icon-cyan">🛠️</div>
+          <div>
+            <h2 class="section-title">Competencias Técnicas & Stack Tecnológico</h2>
+            <span class="section-sub">Habilidades Prácticas y Herramientas de Trabajo</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-block">
+          <div class="skill-block-title"><span>💻</span> Sistemas & Soporte</div>
+          <div class="skill-items-list">
+            <div class="skill-item-pill">Windows Server / 11 / 10</div>
+            <div class="skill-item-pill">Linux (Debian / Ubuntu)</div>
+            <div class="skill-item-pill">Active Directory & Microsoft 365</div>
+            <div class="skill-item-pill">Montaje & Reparación PC</div>
+            <div class="skill-item-pill">Clonación & Despliegue SO</div>
+            <div class="skill-item-pill">Helpdesk & Ticketing</div>
+          </div>
+        </div>
+
+        <div class="skill-block">
+          <div class="skill-block-title"><span>🌐</span> Redes & Conectividad</div>
+          <div class="skill-items-list">
+            <div class="skill-item-pill">Cisco CCST Networking</div>
+            <div class="skill-item-pill">Protocolos TCP/IP, DNS, DHCP</div>
+            <div class="skill-item-pill">Configuración Routers & Switches</div>
+            <div class="skill-item-pill">VLANs & Cableado Estructurado</div>
+            <div class="skill-item-pill">Redes Wi-Fi Corporativas</div>
+            <div class="skill-item-pill">Ciberseguridad & Firewalls</div>
+          </div>
+        </div>
+
+        <div class="skill-block">
+          <div class="skill-block-title"><span>⚡</span> Desarrollo & DevOps</div>
+          <div class="skill-items-list">
+            <div class="skill-item-pill">Python Essentials & FastAPI</div>
+            <div class="skill-item-pill">JavaScript ES6+ & HTML5/CSS3</div>
+            <div class="skill-item-pill">React & Vite</div>
+            <div class="skill-item-pill">Docker & Contenedores</div>
+            <div class="skill-item-pill">Tailscale Mesh VPN</div>
+            <div class="skill-item-pill">Git / GitHub & Bash Scripting</div>
+          </div>
+        </div>
+
+        <div class="skill-block">
+          <div class="skill-block-title"><span>🎯</span> Metodologías & Calidad</div>
+          <div class="skill-items-list">
+            <div class="skill-item-pill">Core Generative AI Skills</div>
+            <div class="skill-item-pill">Ollama & Modelos Locales</div>
+            <div class="skill-item-pill">Kanban Essentials (KEC)</div>
+            <div class="skill-item-pill">Scrum Fundamentals (SFC)</div>
+            <div class="skill-item-pill">Six Sigma Yellow Belt</div>
+            <div class="skill-item-pill">Normativa UNE 58451</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <span class="footer-name">Manuel Álvarez Diánez</span>
+        <span class="footer-copy">Técnico en Sistemas Microinformáticos y Redes · Mequinenza, Zaragoza (España)</span>
+      </div>
+
+      <div class="footer-contact-links">
+        <a href="mailto:manuelalvarezdianez@hotmail.com">✉️ Email</a>
+        <a href="tel:+34651352065">📞 Teléfono</a>
+        <a href="https://linkedin.com/in/manu-alvarez-dev" target="_blank" rel="noopener noreferrer">💼 LinkedIn</a>
+        <a href="https://github.com/manu-alvarez" target="_blank" rel="noopener noreferrer">🐙 GitHub</a>
+        <a href="./Manuel Alvarez - CV.pdf" download="CV-Manuel_Alvarez_Dianez.pdf">📄 Descargar CV (PDF)</a>
+        <a href="https://manu-alvarez.github.io/MSB/" target="_blank" rel="noopener noreferrer">⚡ Panel MSB</a>
+      </div>
+    </div>
+  </footer>
 </body>
-
 </html>
