@@ -8,6 +8,7 @@
 - [x] `Agent-Sr-Smith`: PR #1 merged; full 197/197 tests, TypeScript, build in https://github.com/manu-alvarez/Agent-Sr-Smith/actions/runs/45278695989. **Not an acceptance of ZIP in a user browser.**
 - [x] `CombiPro`: PR #1 merged (commit `8ae9cc225f684a71dbd8e95b361a27a32eeb2f82`); independent source restored from MSBrossAI, `npm ci`, TypeScript, audit and Vite build green in https://github.com/manu-alvarez/CombiPro/actions/runs/45281778022. **Browser/API acceptance remains pending.**
 - [x] `MSBrossAI`: PR #1 merged (commit `e8ab6e6fe3c238015578d6bb1e370460ac0d3b2d`), 13/13 frontend matrix builds green in https://github.com/manu-alvarez/MSBrossAI/actions/runs/45282244889. Replaced broken automatic deployment triggers; Cloudflare is manual-only. **Application and manual deployment acceptance remain pending.**
+- [x] `TaskFlowPro`: PR #1 merged (commit `05aa6292f8d526b9e719096dccfb1786a3380a08`), successful `npm ci`, TypeScript/Vite build and high-severity audit in https://github.com/manu-alvarez/TaskFlowPro/actions/runs/45283024241. **Browser CRUD/persistence acceptance remains pending.**
 - [x] Documentation review: `manu-alvarez.github.io`, `ManuCodearts`, `varios-external` (previous audit; remaining live validation not completed).
 
 ## Complete inventory and next acceptance gates
@@ -46,7 +47,7 @@
 | 30 | [Sr.Smith](https://github.com/manu-alvarez/Sr.Smith) | Partial | Reconcile Agent-Sr-Smith + ZIP acceptance |
 | 31 | [Tarot-Maya](https://github.com/manu-alvarez/Tarot-Maya) | Pending | Card data and navigation |
 | 32 | [tarot-rws](https://github.com/manu-alvarez/tarot-rws) | Pending | Resource integrity and Tarot-Maya relationship |
-| 33 | [TaskFlowPro](https://github.com/manu-alvarez/TaskFlowPro) | Partial | Independent build and reconcile integrated version |
+| 33 | [TaskFlowPro](https://github.com/manu-alvarez/TaskFlowPro) | CI OK; global pending | Browser CRUD/persistence acceptance and reconcile integrated version |
 | 34 | [TuEnergiaMaya](https://github.com/manu-alvarez/TuEnergiaMaya) | Pending | Calculations, static resources, published smoke |
 | 35 | [varios-external](https://github.com/manu-alvarez/varios-external) | Docs OK; global pending | External references check |
 
