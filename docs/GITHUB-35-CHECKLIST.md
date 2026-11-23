@@ -22,7 +22,7 @@
 | 5 | [Dream_OS](https://github.com/manu-alvarez/Dream_OS) | Static asset integrity OK | Offline PWA, storage, import/export and UI acceptance |
 | 6 | [Edelweiss-Cumple](https://github.com/manu-alvarez/Edelweiss-Cumple) | 6 HTML asset checks OK; map/RSVP placeholders removed, PR #1 merged | Venue/contact unavailable; user/browser interaction acceptance |
 | 7 | [FoZ-SoundPro](https://github.com/manu-alvarez/FoZ-SoundPro) | 6/6 technical tests, archive SHA-256 OK; Pages deployment under re-verification | Manual audio/browser interaction and live site acceptance |
-| 8 | [IAPutaOS](https://github.com/manu-alvarez/IAPutaOS) | Pending | CI and integrations |
+| 8 | [IAPutaOS](https://github.com/manu-alvarez/IAPutaOS) | Current main CI verified (run 23364371028) | API/frontend integrated browser acceptance |
 | 9 | [InfoCool](https://github.com/manu-alvarez/InfoCool) | Python/Next.js CI OK, PR #1 merged | Browser workflows and external-service acceptance |
 | 10 | [jartos-de-tu-pelo](https://github.com/manu-alvarez/jartos-de-tu-pelo) | Production build reproducible | UI and publication acceptance |
 | 11 | [LIVEKIT](https://github.com/manu-alvarez/LIVEKIT) | Insecure JWT fallback removed, PR #1 merged | Token endpoint abuse controls, media integration and browser acceptance |
@@ -34,21 +34,21 @@
 | 17 | [Mequi3D](https://github.com/manu-alvarez/Mequi3D) | Static asset integrity OK | Interactive 3D viewer/browser acceptance |
 | 18 | [MOKO-TOOLS](https://github.com/manu-alvarez/MOKO-TOOLS) | Pending | Tool workflows and acceptance |
 | 19 | [MSB](https://github.com/manu-alvarez/MSB) | Partial | 8 pending app routes and app catalog smoke |
-| 20 | [msb-iaputa-backend](https://github.com/manu-alvarez/msb-iaputa-backend) | Pending | API and CI tests |
+| 20 | [msb-iaputa-backend](https://github.com/manu-alvarez/msb-iaputa-backend) | Current main CI verified (run 23630357694) | API/environment acceptance and frontend contract |
 | 21 | [msb-livekit-backend](https://github.com/manu-alvarez/msb-livekit-backend) | JWT secret hardening and regression CI OK; PR #1 merged | Real token issuance/auth, provider connection, browser acceptance |
 | 22 | [msb-traductor-backend](https://github.com/manu-alvarez/msb-traductor-backend) | Input contracts and TypeScript build OK; PR #1 merged | Real translation service and error-case acceptance |
 | 23 | [MSBross.me](https://github.com/manu-alvarez/MSBross.me) | CI OK; global pending | Functional acceptance and safe FTP rollback |
 | 24 | [MSBrossAI](https://github.com/manu-alvarez/MSBrossAI) | CI 13/13 OK; global pending | Source-of-truth matrix, per-app smoke and verified manual deployment |
-| 25 | [MY-UNIVERSAL-AI-OS](https://github.com/manu-alvarez/MY-UNIVERSAL-AI-OS) | Partial | CI, runtime/MCP/RAG contract acceptance; do not deploy VPS |
+| 25 | [MY-UNIVERSAL-AI-OS](https://github.com/manu-alvarez/MY-UNIVERSAL-AI-OS) | Main quality and extended-quality CI verified | Runtime/MCP/RAG external acceptance; NO VPS deploy |
 | 26 | [NexusFlow-Framework](https://github.com/manu-alvarez/NexusFlow-Framework) | Pending | Core execution and framework acceptance |
-| 27 | [PromptCombo](https://github.com/manu-alvarez/PromptCombo) | Pending | CI and UI acceptance |
+| 27 | [PromptCombo](https://github.com/manu-alvarez/PromptCombo) | Current main CI and Pages verified (run 41735664235) | Browser UI, artifacts and published page smoke |
 | 28 | [SERVER-DEV](https://github.com/manu-alvarez/SERVER-DEV) | Partial | Infrastructure source-of-truth, deploy/secret safety |
 | 29 | [SKILL-skill-forge](https://github.com/manu-alvarez/SKILL-skill-forge) | COMPLETE: official validation + 12/12 skill + MCP JSON-RPC 8/8 E2E, PR #1 merged | None for documented local generator contract |
 | 30 | [Sr.Smith](https://github.com/manu-alvarez/Sr.Smith) | Partial | Reconcile Agent-Sr-Smith + ZIP acceptance |
 | 31 | [Tarot-Maya](https://github.com/manu-alvarez/Tarot-Maya) | Production build reproducible | Card data and navigation/browser acceptance |
 | 32 | [tarot-rws](https://github.com/manu-alvarez/tarot-rws) | Static asset integrity OK | Card content, reading interactions and Tarot-Maya relationship |
 | 33 | [TaskFlowPro](https://github.com/manu-alvarez/TaskFlowPro) | CI OK; global pending | Browser CRUD/persistence acceptance and reconcile integrated version |
-| 34 | [TuEnergiaMaya](https://github.com/manu-alvarez/TuEnergiaMaya) | Pending | Calculations, static resources, published smoke |
+| 34 | [TuEnergiaMaya](https://github.com/manu-alvarez/TuEnergiaMaya) | Current main validate/deploy CI verified | Calculation correctness and published browser smoke |
 | 35 | [varios-external](https://github.com/manu-alvarez/varios-external) | Docs OK; global pending | External references check |
 
 
@@ -64,6 +64,8 @@
 
 - [x] `Edelweiss-Cumple` PR #1 merged: fixed invalid map/RSVP placeholders and 15 Nov 2026 weekday, six HTML pages checked in https://github.com/manu-alvarez/Edelweiss-Cumple/actions/runs/45286260724. Actual venue/phone not provided, so no fabricated links.
 - [x] `MSB` PR #4 merged: static asset matrix for `Edelweiss-Cumple`, `Dream_OS`, `tarot-rws` and `Mequi3D`; all four checks passed after source fix (run https://github.com/manu-alvarez/MSB/actions/runs/45286046206).
+
+- [x] Source-head-matched quality evidence (no needless rerun): `IAPutaOS` https://github.com/manu-alvarez/IAPutaOS/actions/runs/23364371028 ; `msb-iaputa-backend` https://github.com/manu-alvarez/msb-iaputa-backend/actions/runs/23630357694 ; `PromptCombo` https://github.com/manu-alvarez/PromptCombo/actions/runs/41735664235 ; `MY-UNIVERSAL-AI-OS` https://github.com/manu-alvarez/MY-UNIVERSAL-AI-OS/actions/runs/45176055249 ; `TuEnergiaMaya` https://github.com/manu-alvarez/TuEnergiaMaya/actions/runs/37633745083. All checked against their exact current main SHA; external acceptance not inferred.
 
 ## Canonical source boundaries under review
 
