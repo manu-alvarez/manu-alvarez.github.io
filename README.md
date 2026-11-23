@@ -7,11 +7,11 @@ Técnico en Sistemas Microinformáticos y Redes. Trabajo con Windows, Linux y re
 | Área | Proyecto | Qué encontrarás |
 | --- | --- | --- |
 | Sistemas | [MSB](https://github.com/manu-alvarez/MSB) | Catálogo de servicios con interfaz web, scripts y configuración de procesos de escritorio. |
-| Agentes | [Agent-Sr-Smith](https://github.com/manu-alvarez/Agent-Sr-Smith) | Generador de proyectos CLI, API o biblioteca con instrucciones para el editor y exportación ZIP. |
+| Agentes | [Agent-Sr-Smith](https://github.com/manu-alvarez/Agent-Sr-Smith) · [Web](https://manu-alvarez.github.io/Agent-Sr-Smith/) | Generador de scaffolding ZIP con runtime portable Node.js, MCP local, RAG y orquestación multirol. La web estática requiere conectividad a proveedores para las funciones LLM. |
 | IA y datos | [MCP-agent-memory](https://github.com/manu-alvarez/MCP-agent-memory) | Componentes Python de memoria para agentes, con código de recuperación, configuración y pruebas. |
 | Servicios web | [msb-traductor-backend](https://github.com/manu-alvarez/msb-traductor-backend) | API TypeScript para extraer texto de documentos y solicitar traducciones y resúmenes a Groq. |
 | Desarrollo móvil | [CalendarioMaya-ManoElectricaAzul](https://github.com/manu-alvarez/CalendarioMaya-ManoElectricaAzul) | Proyecto de calendario con el código de la aplicación y una carpeta de APK. |
-| Audio | [FoZ-SoundPro](https://github.com/manu-alvarez/FoZ-SoundPro) | Estudio web con secuenciador, pads y exportación WAV y MIDI. |
+| Audio | [FoZ-SoundPro](https://github.com/manu-alvarez/FoZ-SoundPro) · [Web](https://manu-alvarez.github.io/FoZ-SoundPro/) | Estudio web con secuenciador, pads y exportación WAV y MIDI. |
 | Operaciones | [LogiTrack-Warehouse-System](https://github.com/manu-alvarez/LogiTrack-Warehouse-System) | Documentación, prompts y scripts para organizar operaciones de almacén. |
 
 <details>
@@ -58,6 +58,13 @@ Técnico en Sistemas Microinformáticos y Redes. Trabajo con Windows, Linux y re
 - [Edelweiss-Cumple](https://github.com/manu-alvarez/Edelweiss-Cumple)
 
 </details>
+
+## Estructura y mantenimiento del ecosistema
+
+- [Inventario y estado de los 35 repositorios](docs/GITHUB-35-CHECKLIST.md). Diferencia trabajo implementado, compilación verificada y aceptación funcional pendiente; no interpreta una CI verde como producto terminado.
+- **Repositorio oficial de Sr. Smith:** [Agent-Sr-Smith](https://github.com/manu-alvarez/Agent-Sr-Smith). La antigua copia privada `Sr.Smith` está obsoleta y se conserva solo como respaldo histórico hasta su archivo o eliminación.
+- **Despliegues:** los cambios en repositorios no autorizan despliegues automáticos al VPS. Los workflows de `SERVER-DEV` requieren una clave de host SSH conocida y se ejecutan manualmente.
+- **Código fuente y publicación:** no asumir que las copias de aplicaciones dentro de `SERVER-DEV`, `MSB` o `MSBrossAI` son las versiones canónicas sin reconciliarlas con cada repositorio.
 
 ## Formación y contacto
 
