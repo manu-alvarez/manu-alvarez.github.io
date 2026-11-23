@@ -27,7 +27,7 @@
 | 10 | [jartos-de-tu-pelo](https://github.com/manu-alvarez/jartos-de-tu-pelo) | Production build reproducible | UI and publication acceptance |
 | 11 | [LIVEKIT](https://github.com/manu-alvarez/LIVEKIT) | Insecure JWT fallback removed, PR #1 merged | Token endpoint abuse controls, media integration and browser acceptance |
 | 12 | [LogiSearch](https://github.com/manu-alvarez/LogiSearch) | Production build reproducible | Search/persistence browser acceptance |
-| 13 | [LogiTrack-Warehouse-System](https://github.com/manu-alvarez/LogiTrack-Warehouse-System) | Pending | Functional scope and acceptance |
+| 13 | [LogiTrack-Warehouse-System](https://github.com/manu-alvarez/LogiTrack-Warehouse-System) | Portable PDF 2-page generation and script syntax CI OK; PR #1 merged | Trello live-board workflow acceptance |
 | 14 | [manu-alvarez.github.io](https://github.com/manu-alvarez/manu-alvarez.github.io) | Docs OK; global pending | Live portfolio link checks |
 | 15 | [ManuCodearts](https://github.com/manu-alvarez/ManuCodearts) | Docs OK; global pending | Public links/assets checks |
 | 16 | [MCP-agent-memory](https://github.com/manu-alvarez/MCP-agent-memory) | SDK compatibility fixed, 164 tests pass, PR #1 merged | Eleven skipped external integration cases and live MCP acceptance |
@@ -40,11 +40,11 @@
 | 23 | [MSBross.me](https://github.com/manu-alvarez/MSBross.me) | CI OK; global pending | Functional acceptance and safe FTP rollback |
 | 24 | [MSBrossAI](https://github.com/manu-alvarez/MSBrossAI) | CI 13/13 OK; global pending | Source-of-truth matrix, per-app smoke and verified manual deployment |
 | 25 | [MY-UNIVERSAL-AI-OS](https://github.com/manu-alvarez/MY-UNIVERSAL-AI-OS) | Main quality and extended-quality CI verified | Runtime/MCP/RAG external acceptance; NO VPS deploy |
-| 26 | [NexusFlow-Framework](https://github.com/manu-alvarez/NexusFlow-Framework) | Pending | Core execution and framework acceptance |
+| 26 | [NexusFlow-Framework](https://github.com/manu-alvarez/NexusFlow-Framework) | Python tooling and portable PDF generation CI OK; PR #1 merged | Trello integrations and actual operational acceptance |
 | 27 | [PromptCombo](https://github.com/manu-alvarez/PromptCombo) | Current main CI and Pages verified (run 41735664235) | Browser UI, artifacts and published page smoke |
 | 28 | [SERVER-DEV](https://github.com/manu-alvarez/SERVER-DEV) | Partial | Infrastructure source-of-truth, deploy/secret safety |
 | 29 | [SKILL-skill-forge](https://github.com/manu-alvarez/SKILL-skill-forge) | COMPLETE: official validation + 12/12 skill + MCP JSON-RPC 8/8 E2E, PR #1 merged | None for documented local generator contract |
-| 30 | [Sr.Smith](https://github.com/manu-alvarez/Sr.Smith) | Partial | Reconcile Agent-Sr-Smith + ZIP acceptance |
+| 30 | [Sr.Smith](https://github.com/manu-alvarez/Sr.Smith) | Current main web+agent quality green; PR #3 merged | Browser ZIP acceptance; divergence from Agent-Sr-Smith (445 matching blobs, 13 differing) |
 | 31 | [Tarot-Maya](https://github.com/manu-alvarez/Tarot-Maya) | Production build reproducible | Card data and navigation/browser acceptance |
 | 32 | [tarot-rws](https://github.com/manu-alvarez/tarot-rws) | Static asset integrity OK | Card content, reading interactions and Tarot-Maya relationship |
 | 33 | [TaskFlowPro](https://github.com/manu-alvarez/TaskFlowPro) | CI OK; global pending | Browser CRUD/persistence acceptance and reconcile integrated version |
@@ -66,6 +66,10 @@
 - [x] `MSB` PR #4 merged: static asset matrix for `Edelweiss-Cumple`, `Dream_OS`, `tarot-rws` and `Mequi3D`; all four checks passed after source fix (run https://github.com/manu-alvarez/MSB/actions/runs/45286046206).
 
 - [x] Source-head-matched quality evidence (no needless rerun): `IAPutaOS` https://github.com/manu-alvarez/IAPutaOS/actions/runs/23364371028 ; `msb-iaputa-backend` https://github.com/manu-alvarez/msb-iaputa-backend/actions/runs/23630357694 ; `PromptCombo` https://github.com/manu-alvarez/PromptCombo/actions/runs/41735664235 ; `MY-UNIVERSAL-AI-OS` https://github.com/manu-alvarez/MY-UNIVERSAL-AI-OS/actions/runs/45176055249 ; `TuEnergiaMaya` https://github.com/manu-alvarez/TuEnergiaMaya/actions/runs/37633745083. All checked against their exact current main SHA; external acceptance not inferred.
+
+- [x] `Sr.Smith`: https://github.com/manu-alvarez/Sr.Smith/pull/3 merged; [run 45286666495](https://github.com/manu-alvarez/Sr.Smith/actions/runs/45286666495) web application and agent engine jobs both passed. Compared against `Agent-Sr-Smith`: 445 identical file blobs, 13 differing shared files and separate unique modules; source ownership needs a deliberate decision.
+- [x] `NexusFlow-Framework`: https://github.com/manu-alvarez/NexusFlow-Framework/pull/1 merged; [run 45286877862](https://github.com/manu-alvarez/NexusFlow-Framework/actions/runs/45286877862) generated PDF in clean runner, read by pypdf; live Trello changes intentionally not executed.
+- [x] `LogiTrack-Warehouse-System`: https://github.com/manu-alvarez/LogiTrack-Warehouse-System/pull/1 merged; [run 45287236066](https://github.com/manu-alvarez/LogiTrack-Warehouse-System/actions/runs/45287236066) generated 2-page PDF on runner, scripts checked without Trello mutation.
 
 ## Canonical source boundaries under review
 
