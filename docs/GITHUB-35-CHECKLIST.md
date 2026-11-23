@@ -7,6 +7,7 @@
 - [x] `MSBross.me`: PR #1 merged; CI run https://github.com/manu-alvarez/MSBross.me/actions/runs/45277548898 (API, backend, four frontends, security scan passed). **Not an acceptance of FTP publication or full app behavior.**
 - [x] `Agent-Sr-Smith`: PR #1 merged; full 197/197 tests, TypeScript, build in https://github.com/manu-alvarez/Agent-Sr-Smith/actions/runs/45278695989. **Not an acceptance of ZIP in a user browser.**
 - [x] `CombiPro`: PR #1 merged (commit `8ae9cc225f684a71dbd8e95b361a27a32eeb2f82`); independent source restored from MSBrossAI, `npm ci`, TypeScript, audit and Vite build green in https://github.com/manu-alvarez/CombiPro/actions/runs/45281778022. **Browser/API acceptance remains pending.**
+- [x] `MSBrossAI`: PR #1 merged (commit `e8ab6e6fe3c238015578d6bb1e370460ac0d3b2d`), 13/13 frontend matrix builds green in https://github.com/manu-alvarez/MSBrossAI/actions/runs/45282244889. Replaced broken automatic deployment triggers; Cloudflare is manual-only. **Application and manual deployment acceptance remain pending.**
 - [x] Documentation review: `manu-alvarez.github.io`, `ManuCodearts`, `varios-external` (previous audit; remaining live validation not completed).
 
 ## Complete inventory and next acceptance gates
@@ -36,7 +37,7 @@
 | 21 | [msb-livekit-backend](https://github.com/manu-alvarez/msb-livekit-backend) | Pending | Token/session API and configuration |
 | 22 | [msb-traductor-backend](https://github.com/manu-alvarez/msb-traductor-backend) | Pending | Translation endpoints and error handling |
 | 23 | [MSBross.me](https://github.com/manu-alvarez/MSBross.me) | CI OK; global pending | Functional acceptance and safe FTP rollback |
-| 24 | [MSBrossAI](https://github.com/manu-alvarez/MSBrossAI) | Partial | Source-of-truth matrix + per-app smoke |
+| 24 | [MSBrossAI](https://github.com/manu-alvarez/MSBrossAI) | CI 13/13 OK; global pending | Source-of-truth matrix, per-app smoke and verified manual deployment |
 | 25 | [MY-UNIVERSAL-AI-OS](https://github.com/manu-alvarez/MY-UNIVERSAL-AI-OS) | Partial | CI, runtime/MCP/RAG contract acceptance; do not deploy VPS |
 | 26 | [NexusFlow-Framework](https://github.com/manu-alvarez/NexusFlow-Framework) | Pending | Core execution and framework acceptance |
 | 27 | [PromptCombo](https://github.com/manu-alvarez/PromptCombo) | Pending | CI and UI acceptance |
