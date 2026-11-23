@@ -16,7 +16,7 @@
 | # | Repository | Current scope status | Outstanding closure gate |
 |---:|---|---|---|
 | 1 | [Agent-Sr-Smith](https://github.com/manu-alvarez/Agent-Sr-Smith) | CI OK; global pending | Zip and browser acceptance |
-| 2 | [CalendarioMaya-ManoElectricaAzul](https://github.com/manu-alvarez/CalendarioMaya-ManoElectricaAzul) | Pending | Calendar calculations and published UI |
+| 2 | [CalendarioMaya-ManoElectricaAzul](https://github.com/manu-alvarez/CalendarioMaya-ManoElectricaAzul) | Expo config/export verified; PR #1 merged | Calendar mathematics and native/browser acceptance |
 | 3 | [CombiPro](https://github.com/manu-alvarez/CombiPro) | Source restored, TypeScript/build/audit OK; global pending | Browser/API acceptance, confirm canonical ownership and reconcile duplicate copies |
 | 4 | [Conspiracy-Projects](https://github.com/manu-alvarez/Conspiracy-Projects) | Production build reproducible | UI/navigation/browser acceptance |
 | 5 | [Dream_OS](https://github.com/manu-alvarez/Dream_OS) | Static asset integrity OK | Offline PWA, storage, import/export and UI acceptance |
@@ -32,7 +32,7 @@
 | 15 | [ManuCodearts](https://github.com/manu-alvarez/ManuCodearts) | Docs OK; global pending | Public links/assets checks |
 | 16 | [MCP-agent-memory](https://github.com/manu-alvarez/MCP-agent-memory) | SDK compatibility fixed, 164 tests pass, PR #1 merged | Eleven skipped external integration cases and live MCP acceptance |
 | 17 | [Mequi3D](https://github.com/manu-alvarez/Mequi3D) | Static asset integrity OK | Interactive 3D viewer/browser acceptance |
-| 18 | [MOKO-TOOLS](https://github.com/manu-alvarez/MOKO-TOOLS) | Pending | Tool workflows and acceptance |
+| 18 | [MOKO-TOOLS](https://github.com/manu-alvarez/MOKO-TOOLS) | Next.js dependency/build CI verified; PR #1 merged | Tool-catalog accuracy and browser acceptance |
 | 19 | [MSB](https://github.com/manu-alvarez/MSB) | Partial | 8 pending app routes and app catalog smoke |
 | 20 | [msb-iaputa-backend](https://github.com/manu-alvarez/msb-iaputa-backend) | Current main CI verified (run 23630357694) | API/environment acceptance and frontend contract |
 | 21 | [msb-livekit-backend](https://github.com/manu-alvarez/msb-livekit-backend) | JWT secret hardening and regression CI OK; PR #1 merged | Real token issuance/auth, provider connection, browser acceptance |
@@ -42,7 +42,7 @@
 | 25 | [MY-UNIVERSAL-AI-OS](https://github.com/manu-alvarez/MY-UNIVERSAL-AI-OS) | Main quality and extended-quality CI verified | Runtime/MCP/RAG external acceptance; NO VPS deploy |
 | 26 | [NexusFlow-Framework](https://github.com/manu-alvarez/NexusFlow-Framework) | Python tooling and portable PDF generation CI OK; PR #1 merged | Trello integrations and actual operational acceptance |
 | 27 | [PromptCombo](https://github.com/manu-alvarez/PromptCombo) | Current main CI and Pages verified (run 41735664235) | Browser UI, artifacts and published page smoke |
-| 28 | [SERVER-DEV](https://github.com/manu-alvarez/SERVER-DEV) | Partial | Infrastructure source-of-truth, deploy/secret safety |
+| 28 | [SERVER-DEV](https://github.com/manu-alvarez/SERVER-DEV) | Verified SSH host identity required, deployment static CI OK; PR #1 merged | Canonical ownership, backup/rollback and eventual deployment gates (NO VPS yet) |
 | 29 | [SKILL-skill-forge](https://github.com/manu-alvarez/SKILL-skill-forge) | COMPLETE: official validation + 12/12 skill + MCP JSON-RPC 8/8 E2E, PR #1 merged | None for documented local generator contract |
 | 30 | [Sr.Smith](https://github.com/manu-alvarez/Sr.Smith) | Current main web+agent quality green; PR #3 merged | Browser ZIP acceptance; divergence from Agent-Sr-Smith (445 matching blobs, 13 differing) |
 | 31 | [Tarot-Maya](https://github.com/manu-alvarez/Tarot-Maya) | Production build reproducible | Card data and navigation/browser acceptance |
@@ -70,6 +70,10 @@
 - [x] `Sr.Smith`: https://github.com/manu-alvarez/Sr.Smith/pull/3 merged; [run 45286666495](https://github.com/manu-alvarez/Sr.Smith/actions/runs/45286666495) web application and agent engine jobs both passed. Compared against `Agent-Sr-Smith`: 445 identical file blobs, 13 differing shared files and separate unique modules; source ownership needs a deliberate decision.
 - [x] `NexusFlow-Framework`: https://github.com/manu-alvarez/NexusFlow-Framework/pull/1 merged; [run 45286877862](https://github.com/manu-alvarez/NexusFlow-Framework/actions/runs/45286877862) generated PDF in clean runner, read by pypdf; live Trello changes intentionally not executed.
 - [x] `LogiTrack-Warehouse-System`: https://github.com/manu-alvarez/LogiTrack-Warehouse-System/pull/1 merged; [run 45287236066](https://github.com/manu-alvarez/LogiTrack-Warehouse-System/actions/runs/45287236066) generated 2-page PDF on runner, scripts checked without Trello mutation.
+
+- [x] `CalendarioMaya-ManoElectricaAzul`: [PR #1](https://github.com/manu-alvarez/CalendarioMaya-ManoElectricaAzul/pull/1) merged; [Expo CI](https://github.com/manu-alvarez/CalendarioMaya-ManoElectricaAzul/actions/runs/45285530669) succeeds, independent calculation and mobile acceptance pending.
+- [x] `MOKO-TOOLS`: [PR #1](https://github.com/manu-alvarez/MOKO-TOOLS/pull/1) merged; [Next.js CI](https://github.com/manu-alvarez/MOKO-TOOLS/actions/runs/45287259661) succeeds, catalog and browser acceptance pending.
+- [x] `SERVER-DEV`: [PR #1](https://github.com/manu-alvarez/SERVER-DEV/pull/1) merged; [deployment safety CI](https://github.com/manu-alvarez/SERVER-DEV/actions/runs/45287963319) passed. Manual VPS workflows now reject missing pinned `VPS_SSH_KNOWN_HOSTS`; no SSH or deployment executed. A correctly trusted host key must be supplied independently before any future authorized deploy.
 
 ## Canonical source boundaries under review
 
