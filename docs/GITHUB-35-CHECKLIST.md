@@ -6,6 +6,7 @@
 
 - [x] `MSBross.me`: PR #1 merged; CI run https://github.com/manu-alvarez/MSBross.me/actions/runs/45277548898 (API, backend, four frontends, security scan passed). **Not an acceptance of FTP publication or full app behavior.**
 - [x] `Agent-Sr-Smith`: PR #1 merged; full 197/197 tests, TypeScript, build in https://github.com/manu-alvarez/Agent-Sr-Smith/actions/runs/45278695989. **Not an acceptance of ZIP in a user browser.**
+- [x] `CombiPro`: PR #1 merged (commit `8ae9cc225f684a71dbd8e95b361a27a32eeb2f82`); independent source restored from MSBrossAI, `npm ci`, TypeScript, audit and Vite build green in https://github.com/manu-alvarez/CombiPro/actions/runs/45281778022. **Browser/API acceptance remains pending.**
 - [x] Documentation review: `manu-alvarez.github.io`, `ManuCodearts`, `varios-external` (previous audit; remaining live validation not completed).
 
 ## Complete inventory and next acceptance gates
@@ -14,7 +15,7 @@
 |---:|---|---|---|
 | 1 | [Agent-Sr-Smith](https://github.com/manu-alvarez/Agent-Sr-Smith) | CI OK; global pending | Zip and browser acceptance |
 | 2 | [CalendarioMaya-ManoElectricaAzul](https://github.com/manu-alvarez/CalendarioMaya-ManoElectricaAzul) | Pending | Calendar calculations and published UI |
-| 3 | [CombiPro](https://github.com/manu-alvarez/CombiPro) | Blocked: empty repo | Compare MSBrossAI and SERVER-DEV versions, select canonical, import + test |
+| 3 | [CombiPro](https://github.com/manu-alvarez/CombiPro) | Source restored, TypeScript/build/audit OK; global pending | Browser/API acceptance, confirm canonical ownership and reconcile duplicate copies |
 | 4 | [Conspiracy-Projects](https://github.com/manu-alvarez/Conspiracy-Projects) | Pending | UI and navigation smoke |
 | 5 | [Dream_OS](https://github.com/manu-alvarez/Dream_OS) | Pending | Run existing tests and execution smoke |
 | 6 | [Edelweiss-Cumple](https://github.com/manu-alvarez/Edelweiss-Cumple) | Pending | Game/assets browser smoke |
@@ -54,7 +55,7 @@
 - `MSBross.me`: Nominalia PHP gateway, frontend build/deploy pipeline. FTP deploy remains manual and non-atomic; no deployment was executed by the CI closure.
 - `MSBrossAI/www`: prior audit found near-identical published web content; compare final files before edits.
 - `SERVER-DEV`: infrastructure and deployment configuration; must not assume this repository's copies of frontends are current.
-- `CombiPro`: repository is empty. Both `MSBrossAI/apps/combipro` and `SERVER-DEV/apps/combipro` contain different implementations. No authoritative source established by a runtime acceptance test yet.
+- `CombiPro`: independent repository now contains a passing standalone build sourced from a pinned MSBrossAI revision; both legacy copies still exist and require reconciliation after browser/API acceptance.
 - `Agent-Sr-Smith` and `Sr.Smith` are separate repositories. One CI passing does not prove parity.
 
 ## Closure contract (applies independently to each repository)
