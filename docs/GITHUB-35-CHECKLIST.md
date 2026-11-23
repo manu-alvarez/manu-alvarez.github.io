@@ -15,7 +15,7 @@
 
 | # | Repository | Current scope status | Outstanding closure gate |
 |---:|---|---|---|
-| 1 | [Agent-Sr-Smith](https://github.com/manu-alvarez/Agent-Sr-Smith) | CANONICAL; portable agent and MCP/RAG consolidated, [PR #2](https://github.com/manu-alvarez/Agent-Sr-Smith/pull/2) merged; CI validated | Published Pages run + real browser ZIP/LLM acceptance |
+| 1 | [Agent-Sr-Smith](https://github.com/manu-alvarez/Agent-Sr-Smith) | CANONICAL; portable agent and MCP/RAG consolidated, [PR #2](https://github.com/manu-alvarez/Agent-Sr-Smith/pull/2) merged; CI validated | [Pages deploy successful](https://github.com/manu-alvarez/Agent-Sr-Smith/actions/runs/45289328588) and [main CI green](https://github.com/manu-alvarez/Agent-Sr-Smith/actions/runs/45289328717); real browser ZIP/LLM acceptance pending |
 | 2 | [CalendarioMaya-ManoElectricaAzul](https://github.com/manu-alvarez/CalendarioMaya-ManoElectricaAzul) | Expo config/export verified; PR #1 merged | Calendar mathematics and native/browser acceptance |
 | 3 | [CombiPro](https://github.com/manu-alvarez/CombiPro) | Source restored, TypeScript/build/audit OK; global pending | Browser/API acceptance, confirm canonical ownership and reconcile duplicate copies |
 | 4 | [Conspiracy-Projects](https://github.com/manu-alvarez/Conspiracy-Projects) | Production build reproducible | UI/navigation/browser acceptance |
