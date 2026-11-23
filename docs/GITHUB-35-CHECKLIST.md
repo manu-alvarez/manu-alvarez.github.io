@@ -21,35 +21,46 @@
 | 4 | [Conspiracy-Projects](https://github.com/manu-alvarez/Conspiracy-Projects) | Pending | UI and navigation smoke |
 | 5 | [Dream_OS](https://github.com/manu-alvarez/Dream_OS) | Pending | Run existing tests and execution smoke |
 | 6 | [Edelweiss-Cumple](https://github.com/manu-alvarez/Edelweiss-Cumple) | Pending | Game/assets browser smoke |
-| 7 | [FoZ-SoundPro](https://github.com/manu-alvarez/FoZ-SoundPro) | Partial | MIDI/WAV export and app smoke |
+| 7 | [FoZ-SoundPro](https://github.com/manu-alvarez/FoZ-SoundPro) | 6/6 technical tests, archive SHA-256 OK; Pages deployment under re-verification | Manual audio/browser interaction and live site acceptance |
 | 8 | [IAPutaOS](https://github.com/manu-alvarez/IAPutaOS) | Pending | CI and integrations |
-| 9 | [InfoCool](https://github.com/manu-alvarez/InfoCool) | Pending | Tests and app smoke |
+| 9 | [InfoCool](https://github.com/manu-alvarez/InfoCool) | Python/Next.js CI OK, PR #1 merged | Browser workflows and external-service acceptance |
 | 10 | [jartos-de-tu-pelo](https://github.com/manu-alvarez/jartos-de-tu-pelo) | Pending | Frontend and publication |
-| 11 | [LIVEKIT](https://github.com/manu-alvarez/LIVEKIT) | Pending | Session, token and media permissions |
+| 11 | [LIVEKIT](https://github.com/manu-alvarez/LIVEKIT) | Insecure JWT fallback removed, PR #1 merged | Token endpoint abuse controls, media integration and browser acceptance |
 | 12 | [LogiSearch](https://github.com/manu-alvarez/LogiSearch) | Pending | Search and persistence |
 | 13 | [LogiTrack-Warehouse-System](https://github.com/manu-alvarez/LogiTrack-Warehouse-System) | Pending | Functional scope and acceptance |
 | 14 | [manu-alvarez.github.io](https://github.com/manu-alvarez/manu-alvarez.github.io) | Docs OK; global pending | Live portfolio link checks |
 | 15 | [ManuCodearts](https://github.com/manu-alvarez/ManuCodearts) | Docs OK; global pending | Public links/assets checks |
-| 16 | [MCP-agent-memory](https://github.com/manu-alvarez/MCP-agent-memory) | Pending | MCP schemas, tools and integration tests |
+| 16 | [MCP-agent-memory](https://github.com/manu-alvarez/MCP-agent-memory) | SDK compatibility fixed, 164 tests pass, PR #1 merged | Eleven skipped external integration cases and live MCP acceptance |
 | 17 | [Mequi3D](https://github.com/manu-alvarez/Mequi3D) | Pending | 3D viewer/assets browser smoke |
 | 18 | [MOKO-TOOLS](https://github.com/manu-alvarez/MOKO-TOOLS) | Pending | Tool workflows and acceptance |
 | 19 | [MSB](https://github.com/manu-alvarez/MSB) | Partial | 8 pending app routes and app catalog smoke |
 | 20 | [msb-iaputa-backend](https://github.com/manu-alvarez/msb-iaputa-backend) | Pending | API and CI tests |
-| 21 | [msb-livekit-backend](https://github.com/manu-alvarez/msb-livekit-backend) | Pending | Token/session API and configuration |
-| 22 | [msb-traductor-backend](https://github.com/manu-alvarez/msb-traductor-backend) | Pending | Translation endpoints and error handling |
+| 21 | [msb-livekit-backend](https://github.com/manu-alvarez/msb-livekit-backend) | JWT secret hardening and regression CI OK; PR #1 merged | Real token issuance/auth, provider connection, browser acceptance |
+| 22 | [msb-traductor-backend](https://github.com/manu-alvarez/msb-traductor-backend) | Input contracts and TypeScript build OK; PR #1 merged | Real translation service and error-case acceptance |
 | 23 | [MSBross.me](https://github.com/manu-alvarez/MSBross.me) | CI OK; global pending | Functional acceptance and safe FTP rollback |
 | 24 | [MSBrossAI](https://github.com/manu-alvarez/MSBrossAI) | CI 13/13 OK; global pending | Source-of-truth matrix, per-app smoke and verified manual deployment |
 | 25 | [MY-UNIVERSAL-AI-OS](https://github.com/manu-alvarez/MY-UNIVERSAL-AI-OS) | Partial | CI, runtime/MCP/RAG contract acceptance; do not deploy VPS |
 | 26 | [NexusFlow-Framework](https://github.com/manu-alvarez/NexusFlow-Framework) | Pending | Core execution and framework acceptance |
 | 27 | [PromptCombo](https://github.com/manu-alvarez/PromptCombo) | Pending | CI and UI acceptance |
 | 28 | [SERVER-DEV](https://github.com/manu-alvarez/SERVER-DEV) | Partial | Infrastructure source-of-truth, deploy/secret safety |
-| 29 | [SKILL-skill-forge](https://github.com/manu-alvarez/SKILL-skill-forge) | Pending | Skill generation and validation |
+| 29 | [SKILL-skill-forge](https://github.com/manu-alvarez/SKILL-skill-forge) | COMPLETE: official validation + 12/12 skill + MCP JSON-RPC 8/8 E2E, PR #1 merged | None for documented local generator contract |
 | 30 | [Sr.Smith](https://github.com/manu-alvarez/Sr.Smith) | Partial | Reconcile Agent-Sr-Smith + ZIP acceptance |
 | 31 | [Tarot-Maya](https://github.com/manu-alvarez/Tarot-Maya) | Pending | Card data and navigation |
 | 32 | [tarot-rws](https://github.com/manu-alvarez/tarot-rws) | Pending | Resource integrity and Tarot-Maya relationship |
 | 33 | [TaskFlowPro](https://github.com/manu-alvarez/TaskFlowPro) | CI OK; global pending | Browser CRUD/persistence acceptance and reconcile integrated version |
 | 34 | [TuEnergiaMaya](https://github.com/manu-alvarez/TuEnergiaMaya) | Pending | Calculations, static resources, published smoke |
 | 35 | [varios-external](https://github.com/manu-alvarez/varios-external) | Docs OK; global pending | External references check |
+
+
+## November 24 verification update
+
+- [x] `SKILL-skill-forge`: complete local generator acceptance E2E. PR https://github.com/manu-alvarez/SKILL-skill-forge/pull/1 ; run https://github.com/manu-alvarez/SKILL-skill-forge/actions/runs/45283136224 ; official Agent Skills checks, skill scaffold, MCP JSON-RPC, adversarial checks.
+- [x] `FoZ-SoundPro`: 6/6 technical gates and portable ZIP/sha verified https://github.com/manu-alvarez/FoZ-SoundPro/actions/runs/45283327786 ; official live URL https://manu-alvarez.github.io/FoZ-SoundPro/ provided by owner. Pages deployment after PR #1 failed to find artifact metadata; PR #2 fixes stabilization and needs new Pages run verification. HTTP availability and browser UX not yet independently verified.
+- [x] `InfoCool`: PR https://github.com/manu-alvarez/InfoCool/pull/1 merged; fixed 5 missing frontend dependencies and unsupported Next experimental config; Python tests + Next production build https://github.com/manu-alvarez/InfoCool/actions/runs/45285501885.
+- [x] `LIVEKIT` and `msb-livekit-backend`: JWT signing secret no longer defaults to hard-coded value; respective PR #1 merged; token access policy still outstanding.
+- [x] `msb-traductor-backend`: PR #1 merged; typed HTTP request validation, deterministic tests + build https://github.com/manu-alvarez/msb-traductor-backend/actions/runs/45282738029.
+- [x] `MCP-agent-memory`: PR #1 merged; compatible MCP SDK and bounded rank fallback; https://github.com/manu-alvarez/MCP-agent-memory/actions/runs/45283930173 (164 passed, 11 skipped).
+- [x] `MSB`: PR #3 merged; cross-repo build matrix verifies `Conspiracy-Projects`, `LogiSearch`, `Tarot-Maya`, `jartos-de-tu-pelo`: https://github.com/manu-alvarez/MSB/actions/runs/45284907362. Their user/browser functionality remains unverified.
 
 ## Canonical source boundaries under review
 
@@ -75,4 +86,4 @@
 2. Verify ZIP/tooling generators and runtimes: `Sr.Smith`, `Agent-Sr-Smith`, `MY-UNIVERSAL-AI-OS`, `MCP-agent-memory`, `NexusFlow-Framework`, `SKILL-skill-forge`.
 3. Validate public apps and backends in deterministic batches, then static/personal web projects.
 
-**Current verified full-project closures: 0/35.** This intentionally excludes scoped green checks and documentation from full-project completion.
+**Current verified full-project closures: 1/35 (`SKILL-skill-forge`, local contract).** This intentionally excludes scoped green checks and documentation from full-project completion.
