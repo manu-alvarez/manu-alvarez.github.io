@@ -15,7 +15,7 @@
 
 | # | Repository | Current scope status | Outstanding closure gate |
 |---:|---|---|---|
-| 1 | [Agent-Sr-Smith](https://github.com/manu-alvarez/Agent-Sr-Smith) | CI OK; global pending | Zip and browser acceptance |
+| 1 | [Agent-Sr-Smith](https://github.com/manu-alvarez/Agent-Sr-Smith) | CANONICAL; portable agent and MCP/RAG consolidated, [PR #2](https://github.com/manu-alvarez/Agent-Sr-Smith/pull/2) merged; CI validated | Published Pages run + real browser ZIP/LLM acceptance |
 | 2 | [CalendarioMaya-ManoElectricaAzul](https://github.com/manu-alvarez/CalendarioMaya-ManoElectricaAzul) | Expo config/export verified; PR #1 merged | Calendar mathematics and native/browser acceptance |
 | 3 | [CombiPro](https://github.com/manu-alvarez/CombiPro) | Source restored, TypeScript/build/audit OK; global pending | Browser/API acceptance, confirm canonical ownership and reconcile duplicate copies |
 | 4 | [Conspiracy-Projects](https://github.com/manu-alvarez/Conspiracy-Projects) | Production build reproducible | UI/navigation/browser acceptance |
@@ -44,7 +44,7 @@
 | 27 | [PromptCombo](https://github.com/manu-alvarez/PromptCombo) | Current main CI and Pages verified (run 41735664235) | Browser UI, artifacts and published page smoke |
 | 28 | [SERVER-DEV](https://github.com/manu-alvarez/SERVER-DEV) | Verified SSH host identity required, deployment static CI OK; PR #1 merged | Canonical ownership, backup/rollback and eventual deployment gates (NO VPS yet) |
 | 29 | [SKILL-skill-forge](https://github.com/manu-alvarez/SKILL-skill-forge) | COMPLETE: official validation + 12/12 skill + MCP JSON-RPC 8/8 E2E, PR #1 merged | None for documented local generator contract |
-| 30 | [Sr.Smith](https://github.com/manu-alvarez/Sr.Smith) | Current main web+agent quality green; PR #3 merged | Browser ZIP acceptance; divergence from Agent-Sr-Smith (445 matching blobs, 13 differing) |
+| 30 | [Sr.Smith](https://github.com/manu-alvarez/Sr.Smith) | LEGACY private duplicate; advanced modules migrated into Agent-Sr-Smith and README redirected | Physical archive/deletion not available through connected GitHub actions; historical backup retained |
 | 31 | [Tarot-Maya](https://github.com/manu-alvarez/Tarot-Maya) | Production build reproducible | Card data and navigation/browser acceptance |
 | 32 | [tarot-rws](https://github.com/manu-alvarez/tarot-rws) | Static asset integrity OK | Card content, reading interactions and Tarot-Maya relationship |
 | 33 | [TaskFlowPro](https://github.com/manu-alvarez/TaskFlowPro) | CI OK; global pending | Browser CRUD/persistence acceptance and reconcile integrated version |
@@ -82,7 +82,7 @@
 - `MSBrossAI/www`: prior audit found near-identical published web content; compare final files before edits.
 - `SERVER-DEV`: infrastructure and deployment configuration; must not assume this repository's copies of frontends are current.
 - `CombiPro`: independent repository now contains a passing standalone build sourced from a pinned MSBrossAI revision; both legacy copies still exist and require reconciliation after browser/API acceptance.
-- `Agent-Sr-Smith` and `Sr.Smith` are separate repositories. One CI passing does not prove parity.
+- `Agent-Sr-Smith` is the canonical repository publishing GitHub Pages. `Sr.Smith` is a private historical duplicate marked as retired; advanced runtime modules migrated via [Agent-Sr-Smith PR #2](https://github.com/manu-alvarez/Agent-Sr-Smith/pull/2) with [full CI success](https://github.com/manu-alvarez/Agent-Sr-Smith/actions/runs/45289184117). Public Pages and real browser acceptance remain independently gated. The GitHub connector does not expose repository archival/deletion; do not misrepresent physical removal.
 
 ## Closure contract (applies independently to each repository)
 
