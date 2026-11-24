@@ -32,7 +32,7 @@
 | 15 | [ManuCodearts](https://github.com/manu-alvarez/ManuCodearts) | Docs OK; global pending | Public links/assets checks |
 | 16 | [MCP-agent-memory](https://github.com/manu-alvarez/MCP-agent-memory) | SDK compatibility fixed, 164 tests pass, PR #1 merged | Eleven skipped external integration cases and live MCP acceptance |
 | 17 | [Mequi3D](https://github.com/manu-alvarez/Mequi3D) | Static asset integrity OK | Interactive 3D viewer/browser acceptance |
-| 18 | [MOKO-TOOLS](https://github.com/manu-alvarez/MOKO-TOOLS) | Next.js dependency/build CI verified; PR #1 merged | Tool-catalog accuracy and browser acceptance |
+| 18 | [MOKO-TOOLS](https://github.com/manu-alvarez/MOKO-TOOLS) | Favorites persistence/hydration corrected, setup/semantics docs updated, CI now checks real `main` and [build green](https://github.com/manu-alvarez/MOKO-TOOLS/actions/runs/45351865506) | External tool-catalog accuracy and browser acceptance |
 | 19 | [MSB](https://github.com/manu-alvarez/MSB) | Catalogue corrected: all 35 static records classified `catalogued`, not falsely `online`; index and README synchronized | App routing and functional acceptance of backends |
 | 20 | [msb-iaputa-backend](https://github.com/manu-alvarez/msb-iaputa-backend) | Current main CI verified (run 23630357694) | API/environment acceptance and frontend contract |
 | 21 | [msb-livekit-backend](https://github.com/manu-alvarez/msb-livekit-backend) | JWT secret hardening and bounded guest-token issuance (15/IP/5min) merged in [PR #2](https://github.com/manu-alvarez/msb-livekit-backend/pull/2); CI passed | Shared edge rate limit on multi-worker deployment; real token/provider/browser acceptance |
@@ -82,6 +82,8 @@
 - [x] `TaskFlowPro`: replaced hard-coded metrics and sample tasks in Dashboard with Zustand-derived counts/upcoming work; wired actions, fixed README install instructions and client-side secrets caveat. Main build/quality run [45351414535](https://github.com/manu-alvarez/TaskFlowPro/actions/runs/45351414535) passed. Browser acceptance remains deferred.
 
 - [x] `CombiPro`, `MSBrossAI`, `SERVER-DEV`: documented canonical editable owners and separated duplicate source trees from distribution artifacts; main README commits [`6a25e427`](https://github.com/manu-alvarez/CombiPro/commit/6a25e427999645075fa557b00121754dee076f23), [`a5e237fd`](https://github.com/manu-alvarez/MSBrossAI/commit/a5e237fde6fe2369b859884eb4c02fe88419b595), [`ac8195d0`](https://github.com/manu-alvarez/SERVER-DEV/commit/ac8195d048a5866130da1b2e3cb43abab4cfe292). This closes source-ownership documentation, **not** artifact-version reconciliation or deployment acceptance.
+
+- [x] `MOKO-TOOLS`: fixed localStorage favorite loading/validation and prevented initial overwrite, corrected README clone URL and search semantics. Replaced stale CI checkout ref `ci/verify-moko-20261123` with `main` checkout; production Next.js build on actual main [green](https://github.com/manu-alvarez/MOKO-TOOLS/actions/runs/45351865506). Live external links unverified.
 
 ## Canonical source boundaries under review
 
