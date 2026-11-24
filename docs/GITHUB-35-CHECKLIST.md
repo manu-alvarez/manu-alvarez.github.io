@@ -85,6 +85,22 @@
 
 - [x] `MOKO-TOOLS`: fixed localStorage favorite loading/validation and prevented initial overwrite, corrected README clone URL and search semantics. Replaced stale CI checkout ref `ci/verify-moko-20261123` with `main` checkout; production Next.js build on actual main [green](https://github.com/manu-alvarez/MOKO-TOOLS/actions/runs/45351865506). Live external links unverified.
 
+## November 24 — main-branch workflow consolidation
+
+These checks close **workflow maintenance** only. They do not certify end-to-end application behavior.
+
+- [x] `CombiPro`: obsolete import branch removed from push trigger; [main CI green](https://github.com/manu-alvarez/CombiPro/actions/runs/45352232732).
+- [x] `FoZ-SoundPro`: checks now run on `main`; [main quality CI green](https://github.com/manu-alvarez/FoZ-SoundPro/actions/runs/45352213843) and [Pages deployment green](https://github.com/manu-alvarez/FoZ-SoundPro/actions/runs/45352213957).
+- [x] `InfoCool`: quality matrix now runs on `main`; [main CI green](https://github.com/manu-alvarez/InfoCool/actions/runs/45352220001).
+- [x] `SERVER-DEV`: manual deployment safety checks now run on `main`; [main CI green](https://github.com/manu-alvarez/SERVER-DEV/actions/runs/45352227040). No VPS changes.
+- [x] `CalendarioMaya-ManoElectricaAzul`: Expo quality now runs on `main`; [CI green](https://github.com/manu-alvarez/CalendarioMaya-ManoElectricaAzul/actions/runs/45352438614).
+- [x] `NexusFlow-Framework`: portable PDF generator quality now runs on `main`; [CI green](https://github.com/manu-alvarez/NexusFlow-Framework/actions/runs/45352444848).
+- [x] `LogiTrack-Warehouse-System`: static document checks now run on `main`; [CI green](https://github.com/manu-alvarez/LogiTrack-Warehouse-System/actions/runs/45352459736).
+- [x] `msb-traductor-backend`: typed contract/build quality now runs on `main`; [CI green](https://github.com/manu-alvarez/msb-traductor-backend/actions/runs/45352468856).
+- [x] `MCP-agent-memory`: memory tests now run on `main`; [CI green](https://github.com/manu-alvarez/MCP-agent-memory/actions/runs/45352477937).
+- [x] `SKILL-skill-forge`: generator checks now run on `main`; [CI green](https://github.com/manu-alvarez/SKILL-skill-forge/actions/runs/45352484367).
+- [x] `Edelweiss-Cumple`: invitation static checks now run on `main`; [quality CI green](https://github.com/manu-alvarez/Edelweiss-Cumple/actions/runs/45352489512). Pages publication is a separate workflow.
+
 ## Canonical source boundaries under review
 
 - `MSB`: GitHub Pages dashboard and `servicios.json`, not a universal source of every frontend.
