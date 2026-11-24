@@ -1,6 +1,6 @@
 # GitHub 35 — authoritative closure ledger
 
-**Audit date:** 2026-11-23. **Owner:** manu-alvarez. **Scope:** all 35 repositories. **Policy:** only test-backed acceptance may close a repository. `Docs OK` and `CI OK` are scoped subtask completions, not full-project acceptance. Do not deploy to VPS as a side effect of repository work.
+**Audit date:** 2026-11-24. **Owner:** manu-alvarez. **Scope:** all 35 repositories. **Policy:** only test-backed acceptance may close a repository. `Docs OK` and `CI OK` are scoped subtask completions, not full-project acceptance. Do not deploy to VPS as a side effect of repository work.
 
 ## Evidence-backed closures
 
@@ -18,38 +18,38 @@
 | 1 | [Agent-Sr-Smith](https://github.com/manu-alvarez/Agent-Sr-Smith) | CANONICAL; portable agent and MCP/RAG consolidated, [PR #2](https://github.com/manu-alvarez/Agent-Sr-Smith/pull/2) merged; CI validated | [Pages deploy successful](https://github.com/manu-alvarez/Agent-Sr-Smith/actions/runs/45289328588) and [main CI green](https://github.com/manu-alvarez/Agent-Sr-Smith/actions/runs/45289328717); real browser ZIP/LLM acceptance pending |
 | 2 | [CalendarioMaya-ManoElectricaAzul](https://github.com/manu-alvarez/CalendarioMaya-ManoElectricaAzul) | Expo config/export verified; PR #1 merged | Calendar mathematics and native/browser acceptance |
 | 3 | [CombiPro](https://github.com/manu-alvarez/CombiPro) | Standalone build/CI OK; canonical editable source explicitly assigned in README (`6a25e427`) | Browser/API acceptance and synchronize published copies without rewriting source |
-| 4 | [Conspiracy-Projects](https://github.com/manu-alvarez/Conspiracy-Projects) | Production build reproducible | UI/navigation/browser acceptance |
-| 5 | [Dream_OS](https://github.com/manu-alvarez/Dream_OS) | Static asset integrity OK | Offline PWA, storage, import/export and UI acceptance |
+| 4 | [Conspiracy-Projects](https://github.com/manu-alvarez/Conspiracy-Projects) | [Main build CI](https://github.com/manu-alvarez/Conspiracy-Projects/actions/runs/45400555114) successful | UI/navigation/browser acceptance |
+| 5 | [Dream_OS](https://github.com/manu-alvarez/Dream_OS) | Static PWA quality and README update merged; [main CI](https://github.com/manu-alvarez/Dream_OS/actions/runs/45401097723) | Offline PWA, storage, import/export and UI acceptance |
 | 6 | [Edelweiss-Cumple](https://github.com/manu-alvarez/Edelweiss-Cumple) | 6 HTML asset checks OK; map/RSVP placeholders removed, PR #1 merged | Venue/contact unavailable; user/browser interaction acceptance |
-| 7 | [FoZ-SoundPro](https://github.com/manu-alvarez/FoZ-SoundPro) | 6/6 technical tests, archive SHA-256 OK; Pages deployment under re-verification | Manual audio/browser interaction and live site acceptance |
-| 8 | [IAPutaOS](https://github.com/manu-alvarez/IAPutaOS) | Current main CI verified (run 23364371028) | API/frontend integrated browser acceptance |
+| 7 | [FoZ-SoundPro](https://github.com/manu-alvarez/FoZ-SoundPro) | 6/6 technical tests, archive SHA-256 OK; [Pages deployment successful](https://github.com/manu-alvarez/FoZ-SoundPro/actions/runs/45352213957) | Manual audio/browser interaction and live site acceptance |
+| 8 | [IAPutaOS](https://github.com/manu-alvarez/IAPutaOS) | [Current main CI](https://github.com/manu-alvarez/IAPutaOS/actions/runs/45385483292) successful | API/frontend integrated browser acceptance |
 | 9 | [InfoCool](https://github.com/manu-alvarez/InfoCool) | Python/Next.js CI OK, PR #1 merged | Browser workflows and external-service acceptance |
 | 10 | [jartos-de-tu-pelo](https://github.com/manu-alvarez/jartos-de-tu-pelo) | Production build reproducible | UI and publication acceptance |
 | 11 | [LIVEKIT](https://github.com/manu-alvarez/LIVEKIT) | JWT fallback removed; bounded guest-token issuance (15/IP/5min) merged in [PR #2](https://github.com/manu-alvarez/LIVEKIT/pull/2) and CI passed | Shared edge rate limit on multi-worker deployment; media integration and browser acceptance |
 | 12 | [LogiSearch](https://github.com/manu-alvarez/LogiSearch) | Production build reproducible | Search/persistence browser acceptance |
 | 13 | [LogiTrack-Warehouse-System](https://github.com/manu-alvarez/LogiTrack-Warehouse-System) | Portable PDF 2-page generation and script syntax CI OK; PR #1 merged | Trello live-board workflow acceptance |
 | 14 | [manu-alvarez.github.io](https://github.com/manu-alvarez/manu-alvarez.github.io) | Docs OK; global pending | Live portfolio link checks |
-| 15 | [ManuCodearts](https://github.com/manu-alvarez/ManuCodearts) | Docs OK; global pending | Public links/assets checks |
+| 15 | [ManuCodearts](https://github.com/manu-alvarez/ManuCodearts) | README local references verified 8/8 | Historical material; content review separate |
 | 16 | [MCP-agent-memory](https://github.com/manu-alvarez/MCP-agent-memory) | SDK compatibility fixed, 164 tests pass, PR #1 merged | Eleven skipped external integration cases and live MCP acceptance |
 | 17 | [Mequi3D](https://github.com/manu-alvarez/Mequi3D) | Static asset integrity OK | Interactive 3D viewer/browser acceptance |
-| 18 | [MOKO-TOOLS](https://github.com/manu-alvarez/MOKO-TOOLS) | Favorites persistence/hydration corrected, setup/semantics docs updated, CI now checks real `main` and [build green](https://github.com/manu-alvarez/MOKO-TOOLS/actions/runs/45351865506) | External tool-catalog accuracy and browser acceptance |
+| 18 | [MOKO-TOOLS](https://github.com/manu-alvarez/MOKO-TOOLS) | Favorites persistence/hydration corrected, setup/semantics docs updated, CI now checks real `main` and [build green](https://github.com/manu-alvarez/MOKO-TOOLS/actions/runs/45402322440) | External tool-catalog accuracy and browser acceptance |
 | 19 | [MSB](https://github.com/manu-alvarez/MSB) | Catalogue corrected: all 35 static records classified `catalogued`, not falsely `online`; index and README synchronized | App routing and functional acceptance of backends |
-| 20 | [msb-iaputa-backend](https://github.com/manu-alvarez/msb-iaputa-backend) | Current main CI verified (run 23630357694) | API/environment acceptance and frontend contract |
+| 20 | [msb-iaputa-backend](https://github.com/manu-alvarez/msb-iaputa-backend) | [Current main CI](https://github.com/manu-alvarez/msb-iaputa-backend/actions/runs/45385497068) successful | API/environment acceptance and frontend contract |
 | 21 | [msb-livekit-backend](https://github.com/manu-alvarez/msb-livekit-backend) | JWT secret hardening and bounded guest-token issuance (15/IP/5min) merged in [PR #2](https://github.com/manu-alvarez/msb-livekit-backend/pull/2); CI passed | Shared edge rate limit on multi-worker deployment; real token/provider/browser acceptance |
 | 22 | [msb-traductor-backend](https://github.com/manu-alvarez/msb-traductor-backend) | Input contracts and TypeScript build OK; PR #1 merged | Real translation service and error-case acceptance |
-| 23 | [MSBross.me](https://github.com/manu-alvarez/MSBross.me) | CI OK; global pending | Functional acceptance and safe FTP rollback |
+| 23 | [MSBross.me](https://github.com/manu-alvarez/MSBross.me) | [Main CI](https://github.com/manu-alvarez/MSBross.me/actions/runs/45408179953) successful; documentation reconciled | Functional and deployment acceptance |
 | 24 | [MSBrossAI](https://github.com/manu-alvarez/MSBrossAI) | CI 13/13 OK; canonical-source ownership matrix documented in README (`a5e237fd`) | Synchronize integrated artifacts, per-app smoke, manual deployment |
 | 25 | [MY-UNIVERSAL-AI-OS](https://github.com/manu-alvarez/MY-UNIVERSAL-AI-OS) | Main quality and extended-quality CI verified | Runtime/MCP/RAG external acceptance; NO VPS deploy |
 | 26 | [NexusFlow-Framework](https://github.com/manu-alvarez/NexusFlow-Framework) | Python tooling and portable PDF generation CI OK; PR #1 merged | Trello integrations and actual operational acceptance |
 | 27 | [PromptCombo](https://github.com/manu-alvarez/PromptCombo) | Current main CI and Pages verified (run 41735664235) | Browser UI, artifacts and published page smoke |
 | 28 | [SERVER-DEV](https://github.com/manu-alvarez/SERVER-DEV) | Infra ownership documented (`ac8195d0`); pinned SSH host identity and static CI OK | Implement explicit backup/rollback and later deploy gates (NO VPS yet) |
 | 29 | [SKILL-skill-forge](https://github.com/manu-alvarez/SKILL-skill-forge) | COMPLETE: official validation + 12/12 skill + MCP JSON-RPC 8/8 E2E, PR #1 merged | None for documented local generator contract |
-| 30 | [Sr.Smith](https://github.com/manu-alvarez/Sr.Smith) | LEGACY private duplicate; advanced modules migrated into Agent-Sr-Smith and README redirected | Physical archive/deletion not available through connected GitHub actions; historical backup retained |
+| 30 | [Sr.Smith](https://github.com/manu-alvarez/Sr.Smith) | LEGACY private duplicate; advanced modules migrated into Agent-Sr-Smith and README redirected | Historical reference retained; archival decision pending |
 | 31 | [Tarot-Maya](https://github.com/manu-alvarez/Tarot-Maya) | Production build reproducible | Card data and navigation/browser acceptance |
 | 32 | [tarot-rws](https://github.com/manu-alvarez/tarot-rws) | Static asset integrity OK | Card content, reading interactions and Tarot-Maya relationship |
-| 33 | [TaskFlowPro](https://github.com/manu-alvarez/TaskFlowPro) | Real dashboard counters/upcoming tasks wired to Zustand, due-date creation, direct form navigation, README ownership; [main CI green](https://github.com/manu-alvarez/TaskFlowPro/actions/runs/45353226452) | Browser CRUD/persistence acceptance and reconcile published copy |
+| 33 | [TaskFlowPro](https://github.com/manu-alvarez/TaskFlowPro) | Real dashboard counters/upcoming tasks wired to Zustand, due-date creation, direct form navigation, README ownership; [main CI green](https://github.com/manu-alvarez/TaskFlowPro/actions/runs/45353530645) | Browser CRUD/persistence acceptance and reconcile published copy |
 | 34 | [TuEnergiaMaya](https://github.com/manu-alvarez/TuEnergiaMaya) | Current main validate/deploy CI verified | Calculation correctness and published browser smoke |
-| 35 | [varios-external](https://github.com/manu-alvarez/varios-external) | Docs OK; global pending | External references check |
+| 35 | [varios-external](https://github.com/manu-alvarez/varios-external) | README local references verified 5/5 | Historical resource archive; no compilation required |
 
 
 ## November 24 verification update

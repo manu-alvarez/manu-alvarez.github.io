@@ -61,10 +61,14 @@ Técnico en Sistemas Microinformáticos y Redes. Trabajo con Windows, Linux y re
 
 ## Estructura y mantenimiento del ecosistema
 
-- [Inventario y estado de los 35 repositorios](docs/GITHUB-35-CHECKLIST.md). Diferencia trabajo implementado, compilación verificada y aceptación funcional pendiente; no interpreta una CI verde como producto terminado.
-- **Repositorio oficial de Sr. Smith:** [Agent-Sr-Smith](https://github.com/manu-alvarez/Agent-Sr-Smith). La antigua copia privada `Sr.Smith` está obsoleta y se conserva solo como respaldo histórico hasta su archivo o eliminación.
+- [Estado técnico y criterios de aceptación de los proyectos](docs/GITHUB-35-CHECKLIST.md). Diferencia trabajo implementado, compilación verificada y aceptación funcional pendiente; no interpreta una CI verde como producto terminado.
+- **Repositorio oficial de Sr. Smith:** [Agent-Sr-Smith](https://github.com/manu-alvarez/Agent-Sr-Smith). La versión anterior se conserva como referencia histórica, sin desarrollo activo.
 - **Despliegues:** los cambios en repositorios no autorizan despliegues automáticos al VPS. Los workflows de `SERVER-DEV` requieren una clave de host SSH conocida y se ejecutan manualmente.
 - **Código fuente y publicación:** no asumir que las copias de aplicaciones dentro de `SERVER-DEV`, `MSB` o `MSBrossAI` son las versiones canónicas sin reconciliarlas con cada repositorio.
+
+## Estado de verificación
+
+Los controles automatizados acreditan compilación, pruebas o publicación según el proyecto. No equivalen a una certificación de funcionamiento de todos los servicios. Las aplicaciones que dependen de proveedores externos, dispositivos o infraestructura requieren aceptación en su entorno correspondiente.
 
 ## Formación y contacto
 
