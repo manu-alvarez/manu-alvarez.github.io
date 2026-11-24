@@ -17,7 +17,7 @@
 |---:|---|---|---|
 | 1 | [Agent-Sr-Smith](https://github.com/manu-alvarez/Agent-Sr-Smith) | CANONICAL; portable agent and MCP/RAG consolidated, [PR #2](https://github.com/manu-alvarez/Agent-Sr-Smith/pull/2) merged; CI validated | [Pages deploy successful](https://github.com/manu-alvarez/Agent-Sr-Smith/actions/runs/45289328588) and [main CI green](https://github.com/manu-alvarez/Agent-Sr-Smith/actions/runs/45289328717); real browser ZIP/LLM acceptance pending |
 | 2 | [CalendarioMaya-ManoElectricaAzul](https://github.com/manu-alvarez/CalendarioMaya-ManoElectricaAzul) | Expo config/export verified; PR #1 merged | Calendar mathematics and native/browser acceptance |
-| 3 | [CombiPro](https://github.com/manu-alvarez/CombiPro) | Source restored, TypeScript/build/audit OK; global pending | Browser/API acceptance, confirm canonical ownership and reconcile duplicate copies |
+| 3 | [CombiPro](https://github.com/manu-alvarez/CombiPro) | Standalone build/CI OK; canonical editable source explicitly assigned in README (`6a25e427`) | Browser/API acceptance and synchronize published copies without rewriting source |
 | 4 | [Conspiracy-Projects](https://github.com/manu-alvarez/Conspiracy-Projects) | Production build reproducible | UI/navigation/browser acceptance |
 | 5 | [Dream_OS](https://github.com/manu-alvarez/Dream_OS) | Static asset integrity OK | Offline PWA, storage, import/export and UI acceptance |
 | 6 | [Edelweiss-Cumple](https://github.com/manu-alvarez/Edelweiss-Cumple) | 6 HTML asset checks OK; map/RSVP placeholders removed, PR #1 merged | Venue/contact unavailable; user/browser interaction acceptance |
@@ -38,11 +38,11 @@
 | 21 | [msb-livekit-backend](https://github.com/manu-alvarez/msb-livekit-backend) | JWT secret hardening and bounded guest-token issuance (15/IP/5min) merged in [PR #2](https://github.com/manu-alvarez/msb-livekit-backend/pull/2); CI passed | Shared edge rate limit on multi-worker deployment; real token/provider/browser acceptance |
 | 22 | [msb-traductor-backend](https://github.com/manu-alvarez/msb-traductor-backend) | Input contracts and TypeScript build OK; PR #1 merged | Real translation service and error-case acceptance |
 | 23 | [MSBross.me](https://github.com/manu-alvarez/MSBross.me) | CI OK; global pending | Functional acceptance and safe FTP rollback |
-| 24 | [MSBrossAI](https://github.com/manu-alvarez/MSBrossAI) | CI 13/13 OK; global pending | Source-of-truth matrix, per-app smoke and verified manual deployment |
+| 24 | [MSBrossAI](https://github.com/manu-alvarez/MSBrossAI) | CI 13/13 OK; canonical-source ownership matrix documented in README (`a5e237fd`) | Synchronize integrated artifacts, per-app smoke, manual deployment |
 | 25 | [MY-UNIVERSAL-AI-OS](https://github.com/manu-alvarez/MY-UNIVERSAL-AI-OS) | Main quality and extended-quality CI verified | Runtime/MCP/RAG external acceptance; NO VPS deploy |
 | 26 | [NexusFlow-Framework](https://github.com/manu-alvarez/NexusFlow-Framework) | Python tooling and portable PDF generation CI OK; PR #1 merged | Trello integrations and actual operational acceptance |
 | 27 | [PromptCombo](https://github.com/manu-alvarez/PromptCombo) | Current main CI and Pages verified (run 41735664235) | Browser UI, artifacts and published page smoke |
-| 28 | [SERVER-DEV](https://github.com/manu-alvarez/SERVER-DEV) | Verified SSH host identity required, deployment static CI OK; PR #1 merged | Canonical ownership, backup/rollback and eventual deployment gates (NO VPS yet) |
+| 28 | [SERVER-DEV](https://github.com/manu-alvarez/SERVER-DEV) | Infra ownership documented (`ac8195d0`); pinned SSH host identity and static CI OK | Implement explicit backup/rollback and later deploy gates (NO VPS yet) |
 | 29 | [SKILL-skill-forge](https://github.com/manu-alvarez/SKILL-skill-forge) | COMPLETE: official validation + 12/12 skill + MCP JSON-RPC 8/8 E2E, PR #1 merged | None for documented local generator contract |
 | 30 | [Sr.Smith](https://github.com/manu-alvarez/Sr.Smith) | LEGACY private duplicate; advanced modules migrated into Agent-Sr-Smith and README redirected | Physical archive/deletion not available through connected GitHub actions; historical backup retained |
 | 31 | [Tarot-Maya](https://github.com/manu-alvarez/Tarot-Maya) | Production build reproducible | Card data and navigation/browser acceptance |
@@ -80,6 +80,8 @@
 
 - [x] `MSB`: replaced 35 unsupported `online` values with `catalogued` in `servicios.json` and embedded `index.html` source; rendered badge now neutral for catalogued records. README synchronized; file consistency checked on current main (commit `a6af09f3d8900d97a1aeae9e603e2bfd54b53af7`). This is **not** live service availability.
 - [x] `TaskFlowPro`: replaced hard-coded metrics and sample tasks in Dashboard with Zustand-derived counts/upcoming work; wired actions, fixed README install instructions and client-side secrets caveat. Main build/quality run [45351414535](https://github.com/manu-alvarez/TaskFlowPro/actions/runs/45351414535) passed. Browser acceptance remains deferred.
+
+- [x] `CombiPro`, `MSBrossAI`, `SERVER-DEV`: documented canonical editable owners and separated duplicate source trees from distribution artifacts; main README commits [`6a25e427`](https://github.com/manu-alvarez/CombiPro/commit/6a25e427999645075fa557b00121754dee076f23), [`a5e237fd`](https://github.com/manu-alvarez/MSBrossAI/commit/a5e237fde6fe2369b859884eb4c02fe88419b595), [`ac8195d0`](https://github.com/manu-alvarez/SERVER-DEV/commit/ac8195d048a5866130da1b2e3cb43abab4cfe292). This closes source-ownership documentation, **not** artifact-version reconciliation or deployment acceptance.
 
 ## Canonical source boundaries under review
 
