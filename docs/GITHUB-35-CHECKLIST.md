@@ -25,7 +25,7 @@
 | 8 | [IAPutaOS](https://github.com/manu-alvarez/IAPutaOS) | Current main CI verified (run 23364371028) | API/frontend integrated browser acceptance |
 | 9 | [InfoCool](https://github.com/manu-alvarez/InfoCool) | Python/Next.js CI OK, PR #1 merged | Browser workflows and external-service acceptance |
 | 10 | [jartos-de-tu-pelo](https://github.com/manu-alvarez/jartos-de-tu-pelo) | Production build reproducible | UI and publication acceptance |
-| 11 | [LIVEKIT](https://github.com/manu-alvarez/LIVEKIT) | Insecure JWT fallback removed, PR #1 merged | Token endpoint abuse controls, media integration and browser acceptance |
+| 11 | [LIVEKIT](https://github.com/manu-alvarez/LIVEKIT) | JWT fallback removed; bounded guest-token issuance (15/IP/5min) merged in [PR #2](https://github.com/manu-alvarez/LIVEKIT/pull/2) and CI passed | Shared edge rate limit on multi-worker deployment; media integration and browser acceptance |
 | 12 | [LogiSearch](https://github.com/manu-alvarez/LogiSearch) | Production build reproducible | Search/persistence browser acceptance |
 | 13 | [LogiTrack-Warehouse-System](https://github.com/manu-alvarez/LogiTrack-Warehouse-System) | Portable PDF 2-page generation and script syntax CI OK; PR #1 merged | Trello live-board workflow acceptance |
 | 14 | [manu-alvarez.github.io](https://github.com/manu-alvarez/manu-alvarez.github.io) | Docs OK; global pending | Live portfolio link checks |
@@ -35,7 +35,7 @@
 | 18 | [MOKO-TOOLS](https://github.com/manu-alvarez/MOKO-TOOLS) | Next.js dependency/build CI verified; PR #1 merged | Tool-catalog accuracy and browser acceptance |
 | 19 | [MSB](https://github.com/manu-alvarez/MSB) | Partial | 8 pending app routes and app catalog smoke |
 | 20 | [msb-iaputa-backend](https://github.com/manu-alvarez/msb-iaputa-backend) | Current main CI verified (run 23630357694) | API/environment acceptance and frontend contract |
-| 21 | [msb-livekit-backend](https://github.com/manu-alvarez/msb-livekit-backend) | JWT secret hardening and regression CI OK; PR #1 merged | Real token issuance/auth, provider connection, browser acceptance |
+| 21 | [msb-livekit-backend](https://github.com/manu-alvarez/msb-livekit-backend) | JWT secret hardening and bounded guest-token issuance (15/IP/5min) merged in [PR #2](https://github.com/manu-alvarez/msb-livekit-backend/pull/2); CI passed | Shared edge rate limit on multi-worker deployment; real token/provider/browser acceptance |
 | 22 | [msb-traductor-backend](https://github.com/manu-alvarez/msb-traductor-backend) | Input contracts and TypeScript build OK; PR #1 merged | Real translation service and error-case acceptance |
 | 23 | [MSBross.me](https://github.com/manu-alvarez/MSBross.me) | CI OK; global pending | Functional acceptance and safe FTP rollback |
 | 24 | [MSBrossAI](https://github.com/manu-alvarez/MSBrossAI) | CI 13/13 OK; global pending | Source-of-truth matrix, per-app smoke and verified manual deployment |
@@ -74,6 +74,9 @@
 - [x] `CalendarioMaya-ManoElectricaAzul`: [PR #1](https://github.com/manu-alvarez/CalendarioMaya-ManoElectricaAzul/pull/1) merged; [Expo CI](https://github.com/manu-alvarez/CalendarioMaya-ManoElectricaAzul/actions/runs/45285530669) succeeds, independent calculation and mobile acceptance pending.
 - [x] `MOKO-TOOLS`: [PR #1](https://github.com/manu-alvarez/MOKO-TOOLS/pull/1) merged; [Next.js CI](https://github.com/manu-alvarez/MOKO-TOOLS/actions/runs/45287259661) succeeds, catalog and browser acceptance pending.
 - [x] `SERVER-DEV`: [PR #1](https://github.com/manu-alvarez/SERVER-DEV/pull/1) merged; [deployment safety CI](https://github.com/manu-alvarez/SERVER-DEV/actions/runs/45287963319) passed. Manual VPS workflows now reject missing pinned `VPS_SSH_KNOWN_HOSTS`; no SSH or deployment executed. A correctly trusted host key must be supplied independently before any future authorized deploy.
+
+- [x] `LIVEKIT` and `msb-livekit-backend`: guest token abuse mitigation merged on both `main` branches (PR #2 each), HTTP 429 and `Retry-After` added; token policy and route contract tests passed in [LIVEKIT CI](https://github.com/manu-alvarez/LIVEKIT/actions/runs/45293212224) and [backend CI](https://github.com/manu-alvarez/msb-livekit-backend/actions/runs/45293205133). Per-process limits are not a substitute for shared edge rate limiting. Production untouched.
+- [x] `manu-alvarez.github.io`: portfolio README reflects official Agent-Sr-Smith and FoZ Pages, documentation links and canonical ownership; commit `c99f0b14d3bb11d60d4007bd17ddcec813f8cad7`.
 
 ## Canonical source boundaries under review
 
