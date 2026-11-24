@@ -83,7 +83,7 @@
 
 - [x] `CombiPro`, `MSBrossAI`, `SERVER-DEV`: documented canonical editable owners and separated duplicate source trees from distribution artifacts; main README commits [`6a25e427`](https://github.com/manu-alvarez/CombiPro/commit/6a25e427999645075fa557b00121754dee076f23), [`a5e237fd`](https://github.com/manu-alvarez/MSBrossAI/commit/a5e237fde6fe2369b859884eb4c02fe88419b595), [`ac8195d0`](https://github.com/manu-alvarez/SERVER-DEV/commit/ac8195d048a5866130da1b2e3cb43abab4cfe292). This closes source-ownership documentation, **not** artifact-version reconciliation or deployment acceptance.
 
-- [x] `MOKO-TOOLS`: fixed localStorage favorite loading/validation and prevented initial overwrite, corrected README clone URL and search semantics. Replaced stale CI checkout ref `ci/verify-moko-20261123` with `main` checkout; production Next.js build on actual main [green](https://github.com/manu-alvarez/MOKO-TOOLS/actions/runs/45351865506). Live external links unverified.
+- [x] `MOKO-TOOLS`: fixed localStorage favorite loading/validation and prevented initial overwrite, corrected README clone URL and search semantics. Replaced stale CI checkout ref `ci/verify-moko-20261123` with `main` checkout; production Next.js build on actual main [green](https://github.com/manu-alvarez/MOKO-TOOLS/actions/runs/45351865506). Removed tracked generated 177 KB `tsconfig.tsbuildinfo` cache and added `*.tsbuildinfo` to gitignore. Live external links unverified.
 
 ## November 24 — main-branch workflow consolidation
 
@@ -100,6 +100,8 @@ These checks close **workflow maintenance** only. They do not certify end-to-end
 - [x] `MCP-agent-memory`: memory tests now run on `main`; [CI green](https://github.com/manu-alvarez/MCP-agent-memory/actions/runs/45352477937).
 - [x] `SKILL-skill-forge`: generator checks now run on `main`; [CI green](https://github.com/manu-alvarez/SKILL-skill-forge/actions/runs/45352484367).
 - [x] `Edelweiss-Cumple`: invitation static checks now run on `main`; [quality CI green](https://github.com/manu-alvarez/Edelweiss-Cumple/actions/runs/45352489512). Pages publication is a separate workflow.
+
+- [x] `MSBrossAI`: removed README's nonexistent `deploy/ftp-deploy-full.py` invocation, unsafe global `pm2 stop all` advice, and unsupported claim that all databases and services run live in production. README points to manual-only deployment and separate [MSBross.me](https://github.com/manu-alvarez/MSBross.me) gateway. Commit [`4eee5fda`](https://github.com/manu-alvarez/MSBrossAI/commit/4eee5fdafe4a834dbdaeb9d552c13cf9a7c83516).
 
 ## Canonical source boundaries under review
 
