@@ -47,7 +47,7 @@
 | 30 | [Sr.Smith](https://github.com/manu-alvarez/Sr.Smith) | LEGACY private duplicate; advanced modules migrated into Agent-Sr-Smith and README redirected | Physical archive/deletion not available through connected GitHub actions; historical backup retained |
 | 31 | [Tarot-Maya](https://github.com/manu-alvarez/Tarot-Maya) | Production build reproducible | Card data and navigation/browser acceptance |
 | 32 | [tarot-rws](https://github.com/manu-alvarez/tarot-rws) | Static asset integrity OK | Card content, reading interactions and Tarot-Maya relationship |
-| 33 | [TaskFlowPro](https://github.com/manu-alvarez/TaskFlowPro) | Real dashboard counters/upcoming tasks wired to Zustand; README and source ownership corrected; [main CI green](https://github.com/manu-alvarez/TaskFlowPro/actions/runs/45351414535) | Browser CRUD/persistence acceptance and reconcile published copy |
+| 33 | [TaskFlowPro](https://github.com/manu-alvarez/TaskFlowPro) | Real dashboard counters/upcoming tasks wired to Zustand, due-date creation, direct form navigation, README ownership; [main CI green](https://github.com/manu-alvarez/TaskFlowPro/actions/runs/45353226452) | Browser CRUD/persistence acceptance and reconcile published copy |
 | 34 | [TuEnergiaMaya](https://github.com/manu-alvarez/TuEnergiaMaya) | Current main validate/deploy CI verified | Calculation correctness and published browser smoke |
 | 35 | [varios-external](https://github.com/manu-alvarez/varios-external) | Docs OK; global pending | External references check |
 
@@ -79,7 +79,7 @@
 - [x] `manu-alvarez.github.io`: portfolio README reflects official Agent-Sr-Smith and FoZ Pages, documentation links and canonical ownership; commit `c99f0b14d3bb11d60d4007bd17ddcec813f8cad7`.
 
 - [x] `MSB`: replaced 35 unsupported `online` values with `catalogued` in `servicios.json` and embedded `index.html` source; rendered badge now neutral for catalogued records. README synchronized; file consistency checked on current main (commit `a6af09f3d8900d97a1aeae9e603e2bfd54b53af7`). This is **not** live service availability.
-- [x] `TaskFlowPro`: replaced hard-coded metrics and sample tasks in Dashboard with Zustand-derived counts/upcoming work; wired actions, fixed README install instructions and client-side secrets caveat. Main build/quality run [45351414535](https://github.com/manu-alvarez/TaskFlowPro/actions/runs/45351414535) passed. Browser acceptance remains deferred.
+- [x] `TaskFlowPro`: replaced hard-coded metrics and sample tasks in Dashboard with Zustand-derived counts/upcoming work, added due-date entry and timezone-safe date counters, opened create form from dashboard, fixed README install instructions and client-side secrets caveat. Main build/quality run [45353226452](https://github.com/manu-alvarez/TaskFlowPro/actions/runs/45353226452) passed. Browser acceptance remains deferred.
 
 - [x] `CombiPro`, `MSBrossAI`, `SERVER-DEV`: documented canonical editable owners and separated duplicate source trees from distribution artifacts; main README commits [`6a25e427`](https://github.com/manu-alvarez/CombiPro/commit/6a25e427999645075fa557b00121754dee076f23), [`a5e237fd`](https://github.com/manu-alvarez/MSBrossAI/commit/a5e237fde6fe2369b859884eb4c02fe88419b595), [`ac8195d0`](https://github.com/manu-alvarez/SERVER-DEV/commit/ac8195d048a5866130da1b2e3cb43abab4cfe292). This closes source-ownership documentation, **not** artifact-version reconciliation or deployment acceptance.
 
